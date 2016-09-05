@@ -12,4 +12,9 @@ class BasicController extends Controller
     {
         return view('basic.simple');
     }
+
+    public function mapCoordinates()
+    {
+        return view('basic.coordinates');
+    }
 }
