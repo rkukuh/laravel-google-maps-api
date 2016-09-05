@@ -34,53 +34,53 @@
 @endpush
 
 @push('js')
-<script>
-    /*
-    * This sample uses a custom control to display the SaveWidget. Custom
-    * controls can be used in place of the default Info Window to create a
-    * custom UI.
-    * This sample uses a Place ID to reference Google Sydney. Place IDs are
-    * stable values that uniquely reference a place on a Google Map and are
-    * documented in detail at:
-    * https://developers.google.com/maps/documentation/javascript/places#placeid
-    */
+    <script>
+        /*
+        * This sample uses a custom control to display the SaveWidget. Custom
+        * controls can be used in place of the default Info Window to create a
+        * custom UI.
+        * This sample uses a Place ID to reference Google Sydney. Place IDs are
+        * stable values that uniquely reference a place on a Google Map and are
+        * documented in detail at:
+        * https://developers.google.com/maps/documentation/javascript/places#placeid
+        */
 
-    function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 17,
-            center: {lat: -33.8666, lng: 151.1958},
-            mapTypeControlOptions: {
-                mapTypeIds: [
-                    'roadmap',
-                    'satellite'
-                ],
-                position: google.maps.ControlPosition.BOTTOM_LEFT
-            }
-        });
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 17,
+                center: {lat: -33.8666, lng: 151.1958},
+                mapTypeControlOptions: {
+                    mapTypeIds: [
+                        'roadmap',
+                        'satellite'
+                    ],
+                    position: google.maps.ControlPosition.BOTTOM_LEFT
+                }
+            });
 
-        var widgetDiv = document.getElementById('save-widget');
+            var widgetDiv = document.getElementById('save-widget');
 
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(widgetDiv);
+            map.controls[google.maps.ControlPosition.TOP_LEFT].push(widgetDiv);
 
-        // Append a Save Control to the existing save-widget div.
-        var saveWidget = new google.maps.SaveWidget(widgetDiv, {
-            place: {
-                // ChIJN1t_tDeuEmsRUsoyG83frY4 is the place Id for Google Sydney.
-                placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4',
-                location: {lat: -33.866647, lng: 151.195886}
-            },
-            attribution: {
-                source: 'Google Maps JavaScript API',
-                webUrl: 'https://developers.google.com/maps/'
-            }
-        });
+            // Append a Save Control to the existing save-widget div.
+            var saveWidget = new google.maps.SaveWidget(widgetDiv, {
+                place: {
+                    // ChIJN1t_tDeuEmsRUsoyG83frY4 is the place Id for Google Sydney.
+                    placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4',
+                    location: {lat: -33.866647, lng: 151.195886}
+                },
+                attribution: {
+                    source: 'Google Maps JavaScript API',
+                    webUrl: 'https://developers.google.com/maps/'
+                }
+            });
 
-        var marker = new google.maps.Marker({
-            map: map,
-            position: saveWidget.getPlace().location
-        });
-    }
-</script>
+            var marker = new google.maps.Marker({
+                map: map,
+                position: saveWidget.getPlace().location
+            });
+        }
+    </script>
 
-<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ $browser_key }}&signed_in=true&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ $browser_key }}&signed_in=true&callback=initMap"></script>
 @endpush
