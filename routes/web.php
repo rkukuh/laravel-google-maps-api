@@ -67,4 +67,12 @@ Route::group(['middleware' => 'auth'], function () {
         'uses'  => 'SignedinController@saveWidget',
     ]);
 
+
+    /******************************* EVENTS ***********************************/
+
+    Route::get('event/simple-click', [
+        'as'    => 'event.simple-click',
+        'uses'  => 'EventController@simpleClick',
+    ]);
+
 });
