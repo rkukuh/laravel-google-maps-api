@@ -79,6 +79,7 @@
                             <li><a href="{{ route('event.simple-click') }}">Simple click event</a></li>
                             <li><a href="{{ route('event.closure') }}">Using closures in event listeners</a></li>
                             <li><a href="{{ route('event.argument') }}">Accessing arguments in UI events</a></li>
+                            <li><a href="{{ route('event.property') }}">Getting properties with event handlers</a></li>
                         </ul>
                     </li>
                 </ul>
