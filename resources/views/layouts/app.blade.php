@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" @yield('html_tag_attributes')>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,7 +53,7 @@
                             <li><a href="{{ route('basic.map-coordinates') }}">Showing pixel and tile coordinates</a></li>
                             <li><a href="{{ route('basic.map-geolocation') }}">Geolocation</a></li>
                             <li><a href="{{ route('basic.map-language') }}">Localizing the map</a></li>
-                            <li><a href="#">Right to left language</a></li>
+                            <li><a href="{{ route('basic.map-rtl') }}">Right to left language</a></li>
                             <li><a href="#">Synchronous loading</a></li>
                             <li><a href="#">Custom map projection</a></li>
                         </ul>
