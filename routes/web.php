@@ -32,4 +32,9 @@ Route::group(['middleware' => 'auth'], function () {
         'uses'  => 'BasicController@mapLanguage',
     ]);
 
+    Route::get('basic/map-rtl', [
+        'as'    => 'basic.map-rtl',
+        'uses'  => 'BasicController@mapRtl',
+    ]);
+
 });
