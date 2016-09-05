@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Simple Map')
+
 @section('content')
     <h1>Simple Map</h1>
 

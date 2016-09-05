@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Geolocation')
+
 @section('content')
     <h1>Geolocation</h1>
 

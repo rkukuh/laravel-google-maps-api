@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Showing pixel and tile coordinates')
+
 @section('content')
     <h1>Showing pixel and tile coordinates</h1>
 
