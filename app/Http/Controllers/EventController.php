@@ -17,4 +17,9 @@ class EventController extends Controller
     {
         return view('event.closure');
     }
+
+    public function eventArgument()
+    {
+        return view('event.argument');
+    }
 }
