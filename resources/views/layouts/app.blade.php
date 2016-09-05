@@ -66,6 +66,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ route('signedin.signedin') }}">Signed-in maps</a></li>
+                            <li><a href="{{ route('signedin.save-infowindow') }}">Default Save Control</a></li>
                         </ul>
                     </li>
                 </ul>
