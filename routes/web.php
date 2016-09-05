@@ -75,4 +75,9 @@ Route::group(['middleware' => 'auth'], function () {
         'uses'  => 'EventController@simpleClick',
     ]);
 
+    Route::get('event/closure', [
+        'as'    => 'event.closure',
+        'uses'  => 'EventController@eventClosure',
+    ]);
+
 });
