@@ -27,4 +27,9 @@ class BasicController extends Controller
     {
         return view('basic.language');
     }
+
+    public function mapRtl()
+    {
+        return view('basic.rtl');
+    }
 }
