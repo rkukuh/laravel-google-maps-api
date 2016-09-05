@@ -22,4 +22,9 @@ class BasicController extends Controller
     {
         return view('basic.geolocation');
     }
+
+    public function mapLanguage()
+    {
+        return view('basic.language');
+    }
 }
