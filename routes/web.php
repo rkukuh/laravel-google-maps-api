@@ -22,4 +22,9 @@ Route::group(['middleware' => 'auth'], function () {
         'uses'  => 'BasicController@mapCoordinates',
     ]);
 
+    Route::get('basic/map-geolocation', [
+        'as'    => 'basic.map-geolocation',
+        'uses'  => 'BasicController@mapGeolocation',
+    ]);
+
 });
