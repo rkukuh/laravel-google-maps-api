@@ -42,4 +42,9 @@ Route::group(['middleware' => 'auth'], function () {
         'uses'  => 'BasicController@mapSync',
     ]);
 
+    Route::get('basic/projection-simple', [
+        'as'    => 'basic.projection-simple',
+        'uses'  => 'BasicController@projectionSimple',
+    ]);
+
 });
