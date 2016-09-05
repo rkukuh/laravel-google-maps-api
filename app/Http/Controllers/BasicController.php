@@ -32,4 +32,9 @@ class BasicController extends Controller
     {
         return view('basic.rtl');
     }
+
+    public function mapSync()
+    {
+        return view('basic.sync');
+    }
 }
