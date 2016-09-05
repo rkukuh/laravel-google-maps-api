@@ -37,4 +37,9 @@ class BasicController extends Controller
     {
         return view('basic.sync');
     }
+
+    public function projectionSimple()
+    {
+        return view('basic.projection');
+    }
 }
