@@ -12,4 +12,9 @@ class EventController extends Controller
     {
         return view('event.simple-click');
     }
+
+    public function eventClosure()
+    {
+        return view('event.closure');
+    }
 }
