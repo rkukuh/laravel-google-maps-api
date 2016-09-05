@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
+    @stack('css')
 
     <!-- Scripts -->
     <script>
@@ -47,7 +48,7 @@
                             Basic <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Simple</a></li>
+                            <li><a href="{{ route('basic.simple') }}">Simple</a></li>
                             <li><a href="#">Showing pixel and tile coordinates</a></li>
                             <li><a href="#">Geolocation</a></li>
                             <li><a href="#">Localizing the map</a></li>
@@ -90,9 +91,16 @@
         </div>
     </nav>
 
-    @yield('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                @yield('content')
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    @stack('js')
 </body>
 </html>
