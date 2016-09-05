@@ -27,4 +27,9 @@ class EventController extends Controller
     {
         return view('event.property');
     }
+
+    public function domListener()
+    {
+        return view('event.dom-listener');
+    }
 }
