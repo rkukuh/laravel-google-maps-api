@@ -22,4 +22,9 @@ class EventController extends Controller
     {
         return view('event.argument');
     }
+
+    public function eventProperty()
+    {
+        return view('event.property');
+    }
 }
