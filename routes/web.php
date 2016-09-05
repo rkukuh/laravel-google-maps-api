@@ -7,3 +7,12 @@ Route::get('/', function () {
 });
 
 Route::get('/home', 'HomeController@index');
+
+Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('basic/simple', [
+        'as'    => 'basic.simple',
+        'uses'  => 'BasicController@simple',
+    ]);
+
+});
