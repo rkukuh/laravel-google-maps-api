@@ -77,6 +77,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ route('event.simple-click') }}">Simple click event</a></li>
+                            <li><a href="{{ route('event.closure') }}">Using closures in event listeners</a></li>
                         </ul>
                     </li>
                 </ul>
