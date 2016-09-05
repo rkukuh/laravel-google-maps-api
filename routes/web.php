@@ -85,4 +85,9 @@ Route::group(['middleware' => 'auth'], function () {
         'uses'  => 'EventController@eventArgument',
     ]);
 
+    Route::get('event/property', [
+        'as'    => 'event.property',
+        'uses'  => 'EventController@eventProperty',
+    ]);
+
 });
