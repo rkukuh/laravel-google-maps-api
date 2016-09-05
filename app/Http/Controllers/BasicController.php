@@ -17,4 +17,9 @@ class BasicController extends Controller
     {
         return view('basic.coordinates');
     }
+
+    public function mapGeolocation()
+    {
+        return view('basic.geolocation');
+    }
 }
