@@ -59,6 +59,15 @@
                             <li><a href="{{ route('basic.projection-simple') }}">Custom map projection</a></li>
                         </ul>
                     </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Signed-in Maps <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ route('signedin.signedin') }}">Signed-in maps</a></li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
