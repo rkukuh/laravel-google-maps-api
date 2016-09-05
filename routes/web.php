@@ -37,4 +37,9 @@ Route::group(['middleware' => 'auth'], function () {
         'uses'  => 'BasicController@mapRtl',
     ]);
 
+    Route::get('basic/map-sync', [
+        'as'    => 'basic.map-sync',
+        'uses'  => 'BasicController@mapSync',
+    ]);
+
 });
