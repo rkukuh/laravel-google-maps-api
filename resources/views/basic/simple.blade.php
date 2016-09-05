@@ -24,5 +24,5 @@
     }
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHnXGlwf8bxR_lc_eAvvkzf7MQYTk6ccE&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ $browser_key }}&callback=initMap" async defer></script>
 @endpush
