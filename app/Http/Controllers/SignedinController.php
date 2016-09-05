@@ -17,4 +17,9 @@ class SignedinController extends Controller
     {
         return view('signedin.saveinfowindow');
     }
+
+    public function saveWidget()
+    {
+        return view('signedin.save-widget');
+    }
 }
