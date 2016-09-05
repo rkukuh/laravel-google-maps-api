@@ -90,4 +90,9 @@ Route::group(['middleware' => 'auth'], function () {
         'uses'  => 'EventController@eventProperty',
     ]);
 
+    Route::get('event/dom-listener', [
+        'as'    => 'event.dom-listener',
+        'uses'  => 'EventController@domListener',
+    ]);
+
 });
