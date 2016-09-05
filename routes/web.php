@@ -80,4 +80,9 @@ Route::group(['middleware' => 'auth'], function () {
         'uses'  => 'EventController@eventClosure',
     ]);
 
+    Route::get('event/argument', [
+        'as'    => 'event.argument',
+        'uses'  => 'EventController@eventArgument',
+    ]);
+
 });
