@@ -15,7 +15,7 @@ class SignedinController extends Controller
 
     public function saveInfoWindow()
     {
-        return view('signedin.saveinfowindow');
+        return view('signedin.save-infowindow');
     }
 
     public function saveWidget()
