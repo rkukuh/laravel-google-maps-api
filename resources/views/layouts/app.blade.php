@@ -42,7 +42,20 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    &nbsp;
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Basic <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Simple</a></li>
+                            <li><a href="#">Showing pixel and tile coordinates</a></li>
+                            <li><a href="#">Geolocation</a></li>
+                            <li><a href="#">Localizing the map</a></li>
+                            <li><a href="#">Right to left language</a></li>
+                            <li><a href="#">Synchronous loading</a></li>
+                            <li><a href="#">Custom map projection</a></li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
