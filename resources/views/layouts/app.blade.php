@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
+
     @stack('css')
 
     <!-- Scripts -->
@@ -101,6 +102,7 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    
     @stack('js')
 </body>
 </html>
