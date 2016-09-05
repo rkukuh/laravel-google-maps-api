@@ -49,4 +49,12 @@ Route::group(['middleware' => 'auth'], function () {
         'uses'  => 'BasicController@projectionSimple',
     ]);
 
+
+    /***************************** SIGNED-IN **********************************/
+
+    Route::get('signedin/signedin', [
+        'as'    => 'signedin.signedin',
+        'uses'  => 'SignedinController@signedIn',
+    ]);
+
 });
