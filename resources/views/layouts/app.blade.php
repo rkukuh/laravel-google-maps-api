@@ -50,7 +50,7 @@
                             Basic <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ route('basic.simple') }}">Simple</a></li>
+                            <li><a href="{{ route('basic.simple') }}">Simple map</a></li>
                             <li><a href="{{ route('basic.map-coordinates') }}">Showing pixel and tile coordinates</a></li>
                             <li><a href="{{ route('basic.map-geolocation') }}">Geolocation</a></li>
                             <li><a href="{{ route('basic.map-language') }}">Localizing the map</a></li>
