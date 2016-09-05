@@ -50,7 +50,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ route('basic.simple') }}">Simple</a></li>
-                            <li><a href="#">Showing pixel and tile coordinates</a></li>
+                            <li><a href="{{ route('basic.map-coordinates') }}">Showing pixel and tile coordinates</a></li>
                             <li><a href="#">Geolocation</a></li>
                             <li><a href="#">Localizing the map</a></li>
                             <li><a href="#">Right to left language</a></li>
@@ -102,7 +102,7 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
-    
+
     @stack('js')
 </body>
 </html>
