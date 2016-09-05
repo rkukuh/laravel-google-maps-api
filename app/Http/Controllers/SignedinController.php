@@ -12,4 +12,9 @@ class SignedinController extends Controller
     {
         return view('signedin.signedin');
     }
+
+    public function saveInfoWindow()
+    {
+        return view('signedin.saveinfowindow');
+    }
 }
