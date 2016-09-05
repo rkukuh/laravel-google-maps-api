@@ -27,4 +27,9 @@ Route::group(['middleware' => 'auth'], function () {
         'uses'  => 'BasicController@mapGeolocation',
     ]);
 
+    Route::get('basic/map-language', [
+        'as'    => 'basic.map-language',
+        'uses'  => 'BasicController@mapLanguage',
+    ]);
+
 });
