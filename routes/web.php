@@ -62,4 +62,9 @@ Route::group(['middleware' => 'auth'], function () {
         'uses'  => 'SignedinController@saveInfoWindow',
     ]);
 
+    Route::get('signedin/save-widget', [
+        'as'    => 'signedin.save-widget',
+        'uses'  => 'SignedinController@saveWidget',
+    ]);
+
 });
