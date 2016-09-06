@@ -95,4 +95,13 @@ Route::group(['middleware' => 'auth'], function () {
         'uses'  => 'EventController@domListener',
     ]);
 
+
+    /********************************* TEST ***********************************/
+
+    Route::group(['prefix' => 'test'], function () {
+        Route::get('proximity-search', function () {
+            return view('test.proximity-search');
+        });
+    });
+
 });
