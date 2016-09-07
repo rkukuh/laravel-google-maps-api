@@ -7,5 +7,6 @@
         <li><a href="{{ route('control.disable-ui') }}">Disabling default controls</a></li>
         <li><a href="{{ route('control.add-control') }}">Adding controls</a></li>
         <li><a href="{{ route('control.options') }}">Control options</a></li>
+        <li><a href="{{ route('control.positioning') }}">Control positioning</a></li>
     </ul>
 </li>
