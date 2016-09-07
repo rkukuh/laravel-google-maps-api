@@ -119,6 +119,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'control.add-control',
             'uses'  => 'ControlController@addControl',
         ]);
+
+        Route::get('options', [
+            'as'    => 'control.options',
+            'uses'  => 'ControlController@options',
+        ]);
     });
 
 
