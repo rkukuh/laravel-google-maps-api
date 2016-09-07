@@ -17,4 +17,9 @@ class ControlController extends Controller
     {
         return view('control.disable-ui');
     }
+
+    public function addControl()
+    {
+        return view('control.add-control');
+    }
 }
