@@ -102,6 +102,16 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
 
+    /****************************** CONTROLS **********************************/
+
+    Route::group(['prefix' => 'control'], function () {
+        Route::get('default', [
+            'as'    => 'control.default',
+            'uses'  => 'ControlController@defaultController',
+        ]);
+    });
+
+
     /********************************* TEST ***********************************/
 
     Route::group(['prefix' => 'test'], function () {
