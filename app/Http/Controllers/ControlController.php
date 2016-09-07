@@ -32,4 +32,9 @@ class ControlController extends Controller
     {
         return view('control.positioning');
     }
+
+    public function custom()
+    {
+        return view('control.custom');
+    }
 }
