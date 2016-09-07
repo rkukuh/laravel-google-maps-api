@@ -109,6 +109,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'control.default',
             'uses'  => 'ControlController@defaultController',
         ]);
+
+        Route::get('disable-ui', [
+            'as'    => 'control.disable-ui',
+            'uses'  => 'ControlController@disableUi',
+        ]);
     });
 
 
