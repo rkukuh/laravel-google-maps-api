@@ -13,7 +13,7 @@ Route::get('/home', 'HomeController@index');
 Route::group(['middleware' => 'auth'], function () {
 
     /******************************* BASIC ************************************/
-
+    
     Route::group(['prefix' => 'basic'], function () {
         Route::get('simple', [
             'as'    => 'basic.simple',
