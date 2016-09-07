@@ -12,4 +12,9 @@ class ControlController extends Controller
     {
         return view('control.default');
     }
+
+    public function disableUi()
+    {
+        return view('control.disable-ui');
+    }
 }
