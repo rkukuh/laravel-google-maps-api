@@ -46,9 +46,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     @include('_navbar.basic')
-
                     @include('_navbar.signedin')
-
                     @include('_navbar.event')
                 </ul>
 
