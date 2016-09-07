@@ -22,4 +22,9 @@ class ControlController extends Controller
     {
         return view('control.add-control');
     }
+
+    public function options()
+    {
+        return view('control.options');
+    }
 }
