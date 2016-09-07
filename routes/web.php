@@ -129,6 +129,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'control.positioning',
             'uses'  => 'ControlController@positioning',
         ]);
+
+        Route::get('custom', [
+            'as'    => 'control.custom',
+            'uses'  => 'ControlController@custom',
+        ]);
     });
 
 
