@@ -14,40 +14,42 @@ Route::group(['middleware' => 'auth'], function () {
 
     /******************************* BASIC ************************************/
 
-    Route::get('basic/simple', [
-        'as'    => 'basic.simple',
-        'uses'  => 'BasicController@simple',
-    ]);
+    Route::group(['prefix' => 'basic'], function () {
+        Route::get('simple', [
+            'as'    => 'basic.simple',
+            'uses'  => 'BasicController@simple',
+        ]);
 
-    Route::get('basic/map-coordinates', [
-        'as'    => 'basic.map-coordinates',
-        'uses'  => 'BasicController@mapCoordinates',
-    ]);
+        Route::get('map-coordinates', [
+            'as'    => 'basic.map-coordinates',
+            'uses'  => 'BasicController@mapCoordinates',
+        ]);
 
-    Route::get('basic/map-geolocation', [
-        'as'    => 'basic.map-geolocation',
-        'uses'  => 'BasicController@mapGeolocation',
-    ]);
+        Route::get('map-geolocation', [
+            'as'    => 'basic.map-geolocation',
+            'uses'  => 'BasicController@mapGeolocation',
+        ]);
 
-    Route::get('basic/map-language', [
-        'as'    => 'basic.map-language',
-        'uses'  => 'BasicController@mapLanguage',
-    ]);
+        Route::get('map-language', [
+            'as'    => 'basic.map-language',
+            'uses'  => 'BasicController@mapLanguage',
+        ]);
 
-    Route::get('basic/map-rtl', [
-        'as'    => 'basic.map-rtl',
-        'uses'  => 'BasicController@mapRtl',
-    ]);
+        Route::get('map-rtl', [
+            'as'    => 'basic.map-rtl',
+            'uses'  => 'BasicController@mapRtl',
+        ]);
 
-    Route::get('basic/map-sync', [
-        'as'    => 'basic.map-sync',
-        'uses'  => 'BasicController@mapSync',
-    ]);
+        Route::get('map-sync', [
+            'as'    => 'basic.map-sync',
+            'uses'  => 'BasicController@mapSync',
+        ]);
 
-    Route::get('basic/projection-simple', [
-        'as'    => 'basic.projection-simple',
-        'uses'  => 'BasicController@projectionSimple',
-    ]);
+        Route::get('projection-simple', [
+            'as'    => 'basic.projection-simple',
+            'uses'  => 'BasicController@projectionSimple',
+        ]);
+    });
 
 
     /***************************** SIGNED-IN **********************************/
