@@ -27,4 +27,9 @@ class ControlController extends Controller
     {
         return view('control.options');
     }
+
+    public function positioning()
+    {
+        return view('control.positioning');
+    }
 }
