@@ -48,6 +48,7 @@
                     @include('_navbar.basic')
                     @include('_navbar.signedin')
                     @include('_navbar.event')
+                    @include('_navbar.control')
                 </ul>
 
                 <!-- Right Side Of Navbar -->
