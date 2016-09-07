@@ -13,7 +13,7 @@ Route::get('/home', 'HomeController@index');
 Route::group(['middleware' => 'auth'], function () {
 
     /******************************* BASIC ************************************/
-    
+
     Route::group(['prefix' => 'basic'], function () {
         Route::get('simple', [
             'as'    => 'basic.simple',
@@ -54,48 +54,52 @@ Route::group(['middleware' => 'auth'], function () {
 
     /***************************** SIGNED-IN **********************************/
 
-    Route::get('signedin/signedin', [
-        'as'    => 'signedin.signedin',
-        'uses'  => 'SignedinController@signedIn',
-    ]);
+    Route::group(['prefix' => 'signedin'], function () {
+        Route::get('signedin', [
+            'as'    => 'signedin.signedin',
+            'uses'  => 'SignedinController@signedIn',
+        ]);
 
-    Route::get('signedin/save-infowindow', [
-        'as'    => 'signedin.save-infowindow',
-        'uses'  => 'SignedinController@saveInfoWindow',
-    ]);
+        Route::get('save-infowindow', [
+            'as'    => 'signedin.save-infowindow',
+            'uses'  => 'SignedinController@saveInfoWindow',
+        ]);
 
-    Route::get('signedin/save-widget', [
-        'as'    => 'signedin.save-widget',
-        'uses'  => 'SignedinController@saveWidget',
-    ]);
+        Route::get('save-widget', [
+            'as'    => 'signedin.save-widget',
+            'uses'  => 'SignedinController@saveWidget',
+        ]);
+    });
 
 
     /******************************* EVENTS ***********************************/
 
-    Route::get('event/simple-click', [
-        'as'    => 'event.simple-click',
-        'uses'  => 'EventController@simpleClick',
-    ]);
+    Route::group(['prefix' => 'event'], function () {
+        Route::get('simple-click', [
+            'as'    => 'event.simple-click',
+            'uses'  => 'EventController@simpleClick',
+        ]);
 
-    Route::get('event/closure', [
-        'as'    => 'event.closure',
-        'uses'  => 'EventController@eventClosure',
-    ]);
+        Route::get('closure', [
+            'as'    => 'event.closure',
+            'uses'  => 'EventController@eventClosure',
+        ]);
 
-    Route::get('event/argument', [
-        'as'    => 'event.argument',
-        'uses'  => 'EventController@eventArgument',
-    ]);
+        Route::get('argument', [
+            'as'    => 'event.argument',
+            'uses'  => 'EventController@eventArgument',
+        ]);
 
-    Route::get('event/property', [
-        'as'    => 'event.property',
-        'uses'  => 'EventController@eventProperty',
-    ]);
+        Route::get('property', [
+            'as'    => 'event.property',
+            'uses'  => 'EventController@eventProperty',
+        ]);
 
-    Route::get('event/dom-listener', [
-        'as'    => 'event.dom-listener',
-        'uses'  => 'EventController@domListener',
-    ]);
+        Route::get('dom-listener', [
+            'as'    => 'event.dom-listener',
+            'uses'  => 'EventController@domListener',
+        ]);
+    });
 
 
     /********************************* TEST ***********************************/
