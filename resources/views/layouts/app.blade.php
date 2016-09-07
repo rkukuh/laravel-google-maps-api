@@ -47,16 +47,7 @@
                 <ul class="nav navbar-nav">
                     @include('_navbar.basic')
 
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            Signed-in Maps <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ route('signedin.signedin') }}">Signed-in maps</a></li>
-                            <li><a href="{{ route('signedin.save-infowindow') }}">Default Save Control</a></li>
-                            <li><a href="{{ route('signedin.save-widget') }}">Custom Save Widget</a></li>
-                        </ul>
-                    </li>
+                    @include('_navbar.signedin')
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
