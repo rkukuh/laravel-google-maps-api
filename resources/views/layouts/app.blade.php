@@ -109,6 +109,12 @@
                                         {{ csrf_field() }}
                                     </form>
                                 </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="{{ url('test/proximity-search') }}">
+                                        Proximity Search
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                     @endif
