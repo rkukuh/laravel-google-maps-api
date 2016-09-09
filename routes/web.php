@@ -134,6 +134,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'control.custom',
             'uses'  => 'ControlController@custom',
         ]);
+
+        Route::get('state', [
+            'as'    => 'control.state',
+            'uses'  => 'ControlController@state',
+        ]);
     });
 
 
