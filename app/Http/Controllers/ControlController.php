@@ -37,4 +37,9 @@ class ControlController extends Controller
     {
         return view('control.custom');
     }
+
+    public function state()
+    {
+        return view('control.state');
+    }
 }
