@@ -179,6 +179,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.simple-marker-icon',
             'uses'  => 'DrawingController@simpleMarkerIcon',
         ]);
+
+        Route::get('complex-marker-icon', [
+            'as'    => 'drawing.complex-marker-icon',
+            'uses'  => 'DrawingController@complexMarkerIcon',
+        ]);
     });
 
 

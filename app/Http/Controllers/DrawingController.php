@@ -27,4 +27,9 @@ class DrawingController extends Controller
     {
         return view('drawing.simple-marker-icon');
     }
+
+    public function complexMarkerIcon()
+    {
+        return view('drawing.complex-marker-icon');
+    }
 }
