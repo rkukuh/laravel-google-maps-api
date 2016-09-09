@@ -12,6 +12,8 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="{{ asset('css/mystyle.css') }}">
+
     <link rel="shortcut icon" href="{{{ asset('images/favicon.ico') }}}">
 
     @stack('css')
