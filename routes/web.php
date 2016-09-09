@@ -184,6 +184,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.complex-marker-icon',
             'uses'  => 'DrawingController@complexMarkerIcon',
         ]);
+
+        Route::get('marker-animation', [
+            'as'    => 'drawing.marker-animation',
+            'uses'  => 'DrawingController@markerAnimation',
+        ]);
     });
 
 
