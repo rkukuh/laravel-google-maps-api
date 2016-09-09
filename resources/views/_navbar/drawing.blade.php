@@ -4,5 +4,6 @@
     </a>
     <ul class="dropdown-menu">
         <li><a href="{{ route('drawing.simple-marker') }}">Simple marker</a></li>
+        <li><a href="{{ route('drawing.marker-label') }}">Marker labels</a></li>
     </ul>
 </li>

@@ -164,6 +164,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.simple-marker',
             'uses'  => 'DrawingController@simpleMarker',
         ]);
+
+        Route::get('marker-label', [
+            'as'    => 'drawing.marker-label',
+            'uses'  => 'DrawingController@markerLabel',
+        ]);
     });
 
 

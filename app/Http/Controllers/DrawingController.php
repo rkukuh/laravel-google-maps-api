@@ -12,4 +12,9 @@ class DrawingController extends Controller
     {
         return view('drawing.simple-marker');
     }
+
+    public function markerLabel()
+    {
+        return view('drawing.marker-label');
+    }
 }
