@@ -17,4 +17,9 @@ class DrawingController extends Controller
     {
         return view('drawing.marker-label');
     }
+
+    public function removeMarker()
+    {
+        return view('drawing.remove-marker');
+    }
 }

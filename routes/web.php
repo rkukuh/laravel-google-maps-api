@@ -169,6 +169,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.marker-label',
             'uses'  => 'DrawingController@markerLabel',
         ]);
+
+        Route::get('remove-marker', [
+            'as'    => 'drawing.remove-marker',
+            'uses'  => 'DrawingController@removeMarker',
+        ]);
     });
 
 
