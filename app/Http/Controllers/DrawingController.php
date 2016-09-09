@@ -37,4 +37,9 @@ class DrawingController extends Controller
     {
         return view('drawing.marker-animation');
     }
+
+    public function markerAnimationTimeout()
+    {
+        return view('drawing.marker-animation-timeout');
+    }
 }
