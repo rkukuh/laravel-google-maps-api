@@ -47,4 +47,9 @@ class DrawingController extends Controller
     {
         return view('drawing.info-window');
     }
+
+    public function infoWindowMaxwidth()
+    {
+        return view('drawing.info-window-maxwidth');
+    }
 }

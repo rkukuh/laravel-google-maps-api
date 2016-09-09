@@ -199,6 +199,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.info-window',
             'uses'  => 'DrawingController@infoWindow',
         ]);
+
+        Route::get('info-window-maxwidth', [
+            'as'    => 'drawing.info-window-maxwidth',
+            'uses'  => 'DrawingController@infoWindowMaxwidth',
+        ]);
     });
 
 
