@@ -174,6 +174,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.remove-marker',
             'uses'  => 'DrawingController@removeMarker',
         ]);
+
+        Route::get('simple-marker-icon', [
+            'as'    => 'drawing.simple-marker-icon',
+            'uses'  => 'DrawingController@simpleMarkerIcon',
+        ]);
     });
 
 
