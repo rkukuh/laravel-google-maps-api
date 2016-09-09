@@ -50,6 +50,7 @@
                     @include('_navbar.event')
                     @include('_navbar.control')
                     @include('_navbar.style')
+                    @include('_navbar.drawing')
                 </ul>
 
                 <!-- Right Side Of Navbar -->

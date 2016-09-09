@@ -156,6 +156,17 @@ Route::group(['middleware' => 'auth'], function () {
         ]);
     });
 
+
+    /****************************** DRAWING ***********************************/
+
+    Route::group(['prefix' => 'drawing'], function () {
+        Route::get('simple-marker', [
+            'as'    => 'drawing.simple-marker',
+            'uses'  => 'DrawingController@simpleMarker',
+        ]);
+    });
+
+
     /********************************* TEST ***********************************/
 
     Route::group(['prefix' => 'test'], function () {
