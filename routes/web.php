@@ -142,6 +142,20 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
 
+    /******************************* STYLES ***********************************/
+
+    Route::group(['prefix' => 'style'], function () {
+        Route::get('map', [
+            'as'    => 'style.styledMap',
+            'uses'  => 'StyleController@styledMap',
+        ]);
+
+        Route::get('mapType', [
+            'as'    => 'style.styledMapType',
+            'uses'  => 'StyleController@styledMapType',
+        ]);
+    });
+
     /********************************* TEST ***********************************/
 
     Route::group(['prefix' => 'test'], function () {
