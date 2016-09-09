@@ -10,5 +10,6 @@
         <li><a href="{{ route('drawing.complex-marker-icon') }}">Complex marker icon</a></li>
         <li><a href="{{ route('drawing.marker-animation') }}">Marker animation</a></li>
         <li><a href="{{ route('drawing.marker-animation-timeout') }}">Marker animation with setTimeout()</a></li>
+        <li><a href="{{ route('drawing.info-window') }}">Info window</a></li>
     </ul>
 </li>

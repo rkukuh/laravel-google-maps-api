@@ -42,4 +42,9 @@ class DrawingController extends Controller
     {
         return view('drawing.marker-animation-timeout');
     }
+
+    public function infoWindow()
+    {
+        return view('drawing.info-window');
+    }
 }
