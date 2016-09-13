@@ -209,6 +209,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.simple-polyline',
             'uses'  => 'DrawingController@simplePolyline',
         ]);
+
+        Route::get('removing-polyline', [
+            'as'    => 'drawing.removing-polyline',
+            'uses'  => 'DrawingController@removingPolyline',
+        ]);
     });
 
 

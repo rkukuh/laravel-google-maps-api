@@ -57,4 +57,9 @@ class DrawingController extends Controller
     {
         return view('drawing.simple-polyline');
     }
+
+    public function removingPolyline()
+    {
+        return view('drawing.removing-polyline');
+    }
 }
