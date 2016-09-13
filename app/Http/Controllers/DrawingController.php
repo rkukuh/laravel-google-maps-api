@@ -62,4 +62,9 @@ class DrawingController extends Controller
     {
         return view('drawing.removing-polyline');
     }
+
+    public function deletingVertex()
+    {
+        return view('drawing.deleting-vertex');
+    }
 }
