@@ -5,7 +5,7 @@
 @section('content')
     <h1>Deleting a vertex</h1>
 
-    <small>Can NOT use 'asyn defer' mode</small>
+    <span><small class="text-danger">Can <strong>NOT</strong> use 'asyn defer' mode</small></span>
 
     <div id="map"></div>
 @endsection
