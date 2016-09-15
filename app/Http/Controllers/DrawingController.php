@@ -97,4 +97,9 @@ class DrawingController extends Controller
     {
         return view('drawing.circle');
     }
+
+    public function rectangle()
+    {
+        return view('drawing.rectangle');
+    }
 }

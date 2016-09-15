@@ -25,6 +25,8 @@
         <li><a href="{{ route('drawing.polygon-array') }}">Polygon arrays</a></li>
         <li><a href="{{ route('drawing.polygon-auto-completion') }}">Polygon auto completion</a></li>
         <li><a href="{{ route('drawing.polygon-hole') }}">Polygon with hole</a></li>
+        <li class="divider"></li>
         <li><a href="{{ route('drawing.circle') }}">Circle</a></li>
+        <li><a href="{{ route('drawing.rectangle') }}">Rectangle</a></li>
     </ul>
 </li>

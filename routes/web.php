@@ -249,6 +249,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.circle',
             'uses'  => 'DrawingController@circle',
         ]);
+
+        Route::get('rectangle', [
+            'as'    => 'drawing.rectangle',
+            'uses'  => 'DrawingController@rectangle',
+        ]);
     });
 
 
