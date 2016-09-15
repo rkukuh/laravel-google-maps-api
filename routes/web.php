@@ -239,6 +239,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.polygon-auto-completion',
             'uses'  => 'DrawingController@polygonAutoCompletion',
         ]);
+
+        Route::get('polygon-hole', [
+            'as'    => 'drawing.polygon-hole',
+            'uses'  => 'DrawingController@polygonHole',
+        ]);
     });
 
 

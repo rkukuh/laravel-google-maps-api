@@ -87,4 +87,9 @@ class DrawingController extends Controller
     {
         return view('drawing.polygon-auto-completion');
     }
+
+    public function polygonHole()
+    {
+        return view('drawing.polygon-hole');
+    }
 }
