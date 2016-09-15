@@ -82,4 +82,9 @@ class DrawingController extends Controller
     {
         return view('drawing.polygon-array');
     }
+
+    public function polygonAutoCompletion()
+    {
+        return view('drawing.polygon-auto-completion');
+    }
 }

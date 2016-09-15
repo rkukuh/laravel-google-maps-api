@@ -23,5 +23,6 @@
         <li class="divider"></li>
         <li><a href="{{ route('drawing.simple-polygon') }}">Simple polygons</a></li>
         <li><a href="{{ route('drawing.polygon-array') }}">Polygon arrays</a></li>
+        <li><a href="{{ route('drawing.polygon-auto-completion') }}">Polygon auto completion</a></li>
     </ul>
 </li>

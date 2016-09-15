@@ -234,6 +234,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.polygon-array',
             'uses'  => 'DrawingController@polygonArray',
         ]);
+
+        Route::get('polygon-auto-completion', [
+            'as'    => 'drawing.polygon-auto-completion',
+            'uses'  => 'DrawingController@polygonAutoCompletion',
+        ]);
     });
 
 
