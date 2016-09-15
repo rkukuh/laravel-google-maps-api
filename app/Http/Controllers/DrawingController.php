@@ -72,4 +72,9 @@ class DrawingController extends Controller
     {
         return view('drawing.deleting-vertex');
     }
+
+    public function simplePolygon()
+    {
+        return view('drawing.simple-polygon');
+    }
 }

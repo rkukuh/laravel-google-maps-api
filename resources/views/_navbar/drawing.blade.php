@@ -21,5 +21,6 @@
         <li><a href="{{ route('drawing.complex-polyline') }}">Complex polylines</a></li>
         <li><a href="{{ route('drawing.deleting-vertex') }}">Deleting a vertex</a></li>
         <li class="divider"></li>
+        <li><a href="{{ route('drawing.simple-polygon') }}">Simple polygons</a></li>
     </ul>
 </li>

@@ -224,6 +224,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.deleting-vertex',
             'uses'  => 'DrawingController@deletingVertex',
         ]);
+
+        Route::get('simple-polygon', [
+            'as'    => 'drawing.simple-polygon',
+            'uses'  => 'DrawingController@simplePolygon',
+        ]);
     });
 
 
