@@ -204,6 +204,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.info-window-maxwidth',
             'uses'  => 'DrawingController@infoWindowMaxwidth',
         ]);
+
+        Route::get('simple-polyline', [
+            'as'    => 'drawing.simple-polyline',
+            'uses'  => 'DrawingController@simplePolyline',
+        ]);
     });
 
 

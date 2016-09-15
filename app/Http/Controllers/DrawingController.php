@@ -52,4 +52,9 @@ class DrawingController extends Controller
     {
         return view('drawing.info-window-maxwidth');
     }
+
+    public function simplePolyline()
+    {
+        return view('drawing.simple-polyline');
+    }
 }
