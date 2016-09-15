@@ -215,6 +215,11 @@ Route::group(['middleware' => 'auth'], function () {
             'uses'  => 'DrawingController@removingPolyline',
         ]);
 
+        Route::get('complex-polyline', [
+            'as'    => 'drawing.complex-polyline',
+            'uses'  => 'DrawingController@complexPolyline',
+        ]);
+
         Route::get('deleting-vertex', [
             'as'    => 'drawing.deleting-vertex',
             'uses'  => 'DrawingController@deletingVertex',

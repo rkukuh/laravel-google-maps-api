@@ -14,6 +14,7 @@
         <li><a href="{{ route('drawing.info-window-maxwidth') }}">Info window with maxWidth</a></li>
         <li><a href="{{ route('drawing.simple-polyline') }}">Simple polylines</a></li>
         <li><a href="{{ route('drawing.removing-polyline') }}">Removing polylines</a></li>
+        <li><a href="{{ route('drawing.complex-polyline') }}">Complex polyline</a></li>
         <li><a href="{{ route('drawing.deleting-vertex') }}">Deleting a vertex</a></li>
     </ul>
 </li>
