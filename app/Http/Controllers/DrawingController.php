@@ -77,4 +77,9 @@ class DrawingController extends Controller
     {
         return view('drawing.simple-polygon');
     }
+
+    public function polygonArray()
+    {
+        return view('drawing.polygon-array');
+    }
 }

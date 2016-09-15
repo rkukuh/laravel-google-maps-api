@@ -22,5 +22,6 @@
         <li><a href="{{ route('drawing.deleting-vertex') }}">Deleting a vertex</a></li>
         <li class="divider"></li>
         <li><a href="{{ route('drawing.simple-polygon') }}">Simple polygons</a></li>
+        <li><a href="{{ route('drawing.polygon-array') }}">Polygon arrays</a></li>
     </ul>
 </li>

@@ -229,6 +229,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.simple-polygon',
             'uses'  => 'DrawingController@simplePolygon',
         ]);
+
+        Route::get('polygon-array', [
+            'as'    => 'drawing.polygon-array',
+            'uses'  => 'DrawingController@polygonArray',
+        ]);
     });
 
 
