@@ -244,6 +244,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.polygon-hole',
             'uses'  => 'DrawingController@polygonHole',
         ]);
+
+        Route::get('circle', [
+            'as'    => 'drawing.circle',
+            'uses'  => 'DrawingController@circle',
+        ]);
     });
 
 
