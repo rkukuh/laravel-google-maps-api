@@ -28,5 +28,6 @@
         <li class="divider"></li>
         <li><a href="{{ route('drawing.circle') }}">Circle</a></li>
         <li><a href="{{ route('drawing.rectangle') }}">Rectangle</a></li>
+        <li><a href="{{ route('drawing.rectangle-zoom') }}">Rectangle zoom</a></li>
     </ul>
 </li>

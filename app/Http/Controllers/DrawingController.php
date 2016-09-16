@@ -102,4 +102,9 @@ class DrawingController extends Controller
     {
         return view('drawing.rectangle');
     }
+
+    public function rectangleZoom()
+    {
+        return view('drawing.rectangle-zoom');
+    }
 }

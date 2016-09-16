@@ -254,6 +254,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.rectangle',
             'uses'  => 'DrawingController@rectangle',
         ]);
+
+        Route::get('rectangle-zoom', [
+            'as'    => 'drawing.rectangle-zoom',
+            'uses'  => 'DrawingController@rectangleZoom',
+        ]);
     });
 
 
