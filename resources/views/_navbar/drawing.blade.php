@@ -33,18 +33,31 @@
             </ul>
         </li>
         <li class="divider"></li>
-        <li><a href="{{ route('drawing.simple-polyline') }}">Simple polylines</a></li>
-        <li><a href="{{ route('drawing.removing-polyline') }}">Removing polylines</a></li>
-        <li><a href="{{ route('drawing.complex-polyline') }}">Complex polylines</a></li>
-        <li><a href="{{ route('drawing.deleting-vertex') }}">Deleting a vertex</a></li>
-        <li class="divider"></li>
-        <li><a href="{{ route('drawing.simple-polygon') }}">Simple polygons</a></li>
-        <li><a href="{{ route('drawing.polygon-array') }}">Polygon arrays</a></li>
-        <li><a href="{{ route('drawing.polygon-auto-completion') }}">Polygon auto completion</a></li>
-        <li><a href="{{ route('drawing.polygon-hole') }}">Polygon with hole</a></li>
-        <li class="divider"></li>
-        <li><a href="{{ route('drawing.circle') }}">Circle</a></li>
-        <li><a href="{{ route('drawing.rectangle') }}">Rectangle</a></li>
-        <li><a href="{{ route('drawing.rectangle-zoom') }}">Rectangle zoom</a></li>
+        <li class="dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Polylines</a>
+            <ul class="dropdown-menu">
+                <li><a href="{{ route('drawing.simple-polyline') }}">Simple polylines</a></li>
+                <li><a href="{{ route('drawing.removing-polyline') }}">Removing polylines</a></li>
+                <li><a href="{{ route('drawing.complex-polyline') }}">Complex polylines</a></li>
+                <li><a href="{{ route('drawing.deleting-vertex') }}">Deleting a vertex</a></li>
+            </ul>
+        </li>
+        <li class="dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Polygons</a>
+            <ul class="dropdown-menu">
+                <li><a href="{{ route('drawing.simple-polygon') }}">Simple polygons</a></li>
+                <li><a href="{{ route('drawing.polygon-array') }}">Polygon arrays</a></li>
+                <li><a href="{{ route('drawing.polygon-auto-completion') }}">Polygon auto completion</a></li>
+                <li><a href="{{ route('drawing.polygon-hole') }}">Polygon with hole</a></li>
+            </ul>
+        </li>
+        <li class="dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shapes</a>
+            <ul class="dropdown-menu">
+                <li><a href="{{ route('drawing.circle') }}">Circle</a></li>
+                <li><a href="{{ route('drawing.rectangle') }}">Rectangle</a></li>
+                <li><a href="{{ route('drawing.rectangle-zoom') }}">Rectangle zoom</a></li>
+            </ul>
+        </li>
     </ul>
 </li>
