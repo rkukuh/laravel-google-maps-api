@@ -289,6 +289,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.custom-overlay',
             'uses'  => 'DrawingController@customOverlay',
         ]);
+
+        Route::get('show-hide-overlay', [
+            'as'    => 'drawing.show-hide-overlay',
+            'uses'  => 'DrawingController@showHideOverlay',
+        ]);
     });
 
 

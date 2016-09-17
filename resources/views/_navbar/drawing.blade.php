@@ -69,6 +69,7 @@
                 <li><a href="{{ route('drawing.ground-overlay') }}">Ground overlay</a></li>
                 <li><a href="{{ route('drawing.remove-overlay') }}">Removing overlay</a></li>
                 <li><a href="{{ route('drawing.custom-overlay') }}">Custom overlay</a></li>
+                <li><a href="{{ route('drawing.show-hide-overlay') }}">Show/Hide overlay</a></li>
             </ul>
         </li>
     </ul>

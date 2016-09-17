@@ -137,4 +137,9 @@ class DrawingController extends Controller
     {
         return view('drawing.custom-overlay');
     }
+
+    public function showHideOverlay()
+    {
+        return view('drawing.show-hide-overlay');
+    }
 }
