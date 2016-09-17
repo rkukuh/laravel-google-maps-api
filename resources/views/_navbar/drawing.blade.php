@@ -57,6 +57,7 @@
                 <li><a href="{{ route('drawing.circle') }}">Circle</a></li>
                 <li><a href="{{ route('drawing.rectangle') }}">Rectangle</a></li>
                 <li><a href="{{ route('drawing.rectangle-zoom') }}">Rectangle zoom</a></li>
+                <li><a href="{{ route('drawing.editable-shape') }}">User-editable shape</a></li>
             </ul>
         </li>
     </ul>

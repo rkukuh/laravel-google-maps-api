@@ -259,6 +259,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.rectangle-zoom',
             'uses'  => 'DrawingController@rectangleZoom',
         ]);
+
+        Route::get('editable-shape', [
+            'as'    => 'drawing.editable-shape',
+            'uses'  => 'DrawingController@editableShape',
+        ]);
     });
 
 

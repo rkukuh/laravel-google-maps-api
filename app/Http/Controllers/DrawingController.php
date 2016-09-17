@@ -107,4 +107,9 @@ class DrawingController extends Controller
     {
         return view('drawing.rectangle-zoom');
     }
+
+    public function editableShape()
+    {
+        return view('drawing.editable-shape');
+    }
 }
