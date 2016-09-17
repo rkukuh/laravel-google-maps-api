@@ -210,6 +210,11 @@ Route::group(['middleware' => 'auth'], function () {
             'uses'  => 'DrawingController@arrowSymbol',
         ]);
 
+        Route::get('custom-symbol', [
+            'as'    => 'drawing.custom-symbol',
+            'uses'  => 'DrawingController@customSymbol',
+        ]);
+
         Route::get('animate-symbol', [
             'as'    => 'drawing.animate-symbol',
             'uses'  => 'DrawingController@animateSymbol',
