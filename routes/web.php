@@ -205,6 +205,11 @@ Route::group(['middleware' => 'auth'], function () {
             'uses'  => 'DrawingController@markerAnimationTimeout',
         ]);
 
+        Route::get('animate-symbol', [
+            'as'    => 'drawing.animate-symbol',
+            'uses'  => 'DrawingController@animateSymbol',
+        ]);
+
         Route::get('info-window', [
             'as'    => 'drawing.info-window',
             'uses'  => 'DrawingController@infoWindow',

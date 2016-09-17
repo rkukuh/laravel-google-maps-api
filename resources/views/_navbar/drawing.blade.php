@@ -31,6 +31,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Symbols</a>
             <ul class="dropdown-menu">
                 <li><a href="{{ route('drawing.predefined-marker') }}">Predefined markers (symbols)</a></li>
+                <li><a href="{{ route('drawing.animate-symbol') }}">Animating symbol</a></li>
             </ul>
         </li>
         <li class="divider"></li>

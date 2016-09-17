@@ -53,6 +53,11 @@ class DrawingController extends Controller
         return view('drawing.marker-animation-timeout');
     }
 
+    public function animateSymbol()
+    {
+        return view('drawing.animate-symbol');
+    }
+
     public function infoWindow()
     {
         return view('drawing.info-window');
