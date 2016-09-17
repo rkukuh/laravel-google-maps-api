@@ -23,6 +23,11 @@ class DrawingController extends Controller
         return view('drawing.remove-marker');
     }
 
+    public function predefinedMarker()
+    {
+        return view('drawing.predefined-marker');
+    }
+
     public function simpleMarkerIcon()
     {
         return view('drawing.simple-marker-icon');

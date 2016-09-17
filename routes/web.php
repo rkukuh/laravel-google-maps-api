@@ -175,6 +175,11 @@ Route::group(['middleware' => 'auth'], function () {
             'uses'  => 'DrawingController@removeMarker',
         ]);
 
+        Route::get('predefined-marker', [
+            'as'    => 'drawing.predefined-marker',
+            'uses'  => 'DrawingController@predefinedMarker',
+        ]);
+
         Route::get('simple-marker-icon', [
             'as'    => 'drawing.simple-marker-icon',
             'uses'  => 'DrawingController@simpleMarkerIcon',
