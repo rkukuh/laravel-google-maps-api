@@ -117,4 +117,9 @@ class DrawingController extends Controller
     {
         return view('drawing.editable-shape');
     }
+
+    public function shapeEvent()
+    {
+        return view('drawing.shape-event');
+    }
 }

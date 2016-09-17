@@ -269,6 +269,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.editable-shape',
             'uses'  => 'DrawingController@editableShape',
         ]);
+
+        Route::get('shape-event', [
+            'as'    => 'drawing.shape-event',
+            'uses'  => 'DrawingController@shapeEvent',
+        ]);
     });
 
 

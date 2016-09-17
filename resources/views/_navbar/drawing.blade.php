@@ -59,6 +59,7 @@
                 <li><a href="{{ route('drawing.rectangle') }}">Rectangle</a></li>
                 <li><a href="{{ route('drawing.rectangle-zoom') }}">Rectangle zoom</a></li>
                 <li><a href="{{ route('drawing.editable-shape') }}">User-editable shape</a></li>
+                <li><a href="{{ route('drawing.shape-event') }}">Rectangle (shape)'s event</a></li>
             </ul>
         </li>
     </ul>
