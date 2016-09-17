@@ -9,7 +9,6 @@
                 <li><a href="{{ route('drawing.simple-marker') }}">Simple marker</a></li>
                 <li><a href="{{ route('drawing.marker-label') }}">Marker labels</a></li>
                 <li><a href="{{ route('drawing.remove-marker') }}">Remove markers</a></li>
-                <li><a href="{{ route('drawing.predefined-marker') }}">Predefined markers</a></li>
             </ul>
         </li>
         <li class="dropdown-submenu">
@@ -25,6 +24,13 @@
             <ul class="dropdown-menu">
                 <li><a href="{{ route('drawing.marker-animation') }}">Marker animation</a></li>
                 <li><a href="{{ route('drawing.marker-animation-timeout') }}">Marker animation with setTimeout()</a></li>
+            </ul>
+        </li>
+        <li class="divider"></li>
+        <li class="dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Symbols</a>
+            <ul class="dropdown-menu">
+                <li><a href="{{ route('drawing.predefined-marker') }}">Predefined markers (symbols)</a></li>
             </ul>
         </li>
         <li class="divider"></li>
