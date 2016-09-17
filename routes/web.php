@@ -190,6 +190,11 @@ Route::group(['middleware' => 'auth'], function () {
             'uses'  => 'DrawingController@complexMarkerIcon',
         ]);
 
+        Route::get('custom-marker-icon', [
+            'as'    => 'drawing.custom-marker-icon',
+            'uses'  => 'DrawingController@customMarkerIcon',
+        ]);
+
         Route::get('marker-animation', [
             'as'    => 'drawing.marker-animation',
             'uses'  => 'DrawingController@markerAnimation',

@@ -38,6 +38,11 @@ class DrawingController extends Controller
         return view('drawing.complex-marker-icon');
     }
 
+    public function customMarkerIcon()
+    {
+        return view('drawing.custom-marker-icon');
+    }
+
     public function markerAnimation()
     {
         return view('drawing.marker-animation');

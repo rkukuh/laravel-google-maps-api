@@ -17,6 +17,7 @@
             <ul class="dropdown-menu">
                 <li><a href="{{ route('drawing.simple-marker-icon') }}">Simple marker icon</a></li>
                 <li><a href="{{ route('drawing.complex-marker-icon') }}">Complex marker icon</a></li>
+                <li><a href="{{ route('drawing.custom-marker-icon') }}">Custom marker icon</a></li>
             </ul>
         </li>
         <li class="dropdown-submenu">
