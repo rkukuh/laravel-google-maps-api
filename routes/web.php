@@ -279,6 +279,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.ground-overlay',
             'uses'  => 'DrawingController@groundOverlay',
         ]);
+
+        Route::get('remove-overlay', [
+            'as'    => 'drawing.remove-overlay',
+            'uses'  => 'DrawingController@removeOverlay',
+        ]);
     });
 
 

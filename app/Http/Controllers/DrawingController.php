@@ -127,4 +127,9 @@ class DrawingController extends Controller
     {
         return view('drawing.ground-overlay');
     }
+
+    public function removeOverlay()
+    {
+        return view('drawing.remove-overlay');
+    }
 }
