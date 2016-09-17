@@ -58,6 +58,11 @@ class DrawingController extends Controller
         return view('drawing.animate-symbol');
     }
 
+    public function arrowSymbol()
+    {
+        return view('drawing.arrow-symbol');
+    }
+
     public function infoWindow()
     {
         return view('drawing.info-window');
