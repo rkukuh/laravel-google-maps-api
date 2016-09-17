@@ -132,4 +132,9 @@ class DrawingController extends Controller
     {
         return view('drawing.remove-overlay');
     }
+
+    public function customOverlay()
+    {
+        return view('drawing.custom-overlay');
+    }
 }
