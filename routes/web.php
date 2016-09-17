@@ -274,6 +274,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'drawing.shape-event',
             'uses'  => 'DrawingController@shapeEvent',
         ]);
+
+        Route::get('ground-overlay', [
+            'as'    => 'drawing.ground-overlay',
+            'uses'  => 'DrawingController@groundOverlay',
+        ]);
     });
 
 

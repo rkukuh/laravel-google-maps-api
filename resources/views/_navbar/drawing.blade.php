@@ -62,5 +62,12 @@
                 <li><a href="{{ route('drawing.shape-event') }}">Rectangle (shape)'s event</a></li>
             </ul>
         </li>
+        <li class="divider"></li>
+        <li class="dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overlays</a>
+            <ul class="dropdown-menu">
+                <li><a href="{{ route('drawing.ground-overlay') }}">Ground overlay</a></li>
+            </ul>
+        </li>
     </ul>
 </li>

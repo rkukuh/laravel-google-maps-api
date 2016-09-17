@@ -122,4 +122,9 @@ class DrawingController extends Controller
     {
         return view('drawing.shape-event');
     }
+
+    public function groundOverlay()
+    {
+        return view('drawing.ground-overlay');
+    }
 }
