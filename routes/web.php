@@ -210,6 +210,11 @@ Route::group(['middleware' => 'auth'], function () {
             'uses'  => 'DrawingController@arrowSymbol',
         ]);
 
+        Route::get('dashed-line', [
+            'as'    => 'drawing.dashed-line',
+            'uses'  => 'DrawingController@dashedLine',
+        ]);
+
         Route::get('custom-symbol', [
             'as'    => 'drawing.custom-symbol',
             'uses'  => 'DrawingController@customSymbol',

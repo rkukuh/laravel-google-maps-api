@@ -32,6 +32,7 @@
             <ul class="dropdown-menu">
                 <li><a href="{{ route('drawing.predefined-marker') }}">Predefined markers (symbols)</a></li>
                 <li><a href="{{ route('drawing.arrow-symbol') }}">Arrow symbol</a></li>
+                <li><a href="{{ route('drawing.dashed-line') }}">Dashed line (symbol)</a></li>
                 <li><a href="{{ route('drawing.custom-symbol') }}">Custom symbol</a></li>
                 <li><a href="{{ route('drawing.animate-symbol') }}">Animating symbol</a></li>
             </ul>

@@ -63,6 +63,11 @@ class DrawingController extends Controller
         return view('drawing.arrow-symbol');
     }
 
+    public function dashedLine()
+    {
+        return view('drawing.dashed-line');
+    }
+
     public function customSymbol()
     {
         return view('drawing.custom-symbol');
