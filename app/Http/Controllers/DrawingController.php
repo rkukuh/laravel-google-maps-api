@@ -93,6 +93,11 @@ class DrawingController extends Controller
         return view('drawing.polygon-hole');
     }
 
+    public function polygonDraggable()
+    {
+        return view('drawing.polygon-draggable');
+    }
+
     public function circle()
     {
         return view('drawing.circle');

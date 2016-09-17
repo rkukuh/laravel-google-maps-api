@@ -49,6 +49,7 @@
                 <li><a href="{{ route('drawing.polygon-array') }}">Polygon arrays</a></li>
                 <li><a href="{{ route('drawing.polygon-auto-completion') }}">Polygon auto completion</a></li>
                 <li><a href="{{ route('drawing.polygon-hole') }}">Polygon with hole</a></li>
+                <li><a href="{{ route('drawing.polygon-draggable') }}">Draggable polygons</a></li>
             </ul>
         </li>
         <li class="dropdown-submenu">

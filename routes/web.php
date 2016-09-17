@@ -245,6 +245,11 @@ Route::group(['middleware' => 'auth'], function () {
             'uses'  => 'DrawingController@polygonHole',
         ]);
 
+        Route::get('polygon-draggable', [
+            'as'    => 'drawing.polygon-draggable',
+            'uses'  => 'DrawingController@polygonDraggable',
+        ]);
+
         Route::get('circle', [
             'as'    => 'drawing.circle',
             'uses'  => 'DrawingController@circle',
