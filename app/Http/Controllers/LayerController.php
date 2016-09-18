@@ -12,4 +12,9 @@ class LayerController extends Controller
     {
         return view('layer.kml');
     }
+
+    public function kmlFeature()
+    {
+        return view('layer.kml-feature');
+    }
 }

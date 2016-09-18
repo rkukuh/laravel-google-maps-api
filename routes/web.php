@@ -334,6 +334,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'layer.kml',
             'uses'  => 'LayerController@kml',
         ]);
+
+        Route::get('kml-feature', [
+            'as'    => 'layer.kml-feature',
+            'uses'  => 'LayerController@kmlFeature',
+        ]);
     });
 
 
