@@ -327,6 +327,16 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
 
+    /******************************* LAYER ************************************/
+
+    Route::group(['prefix' => 'layer'], function () {
+        Route::get('kml', [
+            'as'    => 'layer.kml',
+            'uses'  => 'LayerController@kml',
+        ]);
+    });
+
+
     /********************************* TEST ***********************************/
 
     Route::group(['prefix' => 'test'], function () {
