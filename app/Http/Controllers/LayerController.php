@@ -8,5 +8,8 @@ use App\Http\Requests;
 
 class LayerController extends Controller
 {
-    //
+    public function kml()
+    {
+        return view('layer.kml');
+    }
 }
