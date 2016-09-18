@@ -54,6 +54,7 @@
                     @include('_navbar.control')
                     @include('_navbar.style')
                     @include('_navbar.drawing')
+                    @include('_navbar.layer')
                 </ul>
 
                 <!-- Right Side Of Navbar -->
