@@ -11,5 +11,6 @@
         <li><a href="{{ route('layer.data-event') }}">Data Layer: Event</a></li>
         <li><a href="{{ route('layer.data-dynamic') }}">Data Layer: Dynamic Styling</a></li>
         <li><a href="{{ route('layer.data-polygon') }}">Data Layer: Polygon</a></li>
+        <li><a href="{{ route('layer.data-earthquake') }}">Data Layer: Earthquake</a></li>
     </ul>
 </li>

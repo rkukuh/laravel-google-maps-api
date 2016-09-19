@@ -364,6 +364,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'layer.data-polygon',
             'uses'  => 'LayerController@dataPolygon',
         ]);
+
+        Route::get('data-earthquake', [
+            'as'    => 'layer.data-earthquake',
+            'uses'  => 'LayerController@dataEarthquake',
+        ]);
     });
 
 
