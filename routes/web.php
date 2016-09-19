@@ -355,6 +355,11 @@ Route::group(['middleware' => 'auth'], function () {
             'uses'  => 'LayerController@dataEvent',
         ]);
 
+        Route::get('data-dynamic', [
+            'as'    => 'layer.data-dynamic',
+            'uses'  => 'LayerController@dataDynamic',
+        ]);
+
         Route::get('data-polygon', [
             'as'    => 'layer.data-polygon',
             'uses'  => 'LayerController@dataPolygon',

@@ -33,6 +33,11 @@ class LayerController extends Controller
         return view('layer.data-event');
     }
 
+    public function dataDynamic()
+    {
+        return view('layer.data-dynamic');
+    }
+
     public function dataPolygon()
     {
         return view('layer.data-polygon');
