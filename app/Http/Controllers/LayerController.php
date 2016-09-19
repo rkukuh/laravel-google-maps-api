@@ -23,6 +23,11 @@ class LayerController extends Controller
         return view('layer.data-simple');
     }
 
+    public function dataStyling()
+    {
+        return view('layer.data-styling');
+    }
+
     public function dataPolygon()
     {
         return view('layer.data-polygon');

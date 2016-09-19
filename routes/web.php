@@ -345,6 +345,11 @@ Route::group(['middleware' => 'auth'], function () {
             'uses'  => 'LayerController@dataSimple',
         ]);
 
+        Route::get('data-styling', [
+            'as'    => 'layer.data-styling',
+            'uses'  => 'LayerController@dataStyling',
+        ]);
+
         Route::get('data-polygon', [
             'as'    => 'layer.data-polygon',
             'uses'  => 'LayerController@dataPolygon',
