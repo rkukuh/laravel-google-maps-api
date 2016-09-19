@@ -340,6 +340,11 @@ Route::group(['middleware' => 'auth'], function () {
             'uses'  => 'LayerController@kmlFeature',
         ]);
 
+        Route::get('data-simple', [
+            'as'    => 'layer.data-simple',
+            'uses'  => 'LayerController@dataSimple',
+        ]);
+
         Route::get('data-polygon', [
             'as'    => 'layer.data-polygon',
             'uses'  => 'LayerController@dataPolygon',

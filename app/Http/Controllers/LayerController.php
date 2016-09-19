@@ -18,6 +18,11 @@ class LayerController extends Controller
         return view('layer.kml-feature');
     }
 
+    public function dataSimple()
+    {
+        return view('layer.data-simple');
+    }
+
     public function dataPolygon()
     {
         return view('layer.data-polygon');
