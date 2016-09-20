@@ -77,4 +77,9 @@ class LayerController extends Controller
     {
         return view('layer.fusion-table-styling');
     }
+
+    public function geoRss()
+    {
+        return view('layer.geo-rss');
+    }
 }

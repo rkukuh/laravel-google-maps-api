@@ -399,6 +399,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'layer.fusion-table-styling',
             'uses'  => 'LayerController@fusionTableStyling',
         ]);
+
+        Route::get('geo-rss', [
+            'as'    => 'layer.geo-rss',
+            'uses'  => 'LayerController@geoRss',
+        ]);
     });
 
 
