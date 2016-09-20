@@ -39,12 +39,35 @@
 
 @push('js')
     <script>
-        var map;
+        var map_default;
+        var map_simple;
 
         function initMap() {
-            map = new google.maps.Map(document.getElementById('map-default'), {
+            // Map Default
+            map_default = new google.maps.Map(document.getElementById('map-default'), {
                 center  : { lat: 20, lng: -160 },
                 zoom    : 2
+            });
+
+            // Map Simple
+            map_simple = new google.maps.Map(document.getElementById('map-simple'), {
+                center  : { lat: 20, lng: -160 },
+                zoom    : 2
+            });
+
+            // Add a basic style to map simple.
+            map_simple.data.setStyle(function(feature) {
+                var mag = Math.exp(parseFloat(feature.getProperty('mag'))) * 0.1;
+
+                return /** @type {google.maps.Data.StyleOptions} */({
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE,
+                        scale: mag,
+                        fillColor: '#f00',
+                        fillOpacity: 0.35,
+                        strokeWeight: 0
+                    }
+                });
             });
 
             // Get the earthquake data (JSONP format) from the USGS feed:
@@ -61,7 +84,8 @@
 
         // Defines the callback function referenced in the jsonp file.
         function eqfeed_callback(data) {
-            map.data.addGeoJson(data);
+            map_default.data.addGeoJson(data);
+            map_simple.data.addGeoJson(data);
         }
     </script>
 
