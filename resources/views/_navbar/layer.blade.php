@@ -13,10 +13,10 @@
         <li><a href="{{ route('layer.data-polygon') }}">Data Layer: Polygon</a></li>
         <li><a href="{{ route('layer.data-dragdrop-geojson') }}">Data Layer: Drag-Drop GeoJson</a></li>
         <li><a href="{{ route('layer.data-earthquake') }}">Data Layer: Earthquake</a></li>
-        <li class="divider"></li>
         <li><a href="{{ route('layer.heatmap') }}">Heatmap</a></li>
         <li class="divider"></li>
         <li><a href="{{ route('layer.fusion-table-layer') }}">Fusion Table: Layer</a></li>
+        <li><a href="{{ route('layer.fusion-table-query') }}">Fusion Table: Query</a></li>
         <li><a href="{{ route('layer.fusion-table-query') }}">Fusion Table: Query</a></li>
     </ul>
 </li>
