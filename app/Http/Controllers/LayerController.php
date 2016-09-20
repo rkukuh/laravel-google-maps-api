@@ -62,4 +62,9 @@ class LayerController extends Controller
     {
         return view('layer.fusion-table-layer');
     }
+
+    public function fusionTableQuery()
+    {
+        return view('layer.fusion-table-query');
+    }
 }

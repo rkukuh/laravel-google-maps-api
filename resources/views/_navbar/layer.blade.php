@@ -17,5 +17,6 @@
         <li><a href="{{ route('layer.heatmap') }}">Heatmap</a></li>
         <li class="divider"></li>
         <li><a href="{{ route('layer.fusion-table-layer') }}">Fusion Table: Layer</a></li>
+        <li><a href="{{ route('layer.fusion-table-query') }}">Fusion Table: Query</a></li>
     </ul>
 </li>

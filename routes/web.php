@@ -384,6 +384,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'layer.fusion-table-layer',
             'uses'  => 'LayerController@fusionTableLayer',
         ]);
+
+        Route::get('fusion-table-query', [
+            'as'    => 'layer.fusion-table-query',
+            'uses'  => 'LayerController@fusionTableQuery',
+        ]);
     });
 
 
