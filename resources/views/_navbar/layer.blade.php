@@ -15,5 +15,7 @@
         <li><a href="{{ route('layer.data-earthquake') }}">Data Layer: Earthquake</a></li>
         <li class="divider"></li>
         <li><a href="{{ route('layer.heatmap') }}">Heatmap</a></li>
+        <li class="divider"></li>
+        <li><a href="{{ route('layer.fusion-table-layer') }}">Fusion Table: Layer</a></li>
     </ul>
 </li>

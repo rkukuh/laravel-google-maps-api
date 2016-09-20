@@ -379,6 +379,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'layer.heatmap',
             'uses'  => 'LayerController@heatMap',
         ]);
+
+        Route::get('fusion-table-layer', [
+            'as'    => 'layer.fusion-table-layer',
+            'uses'  => 'LayerController@fusionTableLayer',
+        ]);
     });
 
 

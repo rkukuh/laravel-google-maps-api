@@ -57,4 +57,9 @@ class LayerController extends Controller
     {
         return view('layer.heatmap');
     }
+
+    public function fusionTableLayer()
+    {
+        return view('layer.fusion-table-layer');
+    }
 }
