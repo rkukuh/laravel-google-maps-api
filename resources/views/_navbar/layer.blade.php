@@ -18,5 +18,6 @@
         <li><a href="{{ route('layer.fusion-table-layer') }}">Fusion Table: Layer</a></li>
         <li><a href="{{ route('layer.fusion-table-query') }}">Fusion Table: Query</a></li>
         <li><a href="{{ route('layer.fusion-table-heatmap') }}">Fusion Table: Heatmap</a></li>
+        <li><a href="{{ route('layer.fusion-table-styling') }}">Fusion Table: Styling</a></li>
     </ul>
 </li>

@@ -72,4 +72,9 @@ class LayerController extends Controller
     {
         return view('layer.fusion-table-heatmap');
     }
+
+    public function fusionTableStyling()
+    {
+        return view('layer.fusion-table-styling');
+    }
 }

@@ -394,6 +394,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'layer.fusion-table-heatmap',
             'uses'  => 'LayerController@fusionTableHeatmap',
         ]);
+
+        Route::get('fusion-table-styling', [
+            'as'    => 'layer.fusion-table-styling',
+            'uses'  => 'LayerController@fusionTableStyling',
+        ]);
     });
 
 
