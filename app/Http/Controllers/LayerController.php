@@ -67,4 +67,9 @@ class LayerController extends Controller
     {
         return view('layer.fusion-table-query');
     }
+
+    public function fusionTableHeatmap()
+    {
+        return view('layer.fusion-table-heatmap');
+    }
 }
