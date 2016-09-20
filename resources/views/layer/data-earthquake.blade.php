@@ -14,6 +14,10 @@
             <li>
                 <a href="#simple" data-toggle="tab">Simple</a>
             </li>
+
+            <li>
+                <a href="#advanced" data-toggle="tab">Advanced</a>
+            </li>
         </ul>
 
         <!-- Tab panes -->
@@ -24,6 +28,9 @@
             <div class="tab-pane" id="simple">
                 <div id="map-simple"></div>
             </div>
+            <div class="tab-pane" id="advanced">
+                <div id="map-advanced"></div>
+            </div>
         </div>
     </div>
 @endsection
@@ -31,7 +38,8 @@
 @push('css')
     <style>
         #map-default,
-        #map-simple {
+        #map-simple,
+        #map-advanced {
             height: 450px;
         }
     </style>
@@ -41,6 +49,7 @@
     <script>
         var map_default;
         var map_simple;
+        var map_advanced;
 
         function initMap() {
             // Map Default
@@ -70,6 +79,71 @@
                 });
             });
 
+            // Map Advanced
+            map_advanced = new google.maps.Map(document.getElementById('map-advanced'), {
+                center  : { lat: 20, lng: -160 },
+                zoom    : 2,
+                styles  : mapStyle
+            });
+
+            map_advanced.data.setStyle(styleFeature);
+
+            function styleFeature(feature) {
+                var low     = [151, 83, 34];    // color of mag 1.0
+                var high    = [5, 69, 54];     // color of mag 6.0 and above
+                var minMag  = 1.0;
+                var maxMag  = 6.0;
+
+                // fraction represents where the value sits between the min and max
+                var fraction    = (Math.min(feature.getProperty('mag'), maxMag) - minMag) / (maxMag - minMag);
+                var color       = interpolateHsl(low, high, fraction);
+
+                return {
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE,
+                        strokeWeight: 0.5,
+                        strokeColor: '#fff',
+                        fillColor: color,
+                        fillOpacity: 2 / feature.getProperty('mag'),
+
+                        // while an exponent would technically be correct, quadratic looks nicer
+                        scale: Math.pow(feature.getProperty('mag'), 2)
+                    },
+                    zIndex: Math.floor(feature.getProperty('mag'))
+                };
+            }
+
+            function interpolateHsl(lowHsl, highHsl, fraction) {
+                var color = [];
+
+                for (var i = 0; i < 3; i++) {
+                    // Calculate color based on the fraction.
+                    color[i] = (highHsl[i] - lowHsl[i]) * fraction + lowHsl[i];
+                }
+
+                return 'hsl(' + color[0] + ',' + color[1] + '%,' + color[2] + '%)';
+            }
+
+            var mapStyle = [
+                {
+                    'featureType': 'all',
+                    'elementType': 'all',
+                    'stylers': [{'visibility': 'off'}]
+                }, {
+                    'featureType': 'landscape',
+                    'elementType': 'geometry',
+                    'stylers': [{'visibility': 'on'}, {'color': '#fcfcfc'}]
+                }, {
+                    'featureType': 'water',
+                    'elementType': 'labels',
+                    'stylers': [{'visibility': 'off'}]
+                }, {
+                    'featureType': 'water',
+                    'elementType': 'geometry',
+                    'stylers': [{'visibility': 'on'}, {'hue': '#5f94ff'}, {'lightness': 60}]
+                }
+            ];
+
             // Get the earthquake data (JSONP format) from the USGS feed:
             // http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
             var script = document.createElement('script');
@@ -86,6 +160,7 @@
         function eqfeed_callback(data) {
             map_default.data.addGeoJson(data);
             map_simple.data.addGeoJson(data);
+            map_advanced.data.addGeoJson(data);
         }
     </script>
 
