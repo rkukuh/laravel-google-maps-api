@@ -52,4 +52,9 @@ class LayerController extends Controller
     {
         return view('layer.data-earthquake');
     }
+
+    public function heatMap()
+    {
+        return view('layer.heatmap');
+    }
 }

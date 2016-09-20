@@ -14,5 +14,6 @@
         <li><a href="{{ route('layer.data-dragdrop-geojson') }}">Data Layer: Drag-Drop GeoJson</a></li>
         <li><a href="{{ route('layer.data-earthquake') }}">Data Layer: Earthquake</a></li>
         <li class="divider"></li>
+        <li><a href="{{ route('layer.heatmap') }}">Heatmap</a></li>
     </ul>
 </li>

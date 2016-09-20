@@ -374,6 +374,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'layer.data-earthquake',
             'uses'  => 'LayerController@dataEarthquake',
         ]);
+
+        Route::get('heatmap', [
+            'as'    => 'layer.heatmap',
+            'uses'  => 'LayerController@heatMap',
+        ]);
     });
 
 
