@@ -43,6 +43,11 @@ class LayerController extends Controller
         return view('layer.data-polygon');
     }
 
+    public function dataDragDropGeoJson()
+    {
+        return view('layer.data-dragdrop-geojson');
+    }
+
     public function dataEarthquake()
     {
         return view('layer.data-earthquake');

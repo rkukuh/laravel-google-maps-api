@@ -365,6 +365,11 @@ Route::group(['middleware' => 'auth'], function () {
             'uses'  => 'LayerController@dataPolygon',
         ]);
 
+        Route::get('data-dragdrop-geojson', [
+            'as'    => 'layer.data-dragdrop-geojson',
+            'uses'  => 'LayerController@dataDragDropGeoJson',
+        ]);
+
         Route::get('data-earthquake', [
             'as'    => 'layer.data-earthquake',
             'uses'  => 'LayerController@dataEarthquake',
