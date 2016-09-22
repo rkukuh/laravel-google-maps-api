@@ -414,6 +414,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'layer.transit',
             'uses'  => 'LayerController@transit',
         ]);
+
+        Route::get('bicycling', [
+            'as'    => 'layer.bicycling',
+            'uses'  => 'LayerController@bicycling',
+        ]);
     });
 
 

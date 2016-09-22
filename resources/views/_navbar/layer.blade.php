@@ -24,5 +24,6 @@
         <li class="divider"></li>
         <li><a href="{{ route('layer.traffic') }}">Traffic layer</a></li>
         <li><a href="{{ route('layer.transit') }}">Transit layer</a></li>
+        <li><a href="{{ route('layer.bicycling') }}">Bicycling layer</a></li>
     </ul>
 </li>

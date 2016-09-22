@@ -92,4 +92,9 @@ class LayerController extends Controller
     {
         return view('layer.transit');
     }
+
+    public function bicycling()
+    {
+        return view('layer.bicycling');
+    }
 }
