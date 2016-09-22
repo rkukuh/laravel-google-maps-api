@@ -83,8 +83,8 @@ class LayerController extends Controller
         return view('layer.geo-rss');
     }
 
-    public function transit()
+    public function traffic()
     {
-        return view('layer.transit');
+        return view('layer.traffic');
     }
 }

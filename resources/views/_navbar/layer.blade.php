@@ -22,6 +22,6 @@
         <li class="divider"></li>
         <li><a href="{{ route('layer.geo-rss') }}">GeoRSS</a></li>
         <li class="divider"></li>
-        <li><a href="{{ route('layer.transit') }}">Traffic layer</a></li>
+        <li><a href="{{ route('layer.traffic') }}">Traffic layer</a></li>
     </ul>
 </li>

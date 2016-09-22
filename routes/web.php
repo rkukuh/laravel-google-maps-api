@@ -405,9 +405,9 @@ Route::group(['middleware' => 'auth'], function () {
             'uses'  => 'LayerController@geoRss',
         ]);
 
-        Route::get('transit', [
-            'as'    => 'layer.transit',
-            'uses'  => 'LayerController@transit',
+        Route::get('traffic', [
+            'as'    => 'layer.traffic',
+            'uses'  => 'LayerController@traffic',
         ]);
     });
 
