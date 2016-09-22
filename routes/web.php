@@ -404,6 +404,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'layer.geo-rss',
             'uses'  => 'LayerController@geoRss',
         ]);
+
+        Route::get('transit', [
+            'as'    => 'layer.transit',
+            'uses'  => 'LayerController@transit',
+        ]);
     });
 
 
