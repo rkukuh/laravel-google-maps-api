@@ -409,6 +409,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'layer.traffic',
             'uses'  => 'LayerController@traffic',
         ]);
+
+        Route::get('transit', [
+            'as'    => 'layer.transit',
+            'uses'  => 'LayerController@transit',
+        ]);
     });
 
 

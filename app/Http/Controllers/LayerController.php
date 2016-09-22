@@ -87,4 +87,9 @@ class LayerController extends Controller
     {
         return view('layer.traffic');
     }
+
+    public function transit()
+    {
+        return view('layer.transit');
+    }
 }
