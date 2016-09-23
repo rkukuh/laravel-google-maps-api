@@ -439,6 +439,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'maptype.image',
             'uses'  => 'MapTypeController@image',
         ]);
+
+        Route::get('image-overlay', [
+            'as'    => 'maptype.image-overlay',
+            'uses'  => 'MapTypeController@imageOverlay',
+        ]);
     });
 
 
