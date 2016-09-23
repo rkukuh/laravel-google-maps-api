@@ -444,6 +444,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'maptype.image-overlay',
             'uses'  => 'MapTypeController@imageOverlay',
         ]);
+
+        Route::get('45-degree', [
+            'as'    => 'maptype.45-degree',
+            'uses'  => 'MapTypeController@degree45',
+        ]);
     });
 
 

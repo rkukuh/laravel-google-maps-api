@@ -27,4 +27,9 @@ class MapTypeController extends Controller
     {
         return view('maptype.image-overlay');
     }
+
+    public function degree45()
+    {
+        return view('maptype.45-degree');
+    }
 }
