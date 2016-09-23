@@ -32,4 +32,9 @@ class MapTypeController extends Controller
     {
         return view('maptype.45-degree');
     }
+
+    public function degree45rotating()
+    {
+        return view('maptype.45-degree-rotating');
+    }
 }

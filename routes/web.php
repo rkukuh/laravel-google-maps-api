@@ -449,6 +449,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'maptype.45-degree',
             'uses'  => 'MapTypeController@degree45',
         ]);
+
+        Route::get('rotating-45-degree', [
+            'as'    => 'maptype.rotating-45-degree',
+            'uses'  => 'MapTypeController@degree45rotating',
+        ]);
     });
 
 
