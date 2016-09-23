@@ -422,6 +422,16 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
 
+    /******************************* MAP TYPE *********************************/
+
+    Route::group(['prefix' => 'maptype'], function () {
+        Route::get('basic', [
+            'as'    => 'maptype.basic',
+            'uses'  => 'MapTypeController@basic',
+        ]);
+    });
+
+
     /********************************* TEST ***********************************/
 
     Route::group(['prefix' => 'test'], function () {
