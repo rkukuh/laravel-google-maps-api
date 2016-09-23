@@ -12,4 +12,9 @@ class ServiceController extends Controller
     {
         return view('service.geocoding');
     }
+
+    public function geocodingReverse()
+    {
+        return view('service.geocoding-reverse');
+    }
 }
