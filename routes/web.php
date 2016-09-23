@@ -457,6 +457,16 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
 
+    /******************************* SERVICE **********************************/
+
+    Route::group(['prefix' => 'service'], function () {
+        Route::get('geocoding', [
+            'as'    => 'service.geocoding',
+            'uses'  => 'ServiceController@geocoding',
+        ]);
+    });
+
+
     /********************************* TEST ***********************************/
 
     Route::group(['prefix' => 'test'], function () {
