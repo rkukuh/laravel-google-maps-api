@@ -469,6 +469,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'service.geocoding-reverse',
             'uses'  => 'ServiceController@geocodingReverse',
         ]);
+
+        Route::get('geocoding-reverse-placeid', [
+            'as'    => 'service.geocoding-reverse-placeid',
+            'uses'  => 'ServiceController@geocodingReversePlaceId',
+        ]);
     });
 
 
