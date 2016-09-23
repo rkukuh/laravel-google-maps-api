@@ -17,4 +17,9 @@ class MapTypeController extends Controller
     {
         return view('maptype.overlay');
     }
+
+    public function image()
+    {
+        return view('maptype.image');
+    }
 }

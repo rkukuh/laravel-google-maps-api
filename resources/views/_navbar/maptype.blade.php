@@ -5,5 +5,6 @@
     <ul class="dropdown-menu">
         <li><a href="{{ route('maptype.basic') }}">Basic map type</a></li>
         <li><a href="{{ route('maptype.overlay') }}">Overlay map type</a></li>
+        <li><a href="{{ route('maptype.image') }}">Image map type</a></li>
     </ul>
 </li>
