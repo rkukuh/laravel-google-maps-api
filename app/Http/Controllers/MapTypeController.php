@@ -12,4 +12,9 @@ class MapTypeController extends Controller
     {
         return view('maptype.basic');
     }
+
+    public function overlay()
+    {
+        return view('maptype.overlay');
+    }
 }

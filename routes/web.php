@@ -429,6 +429,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'maptype.basic',
             'uses'  => 'MapTypeController@basic',
         ]);
+
+        Route::get('overlay', [
+            'as'    => 'maptype.overlay',
+            'uses'  => 'MapTypeController@overlay',
+        ]);
     });
 
 
