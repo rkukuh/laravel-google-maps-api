@@ -479,6 +479,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'service.geocoding-component-restriction',
             'uses'  => 'ServiceController@geocodingComponentRestrion',
         ]);
+
+        Route::get('region-biasing-es', [
+            'as'    => 'service.region-biasing-es',
+            'uses'  => 'ServiceController@regionBiasingEs',
+        ]);
     });
 
 

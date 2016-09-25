@@ -27,4 +27,9 @@ class ServiceController extends Controller
     {
         return view('service.geocoding-component-restriction');
     }
+
+    public function regionBiasingEs()
+    {
+        return view('service.region-biasing-es');
+    }
 }
