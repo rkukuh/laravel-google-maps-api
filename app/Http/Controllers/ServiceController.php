@@ -22,4 +22,9 @@ class ServiceController extends Controller
     {
         return view('service.geocoding-reverse-placeid');
     }
+
+    public function geocodingComponentRestrion()
+    {
+        return view('service.geocoding-component-restriction');
+    }
 }

@@ -474,6 +474,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'service.geocoding-reverse-placeid',
             'uses'  => 'ServiceController@geocodingReversePlaceId',
         ]);
+
+        Route::get('geocoding-component-restriction', [
+            'as'    => 'service.geocoding-component-restriction',
+            'uses'  => 'ServiceController@geocodingComponentRestrion',
+        ]);
     });
 
 
