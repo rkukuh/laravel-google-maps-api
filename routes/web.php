@@ -489,6 +489,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'service.region-biasing-us',
             'uses'  => 'ServiceController@regionBiasingUs',
         ]);
+
+        Route::get('direction', [
+            'as'    => 'service.direction',
+            'uses'  => 'ServiceController@direction',
+        ]);
     });
 
 

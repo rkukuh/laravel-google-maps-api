@@ -37,4 +37,9 @@ class ServiceController extends Controller
     {
         return view('service.region-biasing-us');
     }
+
+    public function direction()
+    {
+        return view('service.direction');
+    }
 }
