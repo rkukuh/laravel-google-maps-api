@@ -12,5 +12,6 @@
         <li><a href="{{ route('service.region-biasing-us') }}">Region code biasing (US)</a></li>
         <li class="divider"></li>
         <li><a href="{{ route('service.direction') }}">Direction</a></li>
+        <li><a href="{{ route('service.direction-panel') }}">Direction with setPanel()</a></li>
     </ul>
 </li>

@@ -42,4 +42,9 @@ class ServiceController extends Controller
     {
         return view('service.direction');
     }
+
+    public function directionPanel()
+    {
+        return view('service.direction-panel');
+    }
 }
