@@ -32,4 +32,9 @@ class ServiceController extends Controller
     {
         return view('service.region-biasing-es');
     }
+
+    public function regionBiasingUs()
+    {
+        return view('service.region-biasing-us');
+    }
 }
