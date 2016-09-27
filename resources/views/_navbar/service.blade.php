@@ -13,5 +13,6 @@
         <li class="divider"></li>
         <li><a href="{{ route('service.direction') }}">Direction</a></li>
         <li><a href="{{ route('service.direction-panel') }}">Direction with setPanel()</a></li>
+        <li><a href="{{ route('service.direction-complex') }}">Direction (complex)</a></li>
     </ul>
 </li>
