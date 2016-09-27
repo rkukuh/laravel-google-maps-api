@@ -499,6 +499,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'service.direction-panel',
             'uses'  => 'ServiceController@directionPanel',
         ]);
+
+        Route::get('direction-complex', [
+            'as'    => 'service.direction-complex',
+            'uses'  => 'ServiceController@directionComplex',
+        ]);
     });
 
 
