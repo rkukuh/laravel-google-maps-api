@@ -504,6 +504,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'service.direction-complex',
             'uses'  => 'ServiceController@directionComplex',
         ]);
+
+        Route::get('travel-mode', [
+            'as'    => 'service.travel-mode',
+            'uses'  => 'ServiceController@travelMode',
+        ]);
     });
 
 
