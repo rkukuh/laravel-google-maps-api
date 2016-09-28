@@ -52,4 +52,9 @@ class ServiceController extends Controller
     {
         return view('service.direction-complex');
     }
+
+    public function travelMode()
+    {
+        return view('service.travel-mode');
+    }
 }
