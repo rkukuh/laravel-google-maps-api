@@ -57,4 +57,9 @@ class ServiceController extends Controller
     {
         return view('service.travel-mode');
     }
+
+    public function waypoint()
+    {
+        return view('service.waypoint');
+    }
 }
