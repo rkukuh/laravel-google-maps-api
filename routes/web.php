@@ -509,6 +509,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'service.travel-mode',
             'uses'  => 'ServiceController@travelMode',
         ]);
+
+        Route::get('waypoint', [
+            'as'    => 'service.waypoint',
+            'uses'  => 'ServiceController@waypoint',
+        ]);
     });
 
 
