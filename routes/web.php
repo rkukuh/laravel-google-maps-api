@@ -514,6 +514,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'service.waypoint',
             'uses'  => 'ServiceController@waypoint',
         ]);
+
+        Route::get('direction-draggable', [
+            'as'    => 'service.direction-draggable',
+            'uses'  => 'ServiceController@directionDraggable',
+        ]);
     });
 
 
