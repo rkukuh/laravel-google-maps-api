@@ -16,5 +16,6 @@
         <li><a href="{{ route('service.direction-complex') }}">Direction (complex)</a></li>
         <li><a href="{{ route('service.travel-mode') }}">Travel Mode</a></li>
         <li><a href="{{ route('service.waypoint') }}">Waypoint</a></li>
+        <li><a href="{{ route('service.direction-draggable') }}">Draggable direction</a></li>
     </ul>
 </li>
