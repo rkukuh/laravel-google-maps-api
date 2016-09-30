@@ -62,4 +62,9 @@ class ServiceController extends Controller
     {
         return view('service.waypoint');
     }
+
+    public function directionDraggable()
+    {
+        return view('service.direction-draggable');
+    }
 }
