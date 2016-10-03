@@ -59,12 +59,20 @@
             font-family: 'Roboto','sans-serif';
             line-height: 30px;
             padding-left: 10px;
+            background: #fff;
+            font-size: 14px;
+            box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+            display: none;
         }
 
         #right-panel {
             font-family: 'Roboto','sans-serif';
             line-height: 30px;
             padding-left: 10px;
+            height: 500px;
+            float: right;
+            width: 390px;
+            overflow: scroll;
         }
 
         #right-panel select, #right-panel input {
@@ -79,25 +87,8 @@
             font-size: 12px;
         }
 
-        #right-panel {
-            height: 500px;
-            float: right;
-            width: 390px;
-            overflow: scroll;
-        }
-
         #map {
             margin-right: 400px;
-        }
-
-        #floating-panel {
-            background: #fff;
-            padding: 5px;
-            font-size: 14px;
-            font-family: Arial;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
-            display: none;
         }
 
         @media print {
