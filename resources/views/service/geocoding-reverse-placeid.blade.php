@@ -30,9 +30,6 @@
             font-family: 'Roboto','sans-serif';
             line-height: 30px;
             padding-left: 10px;
-        }
-
-        #floating-panel {
             width: 440px;
         }
 
