@@ -24,6 +24,10 @@
             font-family: 'Roboto','sans-serif';
             line-height: 30px;
             padding-left: 10px;
+            float: right;
+            width: 34%;
+            height: 500px;
+            overflow: scroll
         }
 
         #right-panel select, #right-panel input {
@@ -38,12 +42,6 @@
             font-size: 12px;
         }
 
-        #right-panel {
-            float: right;
-            width: 34%;
-            height: 500px;
-            overflow: scroll
-        }
         .panel {
             height: 100%;
             overflow: auto;
