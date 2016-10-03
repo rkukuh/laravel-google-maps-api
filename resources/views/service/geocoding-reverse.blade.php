@@ -20,7 +20,6 @@
         #floating-panel {
             position: absolute;
             top: 10px;
-            left: 35%;
             z-index: 5;
             background-color: #fff;
             padding: 5px;
@@ -29,18 +28,9 @@
             font-family: 'Roboto','sans-serif';
             line-height: 30px;
             padding-left: 10px;
-        }
-
-        #floating-panel {
-            position: absolute;
-            top: 5px;
             left: 50%;
             margin-left: -180px;
             width: 350px;
-            z-index: 5;
-            background-color: #fff;
-            padding: 5px;
-            border: 1px solid #999;
         }
 
         #latlng {
