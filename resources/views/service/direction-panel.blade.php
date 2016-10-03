@@ -80,10 +80,10 @@
         }
 
         #right-panel {
-            height: 100%;
+            height: 500px;
             float: right;
             width: 390px;
-            overflow: auto;
+            overflow: scroll;
         }
 
         #map {
