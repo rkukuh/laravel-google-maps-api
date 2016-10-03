@@ -41,7 +41,8 @@
         #right-panel {
             float: right;
             width: 34%;
-            height: 100%;
+            height: 500px;
+            overflow: scroll
         }
         .panel {
             height: 100%;
