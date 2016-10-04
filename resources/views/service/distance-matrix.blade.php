@@ -15,7 +15,7 @@
             var destinationB = {lat: 50.087, lng: 14.421};
         </div>
 
-        <div>
+        <div style="margin-top: 20px;">
             <strong>Results</strong>
         </div>
 
@@ -34,7 +34,9 @@
         #right-panel {
             font-family: 'Roboto','sans-serif';
             line-height: 30px;
-            padding-left: 10px;
+            padding-left: 20px;
+            float: right;
+            width: 45%;
         }
 
         #right-panel select, #right-panel input {
@@ -47,16 +49,6 @@
 
         #right-panel i {
             font-size: 12px;
-        }
-
-        #right-panel {
-            float: right;
-            width: 45%;
-            padding-left: 2%;
-        }
-
-        #output {
-            font-size: 11px;
         }
     </style>
 @endpush
