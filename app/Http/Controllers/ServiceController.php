@@ -72,4 +72,9 @@ class ServiceController extends Controller
     {
         return view('service.distance-matrix');
     }
+
+    public function elevation()
+    {
+        return view('service.elevation');
+    }
 }
