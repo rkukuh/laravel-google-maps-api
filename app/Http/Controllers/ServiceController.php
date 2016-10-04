@@ -67,4 +67,9 @@ class ServiceController extends Controller
     {
         return view('service.direction-draggable');
     }
+
+    public function distanceMatrix()
+    {
+        return view('service.distance-matrix');
+    }
 }
