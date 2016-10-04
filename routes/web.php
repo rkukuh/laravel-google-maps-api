@@ -519,6 +519,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'service.direction-draggable',
             'uses'  => 'ServiceController@directionDraggable',
         ]);
+
+        Route::get('distance-matrix', [
+            'as'    => 'service.distance-matrix',
+            'uses'  => 'ServiceController@distanceMatrix',
+        ]);
     });
 
 
