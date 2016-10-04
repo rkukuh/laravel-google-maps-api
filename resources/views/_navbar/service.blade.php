@@ -17,5 +17,7 @@
         <li><a href="{{ route('service.travel-mode') }}">Travel Mode</a></li>
         <li><a href="{{ route('service.waypoint') }}">Waypoints</a></li>
         <li><a href="{{ route('service.direction-draggable') }}">Draggable direction</a></li>
+        <li class="divider"></li>
+        <li><a href="{{ route('service.distance-matrix') }}">Distance Matrix</a></li>
     </ul>
 </li>
