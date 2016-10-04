@@ -524,6 +524,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'service.distance-matrix',
             'uses'  => 'ServiceController@distanceMatrix',
         ]);
+
+        Route::get('elevation', [
+            'as'    => 'service.elevation',
+            'uses'  => 'ServiceController@elevation',
+        ]);
     });
 
 
