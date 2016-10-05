@@ -77,4 +77,9 @@ class ServiceController extends Controller
     {
         return view('service.elevation');
     }
+
+    public function elevationPath()
+    {
+        return view('service.elevation-path');
+    }
 }
