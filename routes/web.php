@@ -534,6 +534,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'service.elevation-path',
             'uses'  => 'ServiceController@elevationPath',
         ]);
+
+        Route::get('streetview', [
+            'as'    => 'service.streetview',
+            'uses'  => 'ServiceController@streetview',
+        ]);
     });
 
 
