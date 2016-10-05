@@ -82,4 +82,9 @@ class ServiceController extends Controller
     {
         return view('service.elevation-path');
     }
+
+    public function streetview()
+    {
+        return view('service.streetview');
+    }
 }
