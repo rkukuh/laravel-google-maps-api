@@ -529,6 +529,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'service.elevation',
             'uses'  => 'ServiceController@elevation',
         ]);
+
+        Route::get('elevation-path', [
+            'as'    => 'service.elevation-path',
+            'uses'  => 'ServiceController@elevationPath',
+        ]);
     });
 
 
