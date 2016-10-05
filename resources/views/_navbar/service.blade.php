@@ -23,5 +23,6 @@
         <li><a href="{{ route('service.elevation-path') }}">Showing elevation along path</a></li>
         <li class="divider"></li>
         <li><a href="{{ route('service.streetview') }}">Street View container</a></li>
+        <li><a href="{{ route('service.streetview-sidebyside') }}">Street View side-by-side</a></li>
     </ul>
 </li>
