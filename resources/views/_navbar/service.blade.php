@@ -20,5 +20,6 @@
         <li class="divider"></li>
         <li><a href="{{ route('service.distance-matrix') }}">Distance Matrix</a></li>
         <li><a href="{{ route('service.elevation') }}">Elevation service</a></li>
+        <li><a href="{{ route('service.elevation-path') }}">Showing elevation along path</a></li>
     </ul>
 </li>
