@@ -544,6 +544,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'service.streetview-sidebyside',
             'uses'  => 'ServiceController@streetviewSideBySide',
         ]);
+
+        Route::get('streetview-overlay', [
+            'as'    => 'service.streetview-overlay',
+            'uses'  => 'ServiceController@streetviewOverlay',
+        ]);
     });
 
 
