@@ -30,14 +30,17 @@
                 <li><a href="{{ route('service.elevation-path') }}">Showing elevation along path</a></li>
             </ul>
         </li>
-
+        <li class="dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Street View</a>
+            <ul class="dropdown-menu">
+                <li><a href="{{ route('service.streetview') }}">Street View container</a></li>
+                <li><a href="{{ route('service.streetview-sidebyside') }}">Street View side-by-side</a></li>
+                <li><a href="{{ route('service.streetview-overlay') }}">Overlays within street view</a></li>
+            </ul>
+        </li>
         <li class="divider"></li>
         <li><a href="{{ route('service.distance-matrix') }}">Distance Matrix</a></li>
         <li><a href="{{ route('service.region-biasing-es') }}">Region code biasing (ES)</a></li>
         <li><a href="{{ route('service.region-biasing-us') }}">Region code biasing (US)</a></li>
-        <li class="divider"></li>
-        <li><a href="{{ route('service.streetview') }}">Street View container</a></li>
-        <li><a href="{{ route('service.streetview-sidebyside') }}">Street View side-by-side</a></li>
-        <li><a href="{{ route('service.streetview-overlay') }}">Overlays within street view</a></li>
     </ul>
 </li>
