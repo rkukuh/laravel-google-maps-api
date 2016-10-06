@@ -92,4 +92,9 @@ class ServiceController extends Controller
     {
         return view('service.streetview-sidebyside');
     }
+
+    public function streetviewOverlay()
+    {
+        return view('service.streetview-overlay');
+    }
 }
