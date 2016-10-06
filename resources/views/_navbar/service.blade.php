@@ -36,6 +36,7 @@
                 <li><a href="{{ route('service.streetview') }}">Street View container</a></li>
                 <li><a href="{{ route('service.streetview-sidebyside') }}">Street View side-by-side</a></li>
                 <li><a href="{{ route('service.streetview-overlay') }}">Overlays within street view</a></li>
+                <li><a href="{{ route('service.streetview-event') }}">Street View events</a></li>
             </ul>
         </li>
         <li class="divider"></li>
