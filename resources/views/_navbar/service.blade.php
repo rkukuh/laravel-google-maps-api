@@ -39,8 +39,13 @@
             </ul>
         </li>
         <li class="divider"></li>
-        <li><a href="{{ route('service.distance-matrix') }}">Distance Matrix</a></li>
-        <li><a href="{{ route('service.region-biasing-es') }}">Region code biasing (ES)</a></li>
-        <li><a href="{{ route('service.region-biasing-us') }}">Region code biasing (US)</a></li>
+        <li class="dropdown-submenu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Others</a>
+            <ul class="dropdown-menu">
+                <li><a href="{{ route('service.distance-matrix') }}">Distance Matrix</a></li>
+                <li><a href="{{ route('service.region-biasing-es') }}">Region code biasing (ES)</a></li>
+                <li><a href="{{ route('service.region-biasing-us') }}">Region code biasing (US)</a></li>
+            </ul>
+        </li>
     </ul>
 </li>
