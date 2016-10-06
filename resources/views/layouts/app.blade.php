@@ -49,7 +49,6 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     @include('_navbar.basic')
-                    @include('_navbar.signedin')
                     @include('_navbar.event')
                     @include('_navbar.control')
                     @include('_navbar.style')
@@ -84,11 +83,15 @@
                                     </form>
                                 </li>
                                 <li class="divider"></li>
+                                <li class="dropdown-header">Playground</li>
                                 <li>
                                     <a href="{{ url('test/proximity-search') }}">
                                         Proximity Search
                                     </a>
                                 </li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Deprecated</li>
+                                @include('_navbar.signedin')
                             </ul>
                         </li>
                     @endif
