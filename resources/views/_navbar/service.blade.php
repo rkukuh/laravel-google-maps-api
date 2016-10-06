@@ -38,6 +38,7 @@
                 <li><a href="{{ route('service.streetview-overlay') }}">Overlays within street view</a></li>
                 <li><a href="{{ route('service.streetview-event') }}">Street View events</a></li>
                 <li><a href="{{ route('service.streetview-control') }}">Street View controls</a></li>
+                <li><a href="{{ route('service.streetview-data') }}">Accessing street view data</a></li>
             </ul>
         </li>
         <li class="divider"></li>
