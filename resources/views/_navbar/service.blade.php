@@ -40,6 +40,7 @@
                 <li><a href="{{ route('service.streetview-control') }}">Street View controls</a></li>
                 <li><a href="{{ route('service.streetview-data') }}">Accessing street view data</a></li>
                 <li><a href="{{ route('service.streetview-panorama') }}">Custom panorama</a></li>
+                <li><a href="{{ route('service.streetview-panorama-tiles') }}">Custom panorama tiles</a></li>
             </ul>
         </li>
         <li class="divider"></li>
