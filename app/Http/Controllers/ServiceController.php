@@ -117,4 +117,9 @@ class ServiceController extends Controller
     {
         return view('service.streetview-panorama');
     }
+
+    public function streetviewPanoramaTiles()
+    {
+        return view('service.streetview-panorama-tiles');
+    }
 }
