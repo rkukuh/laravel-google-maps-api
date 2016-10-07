@@ -574,6 +574,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'service.streetview-panorama-tiles',
             'uses'  => 'ServiceController@streetviewPanoramaTiles',
         ]);
+
+        Route::get('maximum-zoom', [
+            'as'    => 'service.maximum-zoom',
+            'uses'  => 'ServiceController@maximumZoom',
+        ]);
     });
 
 
