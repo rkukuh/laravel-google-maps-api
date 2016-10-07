@@ -122,4 +122,9 @@ class ServiceController extends Controller
     {
         return view('service.streetview-panorama-tiles');
     }
+
+    public function maximumZoom()
+    {
+        return view('service.maximum-zoom');
+    }
 }
