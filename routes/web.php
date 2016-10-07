@@ -564,6 +564,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'service.streetview-data',
             'uses'  => 'ServiceController@streetviewData',
         ]);
+
+        Route::get('streetview-panorama', [
+            'as'    => 'service.streetview-panorama',
+            'uses'  => 'ServiceController@streetviewPanorama',
+        ]);
     });
 
 
