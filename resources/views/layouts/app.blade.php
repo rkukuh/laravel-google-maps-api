@@ -56,6 +56,7 @@
                     @include('_navbar.layer')
                     @include('_navbar.maptype')
                     @include('_navbar.service')
+                    @include('_navbar.library')
                 </ul>
 
                 <!-- Right Side Of Navbar -->
