@@ -50,6 +50,7 @@
                 <li><a href="{{ route('service.distance-matrix') }}">Distance Matrix</a></li>
                 <li><a href="{{ route('service.region-biasing-es') }}">Region code biasing (ES)</a></li>
                 <li><a href="{{ route('service.region-biasing-us') }}">Region code biasing (US)</a></li>
+                <li><a href="{{ route('service.maximum-zoom') }}">Maximum zoom imagery</a></li>
             </ul>
         </li>
     </ul>
