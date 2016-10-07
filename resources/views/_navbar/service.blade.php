@@ -39,6 +39,7 @@
                 <li><a href="{{ route('service.streetview-event') }}">Street View events</a></li>
                 <li><a href="{{ route('service.streetview-control') }}">Street View controls</a></li>
                 <li><a href="{{ route('service.streetview-data') }}">Accessing street view data</a></li>
+                <li><a href="{{ route('service.streetview-panorama') }}">Custom panorama</a></li>
             </ul>
         </li>
         <li class="divider"></li>
