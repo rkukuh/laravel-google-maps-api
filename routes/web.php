@@ -582,6 +582,16 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
 
+    /******************************* LIBRARY **********************************/
+
+    Route::group(['prefix' => 'library'], function () {
+        Route::get('drawing', [
+            'as'    => 'library.drawing',
+            'uses'  => 'LibraryController@drawing',
+        ]);
+    });
+
+
     /********************************* TEST ***********************************/
 
     Route::group(['prefix' => 'test'], function () {
