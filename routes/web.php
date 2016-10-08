@@ -589,6 +589,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'library.drawing',
             'uses'  => 'LibraryController@drawing',
         ]);
+
+        Route::get('geometry-navigation', [
+            'as'    => 'library.geometry-navigation',
+            'uses'  => 'LibraryController@geometryNavigation',
+        ]);
     });
 
 
