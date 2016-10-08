@@ -594,6 +594,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'library.geometry-navigation',
             'uses'  => 'LibraryController@geometryNavigation',
         ]);
+
+        Route::get('geometry-encoding', [
+            'as'    => 'library.geometry-encoding',
+            'uses'  => 'LibraryController@geometryEncoding',
+        ]);
     });
 
 
