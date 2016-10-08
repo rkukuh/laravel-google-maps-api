@@ -17,4 +17,9 @@ class LibraryController extends Controller
     {
         return view('library.geometry-navigation');
     }
+
+    public function geometryEncoding()
+    {
+        return view('library.geometry-encoding');
+    }
 }
