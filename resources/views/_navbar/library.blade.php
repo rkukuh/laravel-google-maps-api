@@ -4,5 +4,6 @@
     </a>
     <ul class="dropdown-menu">
         <li><a href="{{ route('library.drawing') }}">Drawing tool</a></li>
+        <li><a href="{{ route('library.geometry-navigation') }}">Geometri: Navigation function</a></li>
     </ul>
 </li>
