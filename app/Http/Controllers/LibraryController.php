@@ -12,4 +12,9 @@ class LibraryController extends Controller
     {
         return view('library.drawing');
     }
+
+    public function geometryNavigation()
+    {
+        return view('library.geometry-navigation');
+    }
 }
