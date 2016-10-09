@@ -6,5 +6,6 @@
         <li><a href="{{ route('library.drawing') }}">Drawing tool</a></li>
         <li><a href="{{ route('library.geometry-navigation') }}">Geometry: Navigation function</a></li>
         <li><a href="{{ route('library.geometry-encoding') }}">Geometry: Encoding method</a></li>
+        <li><a href="{{ route('library.geometry-location') }}">Geometry: containsLocation()</a></li>
     </ul>
 </li>
