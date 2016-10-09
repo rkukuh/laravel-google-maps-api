@@ -22,4 +22,9 @@ class LibraryController extends Controller
     {
         return view('library.geometry-encoding');
     }
+
+    public function geometryContainsLocation()
+    {
+        return view('library.geometry-location');
+    }
 }
