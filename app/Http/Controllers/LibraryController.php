@@ -30,6 +30,6 @@ class LibraryController extends Controller
 
     public function placeSearch()
     {
-        return view('places-search');
+        return view('library.places-search');
     }
 }
