@@ -27,4 +27,9 @@ class LibraryController extends Controller
     {
         return view('library.geometry-location');
     }
+
+    public function placeSearch()
+    {
+        return view('places-search');
+    }
 }
