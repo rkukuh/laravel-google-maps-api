@@ -604,6 +604,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'library.geometry-location',
             'uses'  => 'LibraryController@geometryContainsLocation',
         ]);
+
+        Route::get('places-search', [
+            'as'    => 'library.places-search',
+            'uses'  => 'LibraryController@placeSearch',
+        ]);
     });
 
 
