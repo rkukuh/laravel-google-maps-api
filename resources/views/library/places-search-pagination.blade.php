@@ -20,8 +20,13 @@
 
         #right-panel {
             font-family: 'Roboto','sans-serif';
-            line-height: 30px;
-            padding-left: 10px;
+            position: absolute;
+            right: 65px;
+            top: 60%;
+            margin-top: -195px;
+            padding: 5px;
+            border: 1px solid red;
+            background: #fff;
         }
 
         #right-panel select, #right-panel input {
@@ -34,20 +39,6 @@
 
         #right-panel i {
             font-size: 12px;
-        }
-
-        #right-panel {
-            font-family: Arial, Helvetica, sans-serif;
-            position: absolute;
-            right: 5px;
-            top: 60%;
-            margin-top: -195px;
-            height: 330px;
-            width: 200px;
-            padding: 5px;
-            z-index: 5;
-            border: 1px solid #999;
-            background: #fff;
         }
 
         #right-panel h2 {
