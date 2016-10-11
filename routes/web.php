@@ -614,6 +614,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'library.places-detail',
             'uses'  => 'LibraryController@placeDetail',
         ]);
+
+        Route::get('places-search-pagination', [
+            'as'    => 'library.places-search-pagination',
+            'uses'  => 'LibraryController@placeSearchPagination',
+        ]);
     });
 
 
