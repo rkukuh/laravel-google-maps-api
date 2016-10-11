@@ -37,4 +37,9 @@ class LibraryController extends Controller
     {
         return view('library.places-detail');
     }
+
+    public function placeSearchPagination()
+    {
+        return view('library.places-search-pagination');
+    }
 }
