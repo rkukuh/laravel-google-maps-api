@@ -32,4 +32,9 @@ class LibraryController extends Controller
     {
         return view('library.places-search');
     }
+
+    public function placeDetail()
+    {
+        return view('library.places-detail');
+    }
 }
