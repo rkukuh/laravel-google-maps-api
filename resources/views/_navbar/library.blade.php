@@ -10,6 +10,6 @@
         <li><a href="{{ route('library.geometry-location') }}">Geometry: containsLocation()</a></li>
         <li class="divider"></li>
         <li><a href="{{ route('library.places-search') }}">Places: Search</a></li>
-        <li><a href="{{ route('library.places-detail') }}">Placee detail</a></li>
+        <li><a href="{{ route('library.places-detail') }}">Place detail</a></li>
     </ul>
 </li>
