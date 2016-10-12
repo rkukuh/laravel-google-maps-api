@@ -42,4 +42,9 @@ class LibraryController extends Controller
     {
         return view('library.places-search-pagination');
     }
+
+    public function placeRadarSearch()
+    {
+        return view('library.places-radar-search');
+    }
 }
