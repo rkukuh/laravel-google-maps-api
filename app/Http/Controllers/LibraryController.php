@@ -47,4 +47,9 @@ class LibraryController extends Controller
     {
         return view('library.places-radar-search');
     }
+
+    public function placeAutocomplete()
+    {
+        return view('library.places-autocomplete');
+    }
 }
