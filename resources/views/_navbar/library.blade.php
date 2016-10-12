@@ -13,6 +13,6 @@
         <li><a href="{{ route('library.places-detail') }}">Place detail</a></li>
         <li><a href="{{ route('library.places-search-pagination') }}">Place search pagination</a></li>
         <li><a href="{{ route('library.places-radar-search') }}">Search 200 places with Radar Search</a></li>
-        <li><a href="{{ route('library.places-autocomplete') }}">Place: Autocomplete</a></li>
+        <li><a href="{{ route('library.places-autocomplete') }}">Places: Autocomplete</a></li>
     </ul>
 </li>
