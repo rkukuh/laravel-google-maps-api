@@ -629,6 +629,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'library.places-autocomplete',
             'uses'  => 'LibraryController@placeAutocomplete',
         ]);
+
+        Route::get('places-autocomplete-address', [
+            'as'    => 'library.places-autocomplete-address',
+            'uses'  => 'LibraryController@placeAutocompleteAddress',
+        ]);
     });
 
 
