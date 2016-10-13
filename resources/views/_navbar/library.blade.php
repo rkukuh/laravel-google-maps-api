@@ -14,5 +14,6 @@
         <li><a href="{{ route('library.places-search-pagination') }}">Place search pagination</a></li>
         <li><a href="{{ route('library.places-radar-search') }}">Search 200 places with Radar Search</a></li>
         <li><a href="{{ route('library.places-autocomplete') }}">Places: Autocomplete</a></li>
+        <li><a href="{{ route('library.places-autocomplete-address') }}">Autocomplete address form</a></li>
     </ul>
 </li>
