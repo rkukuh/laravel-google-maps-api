@@ -5,82 +5,53 @@
 @section('content')
     <h1>Autocomplete address form</h1>
 
-    <div id="locationField">
-        <input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text"></input>
+    <div class="col-md-6" id="form_address">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input type="text" class="form-control" id="autocomplete"
+                        onFocus="geolocate()" placeholder="Enter full address here...">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="street_number" class="col-md-3 control-label">Street Address</label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="street_number">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" id="route">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="locality" class="col-md-3 control-label">City</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" id="locality">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="administrative_area_level_1" class="col-md-3 control-label">State</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="administrative_area_level_1">
+                </div>
+
+                <label for="postal_code" class="col-md-1 control-label">Zip</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="postal_code">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="country" class="col-md-3 control-label">Country</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" id="country">
+                </div>
+            </div>
+        </form>
     </div>
-
-    <table id="address">
-        <tr>
-            <td class="label">Street address</td>
-            <td class="slimField"><input class="field" id="street_number" disabled="true"></input></td>
-            <td class="wideField" colspan="2"><input class="field" id="route" disabled="true"></input></td>
-        </tr>
-        <tr>
-            <td class="label">City</td>
-            <td class="wideField" colspan="3"><input class="field" id="locality" disabled="true"></input></td>
-        </tr>
-        <tr>
-            <td class="label">State</td>
-            <td class="slimField"><input class="field"id="administrative_area_level_1" disabled="true"></input></td>
-
-            <td class="label">Zip code</td>
-            <td class="wideField"><input class="field" id="postal_code" disabled="true"></input></td>
-        </tr>
-        <tr>
-            <td class="label">Country</td>
-            <td class="wideField" colspan="3"><input class="field" id="country" disabled="true"></input></td>
-        </tr>
-    </table>
 @endsection
 
 @push('css')
     <style>
-        #locationField, #controls {
-            position: relative;
-            width: 480px;
-        }
-
-        #autocomplete {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 99%;
-        }
-
-        .label {
-            text-align: right;
-            font-weight: bold;
-            width: 100px;
-            color: #303030;
-        }
-
-        #address {
-            border: 1px solid #000090;
-            background-color: #f0f0ff;
-            width: 480px;
-            padding-right: 2px;
-        }
-
-        #address td {
-            font-size: 10pt;
-        }
-
-        .field {
-            width: 99%;
-        }
-
-        .slimField {
-            width: 80px;
-        }
-
-        .wideField {
-            width: 200px;
-        }
-
-        #locationField {
-            height: 20px;
-            margin-bottom: 2px;
-        }
+        #form_address { margin-top: 40px;}
     </style>
 @endpush
 
