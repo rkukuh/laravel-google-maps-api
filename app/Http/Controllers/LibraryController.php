@@ -52,4 +52,9 @@ class LibraryController extends Controller
     {
         return view('library.places-autocomplete');
     }
+
+    public function placeAutocompleteAddress()
+    {
+        return view('library.places-autocomplete-address');
+    }
 }
