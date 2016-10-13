@@ -35,44 +35,52 @@
 
 @push('css')
     <style>
-    #locationField, #controls {
-    position: relative;
-    width: 480px;
-  }
-  #autocomplete {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 99%;
-  }
-  .label {
-    text-align: right;
-    font-weight: bold;
-    width: 100px;
-    color: #303030;
-  }
-  #address {
-    border: 1px solid #000090;
-    background-color: #f0f0ff;
-    width: 480px;
-    padding-right: 2px;
-  }
-  #address td {
-    font-size: 10pt;
-  }
-  .field {
-    width: 99%;
-  }
-  .slimField {
-    width: 80px;
-  }
-  .wideField {
-    width: 200px;
-  }
-  #locationField {
-    height: 20px;
-    margin-bottom: 2px;
-  }
+        #locationField, #controls {
+            position: relative;
+            width: 480px;
+        }
+
+        #autocomplete {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 99%;
+        }
+
+        .label {
+            text-align: right;
+            font-weight: bold;
+            width: 100px;
+            color: #303030;
+        }
+
+        #address {
+            border: 1px solid #000090;
+            background-color: #f0f0ff;
+            width: 480px;
+            padding-right: 2px;
+        }
+
+        #address td {
+            font-size: 10pt;
+        }
+
+        .field {
+            width: 99%;
+        }
+
+        .slimField {
+            width: 80px;
+        }
+
+        .wideField {
+            width: 200px;
+        }
+
+        #locationField {
+            height: 20px;
+            margin-bottom: 2px;
+        }
     </style>
 @endpush
 
@@ -145,7 +153,7 @@
                         center: geolocation,
                         radius: position.coords.accuracy
                     });
-                    
+
                     autocomplete.setBounds(circle.getBounds());
                 });
             }
