@@ -10,11 +10,11 @@
     </div>
 
     <div id="locationField">
-        <input id="autocomplete" placeholder="Enter a city" type="text" />
+        <input type="text" class="form-control" id="autocomplete" placeholder="Enter a city">
     </div>
 
     <div id="controls">
-        <select id="country">
+        <select id="country" class="form-control">
             <option value="all">All</option>
             <option value="au">Australia</option>
             <option value="br">Brazil</option>
@@ -35,9 +35,9 @@
     <div id="map"></div>
 
     <div id="listing">
-      <table id="resultsTable">
-        <tbody id="results"></tbody>
-      </table>
+        <table id="resultsTable">
+            <tbody id="results"></tbody>
+        </table>
     </div>
 
     <div style="display: none">
@@ -78,11 +78,10 @@
 
         #listing {
             position: absolute;
-            width: 200px;
             height: 470px;
             overflow: auto;
-            left: 442px;
-            top: 0px;
+            right: 0;
+            top: 60px;
             cursor: pointer;
             overflow-x: hidden;
         }
@@ -101,17 +100,15 @@
             position: absolute;
             width: 190px;
             height: 25px;
-            left: 108px;
-            top: 0px;
+            left: 120px;
             z-index: 5;
             background-color: #fff;
         }
 
         #controls {
             position: absolute;
-            left: 300px;
+            left: 320px;
             width: 140px;
-            top: 0px;
             z-index: 5;
             background-color: #fff;
         }
