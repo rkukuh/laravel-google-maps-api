@@ -634,6 +634,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'library.places-autocomplete-address',
             'uses'  => 'LibraryController@placeAutocompleteAddress',
         ]);
+
+        Route::get('places-autocomplete-hotel', [
+            'as'    => 'library.places-autocomplete-hotel',
+            'uses'  => 'LibraryController@placeAutocompleteHotel',
+        ]);
     });
 
 
