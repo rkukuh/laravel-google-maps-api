@@ -654,6 +654,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'library.places-id-finder',
             'uses'  => 'LibraryController@placeIdFinder',
         ]);
+
+        Route::get('places-direction', [
+            'as'    => 'library.places-direction',
+            'uses'  => 'LibraryController@placeDirection',
+        ]);
     });
 
 
