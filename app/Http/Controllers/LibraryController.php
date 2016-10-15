@@ -72,4 +72,9 @@ class LibraryController extends Controller
     {
         return view('library.places-autocomplete-prediction');
     }
+
+    public function placeIdFinder()
+    {
+        return view('library.places-id-finder');
+    }
 }
