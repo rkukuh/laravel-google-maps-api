@@ -16,5 +16,6 @@
         <li><a href="{{ route('library.places-autocomplete') }}">Places: Autocomplete</a></li>
         <li><a href="{{ route('library.places-autocomplete-address') }}">Autocomplete address form</a></li>
         <li><a href="{{ route('library.places-autocomplete-hotel') }}">Autocomplete hotel search</a></li>
+        <li><a href="{{ route('library.places-search-box') }}">Places search box</a></li>
     </ul>
 </li>
