@@ -19,5 +19,6 @@
         <li><a href="{{ route('library.places-search-box') }}">Places search box</a></li>
         <li><a href="{{ route('library.places-autocomplete-prediction') }}">Retrieving autocomplete predictions</a></li>
         <li><a href="{{ route('library.places-id-finder') }}">PlaceID finder</a></li>
+        <li><a href="{{ route('library.places-direction') }}">Places: Direction</a></li>
     </ul>
 </li>
