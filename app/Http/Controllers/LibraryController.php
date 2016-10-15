@@ -77,4 +77,9 @@ class LibraryController extends Controller
     {
         return view('library.places-id-finder');
     }
+
+    public function placeDirection()
+    {
+        return view('library.places-direction');
+    }
 }
