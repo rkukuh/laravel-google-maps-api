@@ -67,4 +67,9 @@ class LibraryController extends Controller
     {
         return view('library.places-search-box');
     }
+
+    public function placeAutocompletePrediction()
+    {
+        return view('library.places-autocomplete-prediction');
+    }
 }
