@@ -7,21 +7,19 @@
 
     <div id="map"></div>
 
-    <input id="origin-input" class="controls" type="text"
-        placeholder="Enter an origin location">
+    <input id="origin-input" class="controls" type="text" placeholder="Enter an origin location">
 
-    <input id="destination-input" class="controls" type="text"
-        placeholder="Enter a destination location">
+    <input id="destination-input" class="controls" type="text" placeholder="Enter a destination location">
 
     <div id="mode-selector" class="controls">
-      <input type="radio" name="type" id="changemode-walking" checked="checked">
-      <label for="changemode-walking">Walking</label>
+        <input type="radio" name="type" id="changemode-walking" checked="checked">
+        <label for="changemode-walking">Walking</label>
 
-      <input type="radio" name="type" id="changemode-transit">
-      <label for="changemode-transit">Transit</label>
+        <input type="radio" name="type" id="changemode-transit">
+        <label for="changemode-transit">Transit</label>
 
-      <input type="radio" name="type" id="changemode-driving">
-      <label for="changemode-driving">Driving</label>
+        <input type="radio" name="type" id="changemode-driving">
+        <label for="changemode-driving">Driving</label>
     </div>
 @endsection
 
@@ -175,6 +173,6 @@
         }
       }
     </script>
-    
+
     <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ $server_key }}&libraries=places&callback=initMap"></script>
 @endpush
