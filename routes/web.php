@@ -649,6 +649,11 @@ Route::group(['middleware' => 'auth'], function () {
             'as'    => 'library.places-autocomplete-prediction',
             'uses'  => 'LibraryController@placeAutocompletePrediction',
         ]);
+
+        Route::get('places-id-finder', [
+            'as'    => 'library.places-id-finder',
+            'uses'  => 'LibraryController@placeIdFinder',
+        ]);
     });
 
 
