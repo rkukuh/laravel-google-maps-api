@@ -62,4 +62,9 @@ class LibraryController extends Controller
     {
         return view('library.places-autocomplete-hotel');
     }
+
+    public function placeSearchBox()
+    {
+        return view('library.places-search-box');
+    }
 }
