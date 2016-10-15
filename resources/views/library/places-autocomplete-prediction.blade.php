@@ -5,19 +5,49 @@
 @section('content')
     <h1>Retrieving autocomplete predictions</h1>
 
-    <div id="map"></div>
+    <div id="right-panel">
+        <p>Query suggestions for 'pizza near Sur':</p>
+        <ul id="results"></ul>
+    </div>
 @endsection
 
 @push('css')
     <style>
-        #map { height: 500px; }
+        /**/
     </style>
 @endpush
 
 @push('js')
     <script>
-        //
+        // This example retrieves autocomplete predictions programmatically from the
+        // autocomplete service, and displays them as an HTML list.
+
+        // This example requires the Places library. Include the libraries=places
+        // parameter when you first load the API. For example:
+        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+        function initService() {
+            var displaySuggestions = function(predictions, status) {
+                if (status != google.maps.places.PlacesServiceStatus.OK) {
+                    alert(status);
+                    return;
+                }
+
+                predictions.forEach(function(prediction) {
+                    var li = document.createElement('li');
+
+                    li.appendChild(document.createTextNode(prediction.description));
+
+                    document.getElementById('results').appendChild(li);
+                });
+            };
+
+            var service = new google.maps.places.AutocompleteService();
+
+            service.getQueryPredictions({ input: 'pizza near Sur' }, displaySuggestions);
+        }
     </script>
 
-    //
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key={{ $browser_key }}&libraries=places&callback=initService"></script>
 @endpush
