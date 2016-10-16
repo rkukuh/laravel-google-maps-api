@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="{{ asset('css/multi-level-navbar-menu.css') }}">
     <link rel="stylesheet" href="{{ asset('css/mystyle.css') }}">
 
+    <link rel="stylesheet" href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css">
+    <link rel="stylesheet" href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css">
+
     <link rel="shortcut icon" href="{{{ asset('images/favicon.ico') }}}">
 
     @stack('css')
@@ -113,6 +116,14 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js"></script>
+
+    <script>
+        SyntaxHighlighter.all()
+    </script>
 
     @stack('js')
 </body>
