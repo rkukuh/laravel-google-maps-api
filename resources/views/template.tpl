@@ -18,6 +18,19 @@
     <script>
         //
     </script>
-
-    //
 @endpush
+
+@section('source-code-javascript')
+
+    &lt;script&gt;
+        //
+    &lt;/script&gt;
+@endsection
+
+@section('source-code-css')
+    #map { height: 500px; }
+@endsection
+
+@section('source-code-html')
+    <div id="map"></div>
+@endsection
