@@ -17,10 +17,10 @@
 @push('js')
     <script>
         function initMap() {
-            var originalMapCenter = new google.maps.LatLng(-25.363882, 131.044922);
+            var originalMapCenter = new google.maps.LatLng(-7.265757, 112.734146);
 
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 4,
+                zoom: 6,
                 center: originalMapCenter
             });
 
@@ -32,7 +32,7 @@
             infowindow.open(map);
 
             map.addListener('zoom_changed', function() {
-                infowindow.setContent('Zoom: ' + map.getZoom());
+                infowindow.setContent('Zoom level: <b>' + map.getZoom() + '</b>');
             });
         }
     </script>
