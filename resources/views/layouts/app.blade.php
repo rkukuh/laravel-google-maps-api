@@ -112,7 +112,47 @@
         </div>
     </div>
 
-    @yield('source-code-modal')
+    <!-- Modal dialog  -->
+    <div class="modal fade" id="source_code">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Source Code</h4>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="active"><a href="#javascript" data-toggle="tab">Javascript</a></li>
+                            <li><a href="#css" data-toggle="tab">CSS</a></li>
+                            <li><a href="#html" data-toggle="tab">HTML</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="javascript">
+                                <pre class="brush: js;">
+                                    @yield('source-code-javascript')
+                                </pre>
+                            </div>
+                            <div class="tab-pane" id="css">
+                                <pre class="brush: css;">
+                                    @yield('source-code-css')
+                                </pre>
+                            </div>
+                            <div class="tab-pane" id="html">
+                                <pre class="brush: xml;">
+                                    @yield('source-code-html')
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
