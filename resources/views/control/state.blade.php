@@ -49,7 +49,6 @@
         * @param {!google.maps.Map} map
         * @param {?google.maps.LatLng} center
         */
-
         function CenterControl(controlDiv, map, center) {
             // We set up a variable for this since we're adding event listeners later.
             var control = this;
@@ -131,8 +130,7 @@
             });
 
             // Create the DIV to hold the control and call the CenterControl()
-            // constructor
-            // passing in this DIV.
+            // constructor passing in this DIV.
             var centerControlDiv    = document.createElement('div');
             var centerControl       = new CenterControl(centerControlDiv, map, chicago);
 
