@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ asset('css/multi-level-navbar-menu.css') }}">
     <link rel="stylesheet" href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css">
     <link rel="stylesheet" href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeRDark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="{{ asset('css/mystyle.css') }}">
 
     <link rel="shortcut icon" href="{{{ asset('images/favicon.ico') }}}">
@@ -112,7 +113,8 @@
     </div>
 
     <!-- Modal dialog  -->
-    <div class="modal fade" id="source_code">
+    <div class="modal animated" id="source_code"
+            data-animate-css-show="rollIn" data-animate-css-hide="zoomOut">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -159,6 +161,7 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    <script src="{{ asset('js/bootstrap-modal-animate-css.js') }}"></script>
 
     <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js"></script>
     <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js"></script>
