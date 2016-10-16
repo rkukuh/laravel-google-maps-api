@@ -17,7 +17,7 @@
 
 @section('source-code-modal')
     <div class="modal fade" id="source_code">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Source Code</h4>
@@ -31,7 +31,16 @@
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="javascript">
-                                javascript
+                                <pre class="brush: js;">
+                                    var map;
+
+                                    function initMap() {
+                                        map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+                                            center: {lat: -34.397, lng: 150.644},
+                                            zoom: 8
+                                        });
+                                    }
+                                </pre>
                             </div>
                             <div class="tab-pane" id="css">
                                 css
