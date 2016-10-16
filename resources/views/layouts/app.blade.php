@@ -109,6 +109,8 @@
         </div>
     </div>
 
+    @yield('source-code-modal')
+
     <!-- Scripts -->
     <script src="/js/app.js"></script>
 
