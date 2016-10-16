@@ -59,5 +59,5 @@
 @endsection
 
 @section('source-code-html')
-    <!-- nothing special  -->
+    <div id="map"></div>
 @endsection
