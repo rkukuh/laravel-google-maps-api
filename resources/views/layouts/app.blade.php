@@ -114,7 +114,7 @@
 
     <!-- Modal dialog  -->
     <div class="modal animated" id="source_code"
-            data-animate-css-show="rollIn" data-animate-css-hide="zoomOut">
+            data-animate-css-show="rollIn" data-animate-css-hide="rollOut">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
