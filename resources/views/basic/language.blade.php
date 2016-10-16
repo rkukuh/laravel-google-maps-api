@@ -3,7 +3,7 @@
 @section('title', 'Localizing the Map')
 
 @section('content')
-    <h1>Localizing the Map</h1>
+    <h1>Localizing the Map <small>(ID to JA)</small></h1>
 
     <div id="map"></div>
 @endsection
