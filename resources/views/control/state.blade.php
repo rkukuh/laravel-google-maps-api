@@ -39,11 +39,10 @@
 @push('js')
     <script>
         var map;
-        var chicago = {lat: 41.85, lng: -87.65};
+        var surabaya = {lat: -7.265757, lng: 112.734146};
 
         /**
-        * The CenterControl adds a control to the map that recenters the map on
-        * Chicago.
+        * The CenterControl adds a control to the map that recenters the map on surabaya.
         * @constructor
         * @param {!Element} controlDiv
         * @param {!google.maps.Map} map
@@ -126,13 +125,13 @@
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 12,
-                center: chicago
+                center: surabaya
             });
 
             // Create the DIV to hold the control and call the CenterControl()
             // constructor passing in this DIV.
             var centerControlDiv    = document.createElement('div');
-            var centerControl       = new CenterControl(centerControlDiv, map, chicago);
+            var centerControl       = new CenterControl(centerControlDiv, map, surabaya);
 
             centerControlDiv.index = 1;
             centerControlDiv.style['padding-top'] = '10px';
