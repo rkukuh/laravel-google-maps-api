@@ -18,15 +18,15 @@
     <script>
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 4,
-                center: {lat: -25.363882, lng: 131.044922 }
+                center: {lat: -7.265757, lng: 112.734146},
+                zoom: 10
             });
 
             var bounds = {
-                north: -25.363882,
-                south: -31.203405,
-                east: 131.044922,
-                west: 125.244141
+                north: -7.232384,
+                south: -7.232043,
+                east: 112.809871,
+                west: 112.667393
             };
 
             // Display the area between the location southWest and northEast.
