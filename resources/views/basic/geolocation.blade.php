@@ -3,7 +3,11 @@
 @section('title', 'Geolocation')
 
 @section('content')
-    <h1>Geolocation</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Geolocation
+    </h1>
 
     <div id="map"></div>
 @endsection
@@ -24,7 +28,7 @@
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
                 center: {lat: -34.397, lng: 150.644},
-                zoom: 6
+                zoom: 10
             });
 
             var infoWindow = new google.maps.InfoWindow({map: map});
@@ -53,9 +57,12 @@
 
         function handleLocationError(browserHasGeolocation, infoWindow, pos) {
             infoWindow.setPosition(pos);
-            infoWindow.setContent(browserHasGeolocation ?
-            'Error: The Geolocation service failed.' :
-            'Error: Your browser doesn\'t support geolocation.');
+
+            infoWindow.setContent(
+                browserHasGeolocation ?
+                    'Error: The Geolocation service failed.' :
+                    'Error: Your browser doesn\'t support geolocation.'
+            );
         }
     </script>
 
