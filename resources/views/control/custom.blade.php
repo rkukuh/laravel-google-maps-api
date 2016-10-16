@@ -17,7 +17,7 @@
 @push('js')
     <script>
         var map;
-        var chicago = {lat: 41.85, lng: -87.65};
+        var surabaya = {lat: -7.265757, lng: 112.734146};
 
         /**
         * The CenterControl adds a control to the map that recenters the map on
@@ -53,14 +53,14 @@
 
             // Setup the click event listeners: simply set the map to Chicago.
             controlUI.addEventListener('click', function() {
-                map.setCenter(chicago);
+                map.setCenter(surabaya);
             });
         }
 
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 12,
-                center: chicago
+                zoom: 10,
+                center: surabaya
             });
 
             // Create the DIV to hold the control and call the CenterControl()
@@ -69,7 +69,7 @@
             var centerControl = new CenterControl(centerControlDiv, map);
 
             centerControlDiv.index = 1;
-            
+
             map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
         }
     </script>
