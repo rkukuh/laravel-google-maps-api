@@ -3,7 +3,11 @@
 @section('title', 'Synchronous Loading')
 
 @section('content')
-    <h1>Synchronous Loading</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Synchronous Loading
+    </h1>
 
     <div id="map"></div>
 @endsection
@@ -24,3 +28,24 @@
         });
     </script>
 @endpush
+
+@section('source-code-javascript')
+
+    &lt;script src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&quot;&gt;&lt;/script&gt;
+
+
+    &lt;script&gt;
+        var map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+            center: {lat: -7.265757, lng: 112.734146},
+            zoom: 10
+        });
+    &lt;/script&gt;
+@endsection
+
+@section('source-code-css')
+    #map { height: 500px; }
+@endsection
+
+@section('source-code-html')
+    <div id="map"></div>
+@endsection
