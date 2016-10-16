@@ -212,8 +212,8 @@
 
             // Create the DIV to hold the control and call the CenterControl()
             // constructor passing in this DIV.
-            var centerControlDiv    = document.createElement(&quot;div&quot;);
-            var centerControl       = new CenterControl(centerControlDiv, map, surabaya);
+            var centerControlDiv = document.createElement(&quot;div&quot;);
+            var centerControl = new CenterControl(centerControlDiv, map, surabaya);
 
             centerControlDiv.index = 1;
             centerControlDiv.style[&quot;padding-top&quot;] = &quot;10px&quot;;
