@@ -3,7 +3,11 @@
 @section('title', 'Simple click event')
 
 @section('content')
-    <h1>Simple click event</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Simple click event
+    </h1>
 
     <div id="map"></div>
 @endsection
@@ -17,10 +21,10 @@
 @push('js')
     <script>
         function initMap() {
-            var myLatlng = {lat: -25.363, lng: 131.044};
+            var myLatlng = {lat: -7.265757, lng: 112.734146};
 
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 4,
+                zoom: 8,
                 center: myLatlng
             });
 
