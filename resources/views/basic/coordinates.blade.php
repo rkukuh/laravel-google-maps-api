@@ -3,7 +3,11 @@
 @section('title', 'Showing pixel and tile coordinates')
 
 @section('content')
-    <h1>Showing pixel and tile coordinates</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Showing pixel and tile coordinates
+    </h1>
 
     <div id="map"></div>
 @endsection
@@ -17,21 +21,21 @@
 @push('js')
     <script>
         function initMap() {
-            var chicago = new google.maps.LatLng(41.850, -87.650);
+            var surabaya = new google.maps.LatLng(-7.265757, 112.734146);
 
             var map = new google.maps.Map(document.getElementById('map'), {
-                center: chicago,
-                zoom: 3
+                center: surabaya,
+                zoom: 9
             });
 
             var coordInfoWindow = new google.maps.InfoWindow();
 
-            coordInfoWindow.setContent(createInfoWindowContent(chicago, map.getZoom()));
-            coordInfoWindow.setPosition(chicago);
+            coordInfoWindow.setContent(createInfoWindowContent(surabaya, map.getZoom()));
+            coordInfoWindow.setPosition(surabaya);
             coordInfoWindow.open(map);
 
             map.addListener('zoom_changed', function() {
-                coordInfoWindow.setContent(createInfoWindowContent(chicago, map.getZoom()));
+                coordInfoWindow.setContent(createInfoWindowContent(surabaya, map.getZoom()));
                 coordInfoWindow.open(map);
             });
         }
@@ -54,7 +58,7 @@
             );
 
             return [
-                'Chicago, IL',
+                '<b>Surabaya, East Java, Indonesia</b>',
                 'LatLng: ' + latLng,
                 'Zoom level: ' + zoom,
                 'World Coordinate: ' + worldCoordinate,
@@ -81,3 +85,16 @@
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ $browser_key }}&callback=initMap"></script>
 @endpush
+
+@section('source-code-javascript')
+
+    //
+@endsection
+
+@section('source-code-css')
+    #map { height: 500px; }
+@endsection
+
+@section('source-code-html')
+    <div id="map"></div>
+@endsection
