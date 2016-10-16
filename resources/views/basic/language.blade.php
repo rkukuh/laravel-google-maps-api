@@ -34,9 +34,8 @@
 @section('source-code-javascript')
 
     &lt;script&gt;
-        // This example displays a map with the language and region set
-        // to Japan. These settings are specified in the HTML script element
-        // when loading the Google Maps JavaScript API.
+        // This example displays a map with the language and region set to Japan.
+        // These settings are specified in the HTML script element when loading the Google Maps API.
         // Setting the language shows the map in the language of your choice.
         // Setting the region biases the geocoding results to that region.
 
@@ -47,6 +46,7 @@
             });
         }
     &lt;/script&gt;
+
 
     &lt;script async defer
         src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;callback=initMap&amp;language=ja&amp;region=JP&quot;&gt;&lt;/script&gt;
