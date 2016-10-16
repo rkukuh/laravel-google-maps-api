@@ -26,27 +26,25 @@
                     <div>
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="active"><a href="#javascript" data-toggle="tab">Javascript</a></li>
-                            <li><a href="#css" data-toggle="tab">CSS</a></li>
-                            <li><a href="#html" data-toggle="tab">HTML</a></li>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="javascript">
                                 <pre class="brush: js;">
-                                    var map;
+&lt;script&gt;
+    var map;
 
-                                    function initMap() {
-                                        map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
-                                            center: {lat: -34.397, lng: 150.644},
-                                            zoom: 8
-                                        });
-                                    }
+    function initMap() {
+        map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8
+        });
+    }
+&lt;/script&gt;
+
+
+&lt;script async defer
+    src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;callback=initMap&quot;&gt;&lt;/script&gt;
                                 </pre>
-                            </div>
-                            <div class="tab-pane" id="css">
-                                css
-                            </div>
-                            <div class="tab-pane" id="html">
-                                html
                             </div>
                         </div>
                     </div>
