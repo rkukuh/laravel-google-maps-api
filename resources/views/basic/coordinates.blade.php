@@ -58,7 +58,7 @@
             );
 
             return [
-                '<b>Surabaya, East Java, Indonesia</b>',
+                '<h3>Surabaya, East Java, Indonesia</h3>',
                 'LatLng: ' + latLng,
                 'Zoom level: ' + zoom,
                 'World Coordinate: ' + worldCoordinate,
@@ -123,7 +123,7 @@
             );
 
             return [
-                &apos;&lt;b&gt;Surabaya, East Java, Indonesia&lt;/b&gt;&apos;,
+                &apos;&lt;h3&gt;Surabaya, East Java, Indonesia&lt;/h3&gt;&apos;,
                 &apos;LatLng: &apos; + latLng,
                 &apos;Zoom level: &apos; + zoom,
                 &apos;World Coordinate: &apos; + worldCoordinate,
