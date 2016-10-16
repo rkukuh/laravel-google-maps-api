@@ -284,6 +284,7 @@
 @endsection
 
 @section('source-code-css')
+
     #map { height: 500px; }
 
     #coords {
@@ -295,6 +296,7 @@
 @endsection
 
 @section('source-code-html')
+
     <div id="map"></div>
     <div id="coords"></div>
 @endsection
