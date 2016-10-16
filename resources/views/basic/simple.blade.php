@@ -15,62 +15,6 @@
     <div id="map"></div>
 @endsection
 
-@section('source-code-modal')
-    <div class="modal fade" id="source_code">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Source Code</h4>
-                </div>
-                <div class="modal-body">
-                    <div>
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li class="active"><a href="#javascript" data-toggle="tab">Javascript</a></li>
-                            <li><a href="#css" data-toggle="tab">CSS</a></li>
-                            <li><a href="#html" data-toggle="tab">HTML</a></li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="javascript">
-                                <pre class="brush: js;">
-                                    &lt;script&gt;
-                                        var map;
-
-                                        function initMap() {
-                                            map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
-                                                center: {lat: -34.397, lng: 150.644},
-                                                zoom: 8
-                                            });
-                                        }
-                                    &lt;/script&gt;
-
-
-                                    &lt;script async defer
-                                        src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;callback=initMap&quot;&gt;&lt;/script&gt;
-                                </pre>
-                            </div>
-                            <div class="tab-pane" id="css">
-                                <pre class="brush: css;">
-                                    #map { height: 500px; }
-                                </pre>
-                            </div>
-                            <div class="tab-pane" id="html">
-                                <pre class="brush: xml;">
-                                    <!-- nothing special  -->
-                                </pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">
-                        Close
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-@endsection
-
 @push('css')
     <style>
         #map { height: 500px; }
@@ -91,3 +35,29 @@
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ $browser_key }}&callback=initMap"></script>
 @endpush
+
+@section('source-code-javascript')
+
+    &lt;script&gt;
+        var map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+            });
+        }
+    &lt;/script&gt;
+
+
+    &lt;script async defer
+        src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;callback=initMap&quot;&gt;&lt;/script&gt;
+@endsection
+
+@section('source-code-css')
+    #map { height: 500px; }
+@endsection
+
+@section('source-code-html')
+    <!-- nothing special  -->
+@endsection
