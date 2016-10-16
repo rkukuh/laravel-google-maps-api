@@ -167,6 +167,14 @@
     <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js"></script>
 
     <script>
+        $('.navbar .dropdown').hover(function() {
+                $(this).find('.dropdown-menu').first().stop(true, true).slideDown(150);
+            },
+            function() {
+                $(this).find('.dropdown-menu').first().stop(true, true).slideUp(105)
+            }
+        );
+
         SyntaxHighlighter.all()
     </script>
 
