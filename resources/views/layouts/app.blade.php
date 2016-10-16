@@ -120,6 +120,7 @@
     <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js"></script>
     <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js"></script>
     <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushCss.js"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js"></script>
     <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js"></script>
 
     <script>
