@@ -62,6 +62,7 @@
         }
 
         var gallPetersMapType;
+        
         function initGallPeters() {
             var GALL_PETERS_RANGE_X = 800;
             var GALL_PETERS_RANGE_Y = 512;
