@@ -3,7 +3,11 @@
 @section('title', 'Adding state to controls')
 
 @section('content')
-    <h1>Adding state to controls</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Adding state to controls
+    </h1>
 
     <div id="map"></div>
 @endsection
@@ -89,6 +93,7 @@
             // to the current center of the control.
             goCenterUI.addEventListener('click', function() {
                 var currentCenter = control.getCenter();
+
                 map.setCenter(currentCenter);
             });
 
@@ -96,6 +101,7 @@
             // the control to the current center of the map.
             setCenterUI.addEventListener('click', function() {
                 var newCenter = map.getCenter();
+
                 control.setCenter(newCenter);
             });
         }
@@ -138,7 +144,7 @@
 
             map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
         }
-        </script>
+    </script>
 
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ $browser_key }}&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ $browser_key }}&callback=initMap"></script>
 @endpush
