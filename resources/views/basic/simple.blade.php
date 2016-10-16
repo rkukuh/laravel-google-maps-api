@@ -4,10 +4,7 @@
 
 @section('content')
     <h1>
-        <button type="button" class="btn btn-primary"
-                data-toggle="modal" data-target="#source_code">
-            <strong>&lt;/&gt;</strong>
-        </button>
+        @include('_shared.button-source-code')
 
         Simple Map
     </h1>
