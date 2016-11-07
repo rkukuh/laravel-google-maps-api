@@ -58,7 +58,7 @@
             map.mapTypes.set('styled_map', styledMapType);
             map.setMapTypeId('styled_map');
         }
-        </script>
+    </script>
 
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ $browser_key }}&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ $browser_key }}&callback=initMap"></script>
 @endpush
