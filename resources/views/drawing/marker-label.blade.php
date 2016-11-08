@@ -26,18 +26,18 @@
         var labelIndex  = 0;
 
         function initialize() {
-            var bangalore = {lat: -7.265757, lng: 112.734146};
+            var surabaya = {lat: -7.265757, lng: 112.734146};
 
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom    : 12,
-                center  : bangalore
+                center  : surabaya
             });
 
             google.maps.event.addListener(map, 'click', function(event) {
                 addMarker(event.latLng, map);
             });
 
-            addMarker(bangalore, map);
+            addMarker(surabaya, map);
         }
 
         function addMarker(location, map) {
@@ -63,11 +63,11 @@
         var labelIndex  = 0;
 
         function initialize() {
-            var bangalore = {lat: -7.265757, lng: 112.734146};
+            var surabaya = {lat: -7.265757, lng: 112.734146};
 
             var map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
                 zoom    : 12,
-                center  : bangalore
+                center  : surabaya
             });
 
             // This event listener calls addMarker() when the map is clicked.
@@ -76,7 +76,7 @@
             });
 
             // Add a marker at the center of the map.
-            addMarker(bangalore, map);
+            addMarker(surabaya, map);
         }
 
         // Adds a marker to the map.
