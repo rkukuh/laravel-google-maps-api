@@ -47,11 +47,11 @@
         var markers = [];
 
         function initMap() {
-            var haightAshbury = {lat: 37.769, lng: -122.446};
+            var surabaya = {lat: -7.265757, lng: 112.734146};
 
             map = new google.maps.Map(document.getElementById('map'), {
                 zoom        : 12,
-                center      : haightAshbury,
+                center      : surabaya,
                 mapTypeId   : 'terrain'
             });
 
@@ -61,7 +61,7 @@
             });
 
             // Adds a marker at the center of the map.
-            addMarker(haightAshbury);
+            addMarker(surabaya);
         }
 
         // Adds a marker to the map and push to the array.
