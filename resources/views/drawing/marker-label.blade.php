@@ -3,7 +3,11 @@
 @section('title', 'Marker labels')
 
 @section('content')
-    <h1>Marker labels</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Marker labels
+    </h1>
 
     <div id="map"></div>
 @endsection
@@ -24,7 +28,7 @@
         var labelIndex  = 0;
 
         function initialize() {
-            var bangalore = { lat: 12.97, lng: 77.59 };
+            var bangalore = {lat: -7.265757, lng: 112.734146};
 
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom    : 12,
