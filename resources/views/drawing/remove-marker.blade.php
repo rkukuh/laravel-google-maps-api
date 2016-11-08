@@ -3,7 +3,11 @@
 @section('title', 'Remove markers')
 
 @section('content')
-    <h1>Remove markers</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Remove markers
+    </h1>
 
     <div id="floating-panel">
         <input type="button" onclick="clearMarkers();" value="Hide Markers">
