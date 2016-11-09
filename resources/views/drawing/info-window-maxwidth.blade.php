@@ -3,7 +3,11 @@
 @section('title', 'Info window with maxWidth')
 
 @section('content')
-    <h1>Info window with maxWidth</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Info window with maxWidth
+    </h1>
 
     <div id="map"></div>
 @endsection
