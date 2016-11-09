@@ -3,7 +3,11 @@
 @section('title', 'Animating symbol')
 
 @section('content')
-    <h1>Animating symbol</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Animating symbol
+    </h1>
 
     <div id="map"></div>
 @endsection
