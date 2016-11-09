@@ -3,7 +3,11 @@
 @section('title', 'Marker animation')
 
 @section('content')
-    <h1>Marker animation</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Marker animation
+    </h1>
 
     <div id="map"></div>
 @endsection
