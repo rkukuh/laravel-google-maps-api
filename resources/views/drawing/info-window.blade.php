@@ -20,9 +20,6 @@
 
 @push('js')
     <script>
-        // This example displays a marker at the center of Australia.
-        // When the user clicks the marker, an info window opens.
-
         function initMap() {
             var uluru = {lat: -25.363, lng: 131.044};
 
