@@ -3,7 +3,11 @@
 @section('title', 'Marker animation with setTimeout()')
 
 @section('content')
-    <h1>Marker animation with setTimeout()</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Marker animation with setTimeout()
+    </h1>
 
     <div id="floating-panel">
         <button id="drop" onclick="drop()">Drop Markers</button>
