@@ -53,7 +53,6 @@
             });
         }
     &lt;/script&gt;
-    
 
     &lt;script async defer
         src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;callback=initMap&quot;&gt;&lt;/script&gt;
