@@ -47,7 +47,6 @@
         }
     &lt;/script&gt;
 
-
     &lt;script async defer
         src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;callback=initMap&amp;language=ja&amp;region=JP&quot;&gt;&lt;/script&gt;
 @endsection

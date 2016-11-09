@@ -146,8 +146,7 @@
                 TILE_SIZE * (0.5 - Math.log((1 + siny) / (1 - siny)) / (4 * Math.PI))
             );
         }
-    &lt;/script&gt;
-    
+    &lt;/script&gt;    
 
     &lt;script async defer
         src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;callback=initMap&quot;&gt;&lt;/script&gt;

@@ -33,7 +33,6 @@
 
     &lt;script src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&quot;&gt;&lt;/script&gt;
 
-
     &lt;script&gt;
         var map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
             center: {lat: -7.265757, lng: 112.734146},
