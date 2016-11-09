@@ -23,7 +23,6 @@
         // The following example creates complex markers to indicate beaches near
         // Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
         // to the base of the flagpole.
-
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom    : 10,
