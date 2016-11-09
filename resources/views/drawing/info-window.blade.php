@@ -3,7 +3,11 @@
 @section('title', 'Info window')
 
 @section('content')
-    <h1>Info window</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Info window
+    </h1>
 
     <div id="map"></div>
 @endsection
