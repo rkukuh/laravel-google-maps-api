@@ -3,7 +3,11 @@
 @section('title', 'Custom symbols')
 
 @section('content')
-    <h1>Custom symbols</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Custom symbols
+    </h1>
 
     <div id="map"></div>
 @endsection
