@@ -22,15 +22,15 @@
     <script>
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom    : 4,
-                center  : {lat: -25.363882, lng: 131.044922}
+                zoom    : 10,
+                center  : {lat: -7.265757, lng: 112.734146}
             });
 
             var marker = new google.maps.Marker({
                 position: map.getCenter(),
                 icon: {
                     path: google.maps.SymbolPath.CIRCLE,
-                    scale: 20
+                    scale: 30
                 },
                 draggable: true,
                 map: map
