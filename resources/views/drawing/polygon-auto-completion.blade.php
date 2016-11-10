@@ -3,7 +3,11 @@
 @section('title', 'Polygon Auto-completion')
 
 @section('content')
-    <h1>Polygon Auto-completion</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Polygon Auto-completion
+    </h1>
 
     <div id="map"></div>
 @endsection
