@@ -33,7 +33,6 @@
                 scale: 4
             };
 
-            // Repeat the symbol at intervals of 20 pixels to create the dashed effect.
             var line = new google.maps.Polyline({
                 path: [
                     {lat: 22.291, lng: 153.027},
