@@ -3,7 +3,11 @@
 @section('title', 'Predefined markers')
 
 @section('content')
-    <h1>Predefined markers</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Predefined markers
+    </h1>
 
     <div id="map"></div>
 @endsection
