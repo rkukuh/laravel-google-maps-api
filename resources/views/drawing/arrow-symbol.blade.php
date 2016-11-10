@@ -22,8 +22,8 @@
     <script>
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom        : 6,
-                center      : {lat: -23.363, lng: 131.044},
+                zoom        : 15,
+                center      : {lat: -7.265757, lng: 112.734146},
                 mapTypeId   : 'terrain'
             });
 
@@ -33,8 +33,8 @@
 
             var line = new google.maps.Polyline({
                 path: [
-                    {lat: -25.363, lng: 131.044},
-                    {lat: -20.363, lng: 131.044},
+                    {lat: -7.265757, lng: 112.734146},
+                    {lat: -7.257757, lng: 112.734146},
                 ],
                 icons: [{
                     icon: lineSymbol,
