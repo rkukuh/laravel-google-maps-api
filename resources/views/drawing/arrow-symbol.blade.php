@@ -3,7 +3,11 @@
 @section('title', 'Arrow symbol')
 
 @section('content')
-    <h1>Arrow symbol</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Arrow symbol
+    </h1>
 
     <div id="map"></div>
 @endsection
