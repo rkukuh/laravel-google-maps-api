@@ -20,11 +20,6 @@
 
 @push('js')
     <script>
-        // This example creates a simple polygon representing the Bermuda Triangle. Note
-        // that the code specifies only three LatLng coordinates for the polygon. The
-        // API automatically draws a stroke connecting the last LatLng back to the first
-        // LatLng.
-
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom        : 5,
@@ -32,9 +27,6 @@
                 mapTypeId   : 'terrain'
             });
 
-            // Define the LatLng coordinates for the polygon's path. Note that there's
-            // no need to specify the final coordinates to complete the polygon, because
-            // The Google Maps JavaScript API will automatically draw the closing side.
             var triangleCoords = [
                 {lat: 25.774, lng: -80.190},
                 {lat: 18.466, lng: -66.118},
