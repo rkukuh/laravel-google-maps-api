@@ -3,7 +3,11 @@
 @section('title', 'Dashed line (symbol)')
 
 @section('content')
-    <h1>Dashed line (symbol)</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Dashed line (symbol)
+    </h1>
 
     <div id="map"></div>
 @endsection
