@@ -3,7 +3,11 @@
 @section('title', 'Deleting a vertex')
 
 @section('content')
-    <h1>Deleting a vertex</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Deleting a vertex
+    </h1>
 
     <span><small class="text-danger">Can <strong>NOT</strong> use 'asyn defer' mode</small></span>
 
