@@ -81,10 +81,6 @@
             });
         }
 
-        /**
-        * A menu that lets a user delete a selected vertex of a path.
-        * @constructor
-        */
         function DeleteMenu() {
             this.div_           = document.createElement('div');
             this.div_.className = 'delete-menu';
@@ -105,8 +101,6 @@
 
             this.getPanes().floatPane.appendChild(this.div_);
 
-            // mousedown anywhere on the map except on the menu div will close the
-            // menu.
             this.divListener_ = google.maps.event.addDomListener(map.getDiv(), 'mousedown', function(e) {
                 if (e.target != deleteMenu.div_) {
                     deleteMenu.close();
@@ -119,7 +113,6 @@
             google.maps.event.removeListener(this.divListener_);
             this.div_.parentNode.removeChild(this.div_);
 
-            // clean up
             this.set('position');
             this.set('path');
             this.set('vertex');
@@ -143,9 +136,6 @@
             this.div_.style.left = point.x + 'px';
         };
 
-        /**
-        * Opens the menu at a vertex of a given path.
-        */
         DeleteMenu.prototype.open = function(map, path, vertex) {
             this.set('position', path.getAt(vertex));
             this.set('path', path);
@@ -154,9 +144,6 @@
             this.draw();
         };
 
-        /**
-        * Deletes the vertex from the path.
-        */
         DeleteMenu.prototype.removeVertex = function() {
             var path    = this.get('path');
             var vertex  = this.get('vertex');
