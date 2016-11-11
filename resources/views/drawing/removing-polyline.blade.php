@@ -3,7 +3,11 @@
 @section('title', 'Removing polyline')
 
 @section('content')
-    <h1>Removing polyline</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Removing polyline
+    </h1>
 
     <div id="floating-panel">
         <input onclick="removeLine();" type=button value="Remove line">
