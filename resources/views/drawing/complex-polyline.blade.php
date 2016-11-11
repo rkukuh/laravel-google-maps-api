@@ -3,7 +3,11 @@
 @section('title', 'Complex polyline')
 
 @section('content')
-    <h1>Complex polyline</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Complex polyline
+    </h1>
 
     <div id="map"></div>
 @endsection
