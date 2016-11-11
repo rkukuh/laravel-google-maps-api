@@ -3,7 +3,11 @@
 @section('title', 'Simple polyline')
 
 @section('content')
-    <h1>Simple polyline</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Simple polyline
+    </h1>
 
     <div id="map"></div>
 @endsection
