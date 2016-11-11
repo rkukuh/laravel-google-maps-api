@@ -7,6 +7,7 @@
         @include('_shared.button-source-code')
 
         Deleting a vertex
+        <small>via context menu</small>
     </h1>
 
     <span><small class="text-danger">Can <strong>NOT</strong> use 'asyn defer' mode</small></span>
