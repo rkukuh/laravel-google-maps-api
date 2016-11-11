@@ -39,9 +39,6 @@
 
 @push('js')
     <script>
-        // This example adds a UI control allowing users to remove the polyline from the
-        // map.
-
         var flightPath;
         var map;
 
