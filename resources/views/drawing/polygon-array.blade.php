@@ -3,7 +3,11 @@
 @section('title', 'Polygon arrays')
 
 @section('content')
-    <h1>Polygon arrays</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Polygon arrays
+    </h1>
 
     <div id="map"></div>
 @endsection
