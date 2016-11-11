@@ -34,7 +34,6 @@
                 {lat: 25.774, lng: -80.190}
             ];
 
-            // Construct the polygon.
             var bermudaTriangle = new google.maps.Polygon({
                 paths           : triangleCoords,
                 strokeColor     : '#FF0000',
