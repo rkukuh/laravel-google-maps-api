@@ -3,7 +3,11 @@
 @section('title', 'Polygon with hole')
 
 @section('content')
-    <h1>Polygon with hole</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Polygon with hole
+    </h1>
 
     <div id="map"></div>
 @endsection
