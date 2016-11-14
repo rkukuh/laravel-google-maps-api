@@ -3,7 +3,11 @@
 @section('title', 'Draggable polygons')
 
 @section('content')
-    <h1>Draggable polygons</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Draggable polygons
+    </h1>
 
     <span><small class="text-primary">
         The red triangle is geodesic, so its shape changes as you drag it north or south.
