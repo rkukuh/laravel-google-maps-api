@@ -3,7 +3,11 @@
 @section('title', 'Circle')
 
 @section('content')
-    <h1>Circle</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Circle
+    </h1>
 
     <div id="map"></div>
 @endsection
