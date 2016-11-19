@@ -3,7 +3,11 @@
 @section('title', 'Ground overlay')
 
 @section('content')
-    <h1>Ground overlay</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Ground overlay
+    </h1>
 
     <div id="map"></div>
 @endsection
