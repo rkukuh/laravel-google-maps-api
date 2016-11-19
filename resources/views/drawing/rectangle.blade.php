@@ -3,7 +3,11 @@
 @section('title', 'Rectangle')
 
 @section('content')
-    <h1>Rectangle</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Rectangle
+    </h1>
 
     <div id="map"></div>
 @endsection
