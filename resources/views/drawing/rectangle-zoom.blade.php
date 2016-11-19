@@ -32,7 +32,6 @@
             var rectangle = new google.maps.Rectangle();
 
             map.addListener('zoom_changed', function() {
-                // Get the current bounds, which reflect the bounds before the zoom.
                 rectangle.setOptions({
                     strokeColor     : '#FF0000',
                     strokeOpacity   : 0.8,
