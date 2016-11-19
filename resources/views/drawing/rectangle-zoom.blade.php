@@ -3,7 +3,11 @@
 @section('title', 'Rectangle zoom')
 
 @section('content')
-    <h1>Rectangle zoom</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Rectangle zoom
+    </h1>
 
     <span><small class="text-primary">Creates a rectangle based on the viewport on any 'zoom-changed' event.</small></span>
 
