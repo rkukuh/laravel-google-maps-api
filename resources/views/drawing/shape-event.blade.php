@@ -3,7 +3,11 @@
 @section('title', 'Rectangle (shape) event')
 
 @section('content')
-    <h1>Rectangle (shape) event</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Rectangle (shape) event
+    </h1>
 
     <span><small class="text-primary">
         When the user changes the bounds of the rectangle, an info window pops up displaying the new bounds.
