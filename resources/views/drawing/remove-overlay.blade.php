@@ -3,7 +3,11 @@
 @section('title', 'Removing overlay')
 
 @section('content')
-    <h1>Removing overlay</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Removing overlay
+    </h1>
 
     <div id="floating-panel">
         <input onclick="removeOverlay();" type=button value="Remove overlay">
