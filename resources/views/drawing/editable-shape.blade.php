@@ -3,7 +3,11 @@
 @section('title', 'User-editable shape')
 
 @section('content')
-    <h1>User-editable shape</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        User-editable shape
+    </h1>
 
     <div id="map"></div>
 @endsection
