@@ -3,7 +3,11 @@
 @section('title', 'KML feature detail')
 
 @section('content')
-    <h1>KML feature detail</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        KML feature detail
+    </h1>
 
     <div id="map"></div>
     <div id="content-window" class="text-primary"></div>
