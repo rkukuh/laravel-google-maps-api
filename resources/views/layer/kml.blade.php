@@ -3,7 +3,11 @@
 @section('title', 'KML Layers')
 
 @section('content')
-    <h1>KML Layers</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        KML Layers
+    </h1>
 
     <div id="map"></div>
 @endsection
