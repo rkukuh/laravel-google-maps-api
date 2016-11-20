@@ -3,7 +3,11 @@
 @section('title', 'Data Layer: Simple')
 
 @section('content')
-    <h1>Data Layer: Simple</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Data Layer: Simple
+    </h1>
 
     <div id="map"></div>
 @endsection
