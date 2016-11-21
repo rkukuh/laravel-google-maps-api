@@ -3,7 +3,11 @@
 @section('title', 'Heatmap')
 
 @section('content')
-    <h1>Heatmap</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Heatmap
+    </h1>
 
     <div id="floating-panel">
         <button onclick="toggleHeatmap()">Toggle Heatmap</button>
