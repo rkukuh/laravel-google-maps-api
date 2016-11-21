@@ -9,6 +9,10 @@
         Data Layer: Drag-Drop GeoJson
     </h1>
 
+    <span><small class="text-primary">
+        Download GeoJSON example <strong><a href="https://developers.google.com/maps/documentation/javascript/examples/layer-data-dragndrop#sample-geojson" target="_blank">here</a></strong>
+    </small></span>
+
     <div id="map"></div>
     <div id="drop-container">
         <div id="drop-silhouette"></div>
@@ -311,7 +315,7 @@
 @endsection
 
 @section('source-code-html')
-    
+
     <div id="map"></div>
     <div id="drop-container">
         <div id="drop-silhouette"></div>
