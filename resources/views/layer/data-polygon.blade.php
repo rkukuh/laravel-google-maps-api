@@ -26,15 +26,13 @@
                 center  : {lat: -33.872, lng: 151.252},
             });
 
-            // Define the LatLng coordinates for the outer path.
             var outerCoords = [
-                {lat: -32.364, lng: 153.207}, // north west
-                {lat: -35.364, lng: 153.207}, // south west
-                {lat: -35.364, lng: 158.207}, // south east
-                {lat: -32.364, lng: 158.207}  // north east
+                {lat: -32.364, lng: 153.207},
+                {lat: -35.364, lng: 153.207},
+                {lat: -35.364, lng: 158.207},
+                {lat: -32.364, lng: 158.207}
                 ];
 
-            // Define the LatLng coordinates for an inner path.
             var innerCoords1 = [
                 {lat: -33.364, lng: 154.207},
                 {lat: -34.364, lng: 154.207},
@@ -42,7 +40,6 @@
                 {lat: -33.364, lng: 155.207}
             ];
 
-            // Define the LatLng coordinates for another inner path.
             var innerCoords2 = [
                 {lat: -33.364, lng: 156.207},
                 {lat: -34.364, lng: 156.207},
