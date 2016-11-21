@@ -10,7 +10,6 @@
     </h1>
 
     <div>
-        <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
             <li class="active">
                 <a href="#default" data-toggle="tab">Default</a>
@@ -24,7 +23,6 @@
             </li>
         </ul>
 
-        <!-- Tab panes -->
         <div class="tab-content">
             <div class="tab-pane active" id="default">
                 <div id="map-default"></div>
@@ -56,19 +54,16 @@
         var map_advanced;
 
         function initMap() {
-            // Map Default
             map_default = new google.maps.Map(document.getElementById('map-default'), {
                 center  : { lat: 20, lng: -160 },
                 zoom    : 2
             });
 
-            // Map Simple
             map_simple = new google.maps.Map(document.getElementById('map-simple'), {
                 center  : { lat: 20, lng: -160 },
                 zoom    : 2
             });
 
-            // Add a basic style to map simple.
             map_simple.data.setStyle(function(feature) {
                 var mag = Math.exp(parseFloat(feature.getProperty('mag'))) * 0.1;
 
@@ -83,7 +78,6 @@
                 });
             });
 
-            // Map Advanced
             map_advanced = new google.maps.Map(document.getElementById('map-advanced'), {
                 center  : { lat: 20, lng: -160 },
                 zoom    : 2,
@@ -93,12 +87,11 @@
             map_advanced.data.setStyle(styleFeature);
 
             function styleFeature(feature) {
-                var low     = [151, 83, 34];    // color of mag 1.0
-                var high    = [5, 69, 54];     // color of mag 6.0 and above
+                var low     = [151, 83, 34];
+                var high    = [5, 69, 54];
                 var minMag  = 1.0;
                 var maxMag  = 6.0;
 
-                // fraction represents where the value sits between the min and max
                 var fraction    = (Math.min(feature.getProperty('mag'), maxMag) - minMag) / (maxMag - minMag);
                 var color       = interpolateHsl(low, high, fraction);
 
@@ -110,7 +103,6 @@
                         fillColor: color,
                         fillOpacity: 2 / feature.getProperty('mag'),
 
-                        // while an exponent would technically be correct, quadratic looks nicer
                         scale: Math.pow(feature.getProperty('mag'), 2)
                     },
                     zIndex: Math.floor(feature.getProperty('mag'))
@@ -121,7 +113,6 @@
                 var color = [];
 
                 for (var i = 0; i < 3; i++) {
-                    // Calculate color based on the fraction.
                     color[i] = (highHsl[i] - lowHsl[i]) * fraction + lowHsl[i];
                 }
 
@@ -148,8 +139,6 @@
                 }
             ];
 
-            // Get the earthquake data (JSONP format) from the USGS feed:
-            // http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
             var script = document.createElement('script');
 
             script.setAttribute(
@@ -160,7 +149,6 @@
             document.getElementsByTagName('head')[0].appendChild(script);
         }
 
-        // Defines the callback function referenced in the jsonp file.
         function eqfeed_callback(data) {
             map_default.data.addGeoJson(data);
             map_simple.data.addGeoJson(data);
@@ -296,7 +284,7 @@
 @endsection
 
 @section('source-code-css')
-    
+
     #map-default,
     #map-simple,
     #map-advanced {
