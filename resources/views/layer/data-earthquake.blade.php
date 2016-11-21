@@ -300,5 +300,33 @@
 @endsection
 
 @section('source-code-html')
-    <div id="map"></div>
+    
+    <div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="active">
+                <a href="#default" data-toggle="tab">Default</a>
+            </li>
+            <li>
+                <a href="#simple" data-toggle="tab">Simple</a>
+            </li>
+
+            <li>
+                <a href="#advanced" data-toggle="tab">Advanced</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="default">
+                <div id="map-default"></div>
+            </div>
+            <div class="tab-pane" id="simple">
+                <div id="map-simple"></div>
+            </div>
+            <div class="tab-pane" id="advanced">
+                <div id="map-advanced"></div>
+            </div>
+        </div>
+    </div>
 @endsection
