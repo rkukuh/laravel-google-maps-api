@@ -284,7 +284,7 @@
 @endsection
 
 @section('source-code-css')
-    
+
     #map { height: 500px; }
 
     #drop-container {
@@ -311,5 +311,9 @@
 @endsection
 
 @section('source-code-html')
+    
     <div id="map"></div>
+    <div id="drop-container">
+        <div id="drop-silhouette"></div>
+    </div>
 @endsection
