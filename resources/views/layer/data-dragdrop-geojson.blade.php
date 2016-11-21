@@ -48,7 +48,6 @@
         var map;
 
         function initMap() {
-            // set up the map
             map = new google.maps.Map(document.getElementById('map'), {
                 center  : new google.maps.LatLng(0, 0),
                 zoom    : 2
@@ -62,10 +61,6 @@
             zoom(map);
         }
 
-        /**
-        * Update a map's viewport to fit each geometry in a dataset
-        * @param {google.maps.Map} map The map to adjust
-        */
         function zoom(map) {
             var bounds = new google.maps.LatLngBounds();
 
@@ -76,14 +71,6 @@
             map.fitBounds(bounds);
         }
 
-        /**
-        * Process each point in a Geometry, regardless of how deep the points may lie.
-        * @param {google.maps.Data.Geometry} geometry The structure to process
-        * @param {function(google.maps.LatLng)} callback A function to call on each
-        *     LatLng point encountered (e.g. Array.push)
-        * @param {Object} thisArg The value of 'this' as provided to 'callback' (e.g.
-        *     myArray)
-        */
         function processPoints(geometry, callback, thisArg) {
             if (geometry instanceof google.maps.LatLng) {
                 callback.call(thisArg, geometry);
@@ -96,16 +83,12 @@
             }
         }
 
-        /* DOM (drag/drop) functions */
         function initEvents() {
-            // set up the drag & drop events
             var mapContainer = document.getElementById('map');
             var dropContainer = document.getElementById('drop-container');
 
-            // map-specific events
             mapContainer.addEventListener('dragenter', showPanel, false);
 
-            // overlay specific events (since it only appears once drag starts)
             dropContainer.addEventListener('dragover', showPanel, false);
             dropContainer.addEventListener('drop', handleDrop, false);
             dropContainer.addEventListener('dragleave', hidePanel, false);
@@ -133,8 +116,6 @@
             var files = e.dataTransfer.files;
 
             if (files.length) {
-                // process file(s) being dropped
-                // grab the file data from each file
                 for (var i = 0, file; file = files[i]; i++) {
                     var reader = new FileReader();
 
@@ -150,8 +131,6 @@
                 }
             }
             else {
-                // process non-file (e.g. text or html) content being dropped
-                // grab the plain text version of the data
                 var plainText = e.dataTransfer.getData('text/plain');
 
                 if (plainText) {
@@ -159,7 +138,6 @@
                 }
             }
 
-            // prevent drag event from bubbling further
             return false;
         }
 
