@@ -3,7 +3,11 @@
 @section('title', 'Data Layer: Dynamic styling')
 
 @section('content')
-    <h1>Data Layer: Dynamic styling</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Data Layer: Dynamic styling
+    </h1>
 
     <div id="map"></div>
 @endsection
