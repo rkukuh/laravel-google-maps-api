@@ -172,3 +172,143 @@
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ $browser_key }}&callback=initialize"></script>
 @endpush
+
+@section('source-code-javascript')
+
+    &lt;script&gt;
+        var map;
+
+        function initMap() {
+            // set up the map
+            map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+                center  : new google.maps.LatLng(0, 0),
+                zoom    : 2
+            });
+        }
+
+        function loadGeoJsonString(geoString) {
+            var geojson = JSON.parse(geoString);
+
+            map.data.addGeoJson(geojson);
+            zoom(map);
+        }
+
+        /**
+        * Update a map&apos;s viewport to fit each geometry in a dataset
+        * @param {google.maps.Map} map The map to adjust
+        */
+        function zoom(map) {
+            var bounds = new google.maps.LatLngBounds();
+
+            map.data.forEach(function(feature) {
+                processPoints(feature.getGeometry(), bounds.extend, bounds);
+            });
+
+            map.fitBounds(bounds);
+        }
+
+        /**
+        * Process each point in a Geometry, regardless of how deep the points may lie.
+        * @param {google.maps.Data.Geometry} geometry The structure to process
+        * @param {function(google.maps.LatLng)} callback A function to call on each
+        *     LatLng point encountered (e.g. Array.push)
+        * @param {Object} thisArg The value of &apos;this&apos; as provided to &apos;callback&apos; (e.g.
+        *     myArray)
+        */
+        function processPoints(geometry, callback, thisArg) {
+            if (geometry instanceof google.maps.LatLng) {
+                callback.call(thisArg, geometry);
+            } else if (geometry instanceof google.maps.Data.Point) {
+                callback.call(thisArg, geometry.get());
+            } else {
+                geometry.getArray().forEach(function(g) {
+                    processPoints(g, callback, thisArg);
+                });
+            }
+        }
+
+        /* DOM (drag/drop) functions */
+        function initEvents() {
+            // set up the drag &amp; drop events
+            var mapContainer = document.getElementById(&apos;map&apos;);
+            var dropContainer = document.getElementById(&apos;drop-container&apos;);
+
+            // map-specific events
+            mapContainer.addEventListener(&apos;dragenter&apos;, showPanel, false);
+
+            // overlay specific events (since it only appears once drag starts)
+            dropContainer.addEventListener(&apos;dragover&apos;, showPanel, false);
+            dropContainer.addEventListener(&apos;drop&apos;, handleDrop, false);
+            dropContainer.addEventListener(&apos;dragleave&apos;, hidePanel, false);
+        }
+
+        function showPanel(e) {
+            e.stopPropagation();
+            e.preventDefault();
+
+            document.getElementById(&apos;drop-container&apos;).style.display = &apos;block&apos;;
+
+            return false;
+        }
+
+        function hidePanel(e) {
+            document.getElementById(&apos;drop-container&apos;).style.display = &apos;none&apos;;
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            hidePanel(e);
+
+            var files = e.dataTransfer.files;
+
+            if (files.length) {
+                // process file(s) being dropped
+                // grab the file data from each file
+                for (var i = 0, file; file = files[i]; i++) {
+                    var reader = new FileReader();
+
+                    reader.onload = function(e) {
+                        loadGeoJsonString(e.target.result);
+                    };
+
+                    reader.onerror = function(e) {
+                        console.error(&apos;reading failed&apos;);
+                    };
+
+                    reader.readAsText(file);
+                }
+            }
+            else {
+                // process non-file (e.g. text or html) content being dropped
+                // grab the plain text version of the data
+                var plainText = e.dataTransfer.getData(&apos;text/plain&apos;);
+
+                if (plainText) {
+                    loadGeoJsonString(plainText);
+                }
+            }
+
+            // prevent drag event from bubbling further
+            return false;
+        }
+
+
+        function initialize() {
+            initMap();
+            initEvents();
+        }
+    &lt;/script&gt;
+
+    &lt;script async defer
+        src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;callback=initialize&quot;&gt;&lt;/script&gt;
+@endsection
+
+@section('source-code-css')
+    #map { height: 500px; }
+@endsection
+
+@section('source-code-html')
+    <div id="map"></div>
+@endsection
