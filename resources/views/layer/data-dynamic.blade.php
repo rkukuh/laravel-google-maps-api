@@ -30,7 +30,6 @@
 
             map.data.loadGeoJson('https://storage.googleapis.com/mapsdevsite/json/google.json');
 
-            // Color each letter gray. Change the color when the isColorful property is set to true.
             map.data.setStyle(function(feature) {
                 var color = 'gray';
 
@@ -45,14 +44,10 @@
                 });
             });
 
-            // When the user clicks, set 'isColorful', changing the color of the letters.
             map.data.addListener('click', function(event) {
                 event.feature.setProperty('isColorful', true);
             });
 
-            // When the user hovers, tempt them to click by outlining the letters.
-            // Call revertStyle() to remove all overrides. This will use the style rules
-            // defined in the function passed to setStyle()
             map.data.addListener('mouseover', function(event) {
                 map.data.revertStyle();
                 map.data.overrideStyle(event.feature, {strokeWeight: 8});
