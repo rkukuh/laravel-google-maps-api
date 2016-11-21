@@ -296,11 +296,16 @@
 @endsection
 
 @section('source-code-css')
-    #map { height: 500px; }
+    
+    #map-default,
+    #map-simple,
+    #map-advanced {
+        height: 450px;
+    }
 @endsection
 
 @section('source-code-html')
-    
+
     <div>
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
