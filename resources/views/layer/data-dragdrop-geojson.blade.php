@@ -3,7 +3,11 @@
 @section('title', 'Data Layer: Drag-Drop GeoJson')
 
 @section('content')
-    <h1>Data Layer: Drag-Drop GeoJson</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Data Layer: Drag-Drop GeoJson
+    </h1>
 
     <div id="map"></div>
     <div id="drop-container">
