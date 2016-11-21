@@ -3,7 +3,11 @@
 @section('title', 'Data Layer: Earthquake')
 
 @section('content')
-    <h1>Data Layer: Earthquake</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Data Layer: Earthquake
+    </h1>
 
     <div>
         <!-- Nav tabs -->
