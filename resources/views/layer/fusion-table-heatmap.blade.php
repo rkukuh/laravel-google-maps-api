@@ -3,7 +3,11 @@
 @section('title', 'Fusion Table: Heatmap')
 
 @section('content')
-    <h1>Fusion Table: Heatmap</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Fusion Table: Heatmap
+    </h1>
 
     <div id="map"></div>
 @endsection
