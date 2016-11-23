@@ -3,7 +3,11 @@
 @section('title', 'Fusion Table: Layer')
 
 @section('content')
-    <h1>Fusion Table: Layer</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Fusion Table: Layer
+    </h1>
 
     <div id="map"></div>
 @endsection
