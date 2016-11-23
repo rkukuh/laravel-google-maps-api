@@ -3,7 +3,11 @@
 @section('title', 'GeoRSS')
 
 @section('content')
-    <h1>GeoRSS</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        GeoRSS
+    </h1>
 
     <div id="map"></div>
 @endsection
