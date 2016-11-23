@@ -59,3 +59,53 @@
     src="https://maps.googleapis.com/maps/api/js?key={{ $browser_key }}&callback=initMap">
     </script>
 @endpush
+
+@section('source-code-javascript')
+
+    &lt;script&gt;
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+                center  : {lat: -25, lng: 133},
+                zoom    : 4
+            });
+
+            var layer = new google.maps.FusionTablesLayer({
+                query: {
+                    select: &apos;geometry&apos;,
+                    from: &apos;1ertEwm-1bMBhpEwHhtNYT47HQ9k2ki_6sRa-UQ&apos;
+                },
+                styles: [
+                    {
+                        polygonOptions: {
+                            fillColor: &apos;#00FF00&apos;,
+                            fillOpacity: 0.3
+                        }
+                    }, {
+                        where: &apos;birds &gt; 300&apos;,
+                        polygonOptions: {
+                            fillColor: &apos;#0000FF&apos;
+                        }
+                    }, {
+                        where: &apos;population &gt; 5&apos;,
+                        polygonOptions: {
+                            fillOpacity: 1.0
+                        }
+                    }
+                ]
+            });
+
+            layer.setMap(map);
+        }
+    &lt;/script&gt;
+
+    &lt;script async defer
+        src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;callback=initMap&quot;&gt;&lt;/script&gt;
+@endsection
+
+@section('source-code-css')
+    #map { height: 500px; }
+@endsection
+
+@section('source-code-html')
+    <div id="map"></div>
+@endsection
