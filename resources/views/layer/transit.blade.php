@@ -19,7 +19,7 @@
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom    : 13,
-                center  : {lat: 51.501904, lng: -0.115871}
+                center  : {lat: -7.265757, lng: 112.734146}
             });
 
             var transitLayer = new google.maps.TransitLayer();
