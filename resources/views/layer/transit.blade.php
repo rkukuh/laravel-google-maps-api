@@ -3,7 +3,11 @@
 @section('title', 'Transit layer')
 
 @section('content')
-    <h1>Transit layer</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Transit layer
+    </h1>
 
     <div id="map"></div>
 @endsection
