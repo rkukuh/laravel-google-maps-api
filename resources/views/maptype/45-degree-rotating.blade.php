@@ -66,3 +66,44 @@
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ $browser_key }}&callback=initMap"></script>
 @endpush
+
+@section('source-code-javascript')
+
+    &lt;script&gt;
+        var map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+                center      : {lat: 45.518, lng: -122.672},
+                zoom        : 18,
+                mapTypeId   : &apos;satellite&apos;,
+                heading     : 90,
+                tilt        : 45
+            });
+        }
+
+        function rotate90() {
+            var heading = map.getHeading() || 0;
+
+            map.setHeading(heading + 90);
+        }
+
+        function autoRotate() {
+            // Determine if we&apos;re showing aerial imagery.
+            if (map.getTilt() !== 0) {
+                window.setInterval(rotate90, 3000);
+            }
+        }
+    &lt;/script&gt;
+
+    &lt;script async defer
+        src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;callback=initMap&quot;&gt;&lt;/script&gt;
+@endsection
+
+@section('source-code-css')
+    #map { height: 500px; }
+@endsection
+
+@section('source-code-html')
+    <div id="map"></div>
+@endsection
