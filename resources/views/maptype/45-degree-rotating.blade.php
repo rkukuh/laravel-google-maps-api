@@ -57,7 +57,6 @@
         }
 
         function autoRotate() {
-            // Determine if we're showing aerial imagery.
             if (map.getTilt() !== 0) {
                 window.setInterval(rotate90, 3000);
             }
