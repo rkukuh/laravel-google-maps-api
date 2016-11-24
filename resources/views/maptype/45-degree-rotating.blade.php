@@ -23,7 +23,7 @@
         #floating-panel {
             position: absolute;
             top: 10px;
-            left: 35%;
+            left: 40%;
             z-index: 5;
             background-color: #fff;
             padding: 5px;
