@@ -3,7 +3,11 @@
 @section('title', 'Rotating 45&deg; imagery')
 
 @section('content')
-    <h1>Rotating 45&deg; imagery</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Rotating 45&deg; imagery
+    </h1>
 
     <div id="floating-panel">
         <input type="button" value="Auto Rotate" onclick="autoRotate();">
