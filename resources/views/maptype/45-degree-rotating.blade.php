@@ -119,5 +119,10 @@
 @endsection
 
 @section('source-code-html')
+
+    <div id="floating-panel">
+        <input type="button" value="Auto Rotate" onclick="autoRotate();">
+    </div>
+
     <div id="map"></div>
 @endsection
