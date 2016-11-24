@@ -85,3 +85,81 @@
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ $browser_key }}&callback=initMap"></script>
 @endpush
+
+@section('source-code-javascript')
+
+    &lt;script&gt;
+        /*
+        * This demo demonstrates how to replace default map tiles with custom imagery.
+        * In this case, the CoordMapType displays gray tiles annotated with the tile
+        * coordinates.
+        *
+        * Try panning and zooming the map to see how the coordinates change.
+        */
+
+        /**
+        * @constructor
+        * @implements {google.maps.MapType}
+        */
+        function CoordMapType(tileSize) {
+            this.tileSize = tileSize;
+        }
+
+        CoordMapType.prototype.maxZoom  = 19;
+        CoordMapType.prototype.name     = &apos;Tile #s&apos;;
+        CoordMapType.prototype.alt      = &apos;Tile Coordinate Map Type&apos;;
+
+        CoordMapType.prototype.getTile = function(coord, zoom, ownerDocument) {
+            var div = ownerDocument.createElement(&apos;div&apos;);
+
+            div.innerHTML               = coord;
+            div.style.width             = this.tileSize.width + &apos;px&apos;;
+            div.style.height            = this.tileSize.height + &apos;px&apos;;
+            div.style.fontSize          = &apos;10&apos;;
+            div.style.borderStyle       = &apos;solid&apos;;
+            div.style.borderWidth       = &apos;1px&apos;;
+            div.style.borderColor       = &apos;#AAAAAA&apos;;
+            div.style.backgroundColor   = &apos;#E5E3DF&apos;;
+
+            return div;
+        };
+
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+                zoom    : 10,
+                center  : {lat: 41.850, lng: -87.650},
+                streetViewControl   : false,
+                mapTypeId           : &apos;coordinate&apos;,
+                mapTypeControlOptions: {
+                    mapTypeIds  : [&apos;coordinate&apos;, &apos;roadmap&apos;],
+                    style       : google.maps.MapTypeControlStyle.DROPDOWN_MENU
+                }
+            });
+
+            map.addListener(&apos;maptypeid_changed&apos;, function() {
+                var showStreetViewControl = map.getMapTypeId() !== &apos;coordinate&apos;;
+
+                map.setOptions({
+                    streetViewControl: showStreetViewControl
+                });
+            });
+
+            // Now attach the coordinate map type to the map&apos;s registry.
+            map.mapTypes.set(
+                &apos;coordinate&apos;,
+                new CoordMapType(new google.maps.Size(256, 256))
+            );
+        }
+    &lt;/script&gt;
+
+    &lt;script async defer
+        src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;callback=initMap&quot;&gt;&lt;/script&gt;
+@endsection
+
+@section('source-code-css')
+    #map { height: 500px; }
+@endsection
+
+@section('source-code-html')
+    <div id="map"></div>
+@endsection
