@@ -3,7 +3,11 @@
 @section('title', '45&deg; imagery')
 
 @section('content')
-    <h1>45&deg; imagery</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        45&deg; imagery
+    </h1>
 
     <div id="map"></div>
 @endsection
