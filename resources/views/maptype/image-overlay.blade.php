@@ -3,7 +3,11 @@
 @section('title', 'Overlaying an image map type')
 
 @section('content')
-    <h1>Overlaying an image map type</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Overlaying an image map type
+    </h1>
 
     <div id="map"></div>
 @endsection
