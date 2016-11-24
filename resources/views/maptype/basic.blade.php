@@ -20,14 +20,6 @@
 
 @push('js')
     <script>
-        /*
-        * This demo demonstrates how to replace default map tiles with custom imagery.
-        * In this case, the CoordMapType displays gray tiles annotated with the tile
-        * coordinates.
-        *
-        * Try panning and zooming the map to see how the coordinates change.
-        */
-
         /**
         * @constructor
         * @implements {google.maps.MapType}
@@ -75,7 +67,6 @@
                 });
             });
 
-            // Now attach the coordinate map type to the map's registry.
             map.mapTypes.set(
                 'coordinate',
                 new CoordMapType(new google.maps.Size(256, 256))
