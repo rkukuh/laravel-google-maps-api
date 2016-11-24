@@ -54,7 +54,7 @@
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom    : 10,
-                center  : {lat: 41.850, lng: -87.650}
+                center  : {lat: -7.265757, lng: 112.734146}
             });
 
             // Insert this overlay map type as the first overlay map type at
