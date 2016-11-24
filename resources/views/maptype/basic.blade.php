@@ -3,7 +3,11 @@
 @section('title', 'Map type basic')
 
 @section('content')
-    <h1>Map type basic</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Map type basic
+    </h1>
 
     <div id="map"></div>
 @endsection
