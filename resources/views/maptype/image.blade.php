@@ -3,7 +3,11 @@
 @section('title', 'Image map type')
 
 @section('content')
-    <h1>Image map type</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Image map type
+    </h1>
 
     <div id="map"></div>
 @endsection
