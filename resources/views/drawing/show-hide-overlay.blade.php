@@ -41,12 +41,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key={{ $browser_key }}"></script>
 
     <script>
-        // This example adds hide() and show() methods to a custom overlay's prototype.
-        // These methods toggle the visibility of the container <div>.
-
-        // Additionally, we add a toggleDOM() method, which attaches or detaches the
-        // overlay to or from the map.
-
         var overlay;
 
         USGSOverlay.prototype = new google.maps.OverlayView();
@@ -63,7 +57,6 @@
                 new google.maps.LatLng(62.400471, -150.005608)
             );
 
-            // The photograph is courtesy of the U.S. Geological Survey.
             var srcImage = 'https://developers.google.com/maps/documentation/javascript/';
             srcImage += 'examples/full/images/talkeetna.png';
 
@@ -71,24 +64,15 @@
         }
 
         function USGSOverlay(bounds, image, map) {
-            // Now initialize all properties.
             this.bounds_    = bounds;
             this.image_     = image;
             this.map_       = map;
 
-            // Define a property to hold the image's div. We'll
-            // actually create this div upon receipt of the onAdd()
-            // method so we'll leave it null for now.
             this.div_ = null;
 
-            // Explicitly call setMap on this overlay
             this.setMap(map);
         }
 
-        /**
-        * onAdd is called when the map's panes are ready and the overlay has been
-        * added to the map.
-        */
         USGSOverlay.prototype.onAdd = function() {
             var div = document.createElement('div');
 
@@ -96,7 +80,6 @@
             div.style.borderWidth   = '0px';
             div.style.position      = 'absolute';
 
-            // Create the img element and attach it to the div.
             var img = document.createElement('img');
 
             img.src             = this.image_;
@@ -107,25 +90,17 @@
 
             this.div_ = div;
 
-            // Add the element to the "overlayImage" pane.
             var panes = this.getPanes();
 
             panes.overlayImage.appendChild(this.div_);
         };
 
         USGSOverlay.prototype.draw = function() {
-            // We use the south-west and north-east
-            // coordinates of the overlay to peg it to the correct position and size.
-            // To do this, we need to retrieve the projection from the overlay.
             var overlayProjection = this.getProjection();
 
-            // Retrieve the south-west and north-east coordinates of this overlay
-            // in LatLngs and convert them to pixel coordinates.
-            // We'll use these coordinates to resize the div.
             var sw = overlayProjection.fromLatLngToDivPixel(this.bounds_.getSouthWest());
             var ne = overlayProjection.fromLatLngToDivPixel(this.bounds_.getNorthEast());
 
-            // Resize the image's div to fit the indicated dimensions.
             var div = this.div_;
 
             div.style.left      = sw.x + 'px';
@@ -138,10 +113,8 @@
             this.div_.parentNode.removeChild(this.div_);
         };
 
-        // Set the visibility to 'hidden' or 'visible'.
         USGSOverlay.prototype.hide = function() {
             if (this.div_) {
-                // The visibility property must be a string enclosed in quotes.
                 this.div_.style.visibility = 'hidden';
             }
         };
@@ -162,12 +135,8 @@
             }
         };
 
-        // Detach the map from the DOM via toggleDOM().
-        // Note that if we later reattach the map, it will be visible again,
-        // because the containing <div> is recreated in the overlay's onAdd() method.
         USGSOverlay.prototype.toggleDOM = function() {
             if (this.getMap()) {
-                // Note: setMap(null) calls OverlayView.onRemove()
                 this.setMap(null);
             } else {
                 this.setMap(this.map_);
