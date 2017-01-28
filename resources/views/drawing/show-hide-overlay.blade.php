@@ -3,7 +3,11 @@
 @section('title', 'Show/Hide Overlay')
 
 @section('content')
-    <h1>Show/Hide Overlay</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Show/Hide Overlay
+    </h1>
 
     <div id="floating-panel">
         <input type="button" value="Toggle visibility" onclick="overlay.toggle();"></input>
@@ -20,7 +24,7 @@
         #floating-panel {
             position: absolute;
             top: 10px;
-            left: 35%;
+            left: 40%;
             z-index: 5;
             background-color: #fff;
             padding: 5px;
@@ -173,3 +177,18 @@
         google.maps.event.addDomListener(window, 'load', initMap);
     </script>
 @endpush
+
+@section('source-code-javascript')
+
+    &lt;script&gt;
+        //
+    &lt;/script&gt;
+@endsection
+
+@section('source-code-css')
+    #map { height: 500px; }
+@endsection
+
+@section('source-code-html')
+    <div id="map"></div>
+@endsection
