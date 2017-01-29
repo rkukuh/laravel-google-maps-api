@@ -173,5 +173,6 @@
         &lt;input id=&quot;submit&quot; type=&quot;button&quot; value=&quot;Find&quot;&gt;
     &lt;/div&gt;
 
+    &lt;span class=&quot;text-primary&quot;&gt;Use &quot;Server Key&quot; instead of &quot;Browser Key&quot;&lt;/span&gt;
     &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
 @endsection
