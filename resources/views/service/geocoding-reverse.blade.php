@@ -3,7 +3,11 @@
 @section('title', 'Reverse Geocoding')
 
 @section('content')
-    <h1>Reverse Geocoding</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Reverse Geocoding
+    </h1>
 
     <div id="floating-panel">
         <input id="latlng" type="text" value="40.714224, -73.961452">
@@ -28,7 +32,7 @@
             font-family: 'Roboto','sans-serif';
             line-height: 30px;
             padding-left: 10px;
-            left: 50%;
+            left: 55%;
             margin-left: -180px;
             width: 350px;
         }
