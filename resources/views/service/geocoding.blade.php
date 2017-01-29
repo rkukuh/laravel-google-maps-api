@@ -133,5 +133,12 @@
 @endsection
 
 @section('source-code-html')
-    <div id="map"></div>
+
+    &lt;div id=&quot;floating-panel&quot;&gt;
+        &lt;input id=&quot;address&quot; type=&quot;textbox&quot; value=&quot;Surabaya, Indonesia&quot;&gt;
+        &lt;input id=&quot;submit&quot; type=&quot;button&quot; value=&quot;Geocode&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;span class=&quot;text-primary&quot;&gt;Use &quot;Server Key&quot; instead of &quot;Browser Key&quot;&lt;/span&gt;
+    &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
 @endsection
