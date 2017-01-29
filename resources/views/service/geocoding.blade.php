@@ -3,7 +3,11 @@
 @section('title', 'Geocoding')
 
 @section('content')
-    <h1>Geocoding</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Geocoding
+    </h1>
 
     <div id="floating-panel">
         <input id="address" type="textbox" value="Surabaya, Indonesia">
