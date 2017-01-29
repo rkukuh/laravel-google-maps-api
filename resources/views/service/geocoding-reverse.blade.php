@@ -90,3 +90,60 @@
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ $server_key }}&callback=initMap"></script>
 @endpush
+
+@section('source-code-javascript')
+
+    &lt;script&gt;
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+                zoom    : 10,
+                center: {lat: -7.265757, lng: 112.734146},
+            });
+
+            var geocoder   = new google.maps.Geocoder;
+            var infowindow = new google.maps.InfoWindow;
+
+            document.getElementById(&apos;submit&apos;).addEventListener(&apos;click&apos;, function() {
+                geocodeLatLng(geocoder, map, infowindow);
+            });
+        }
+
+        function geocodeLatLng(geocoder, map, infowindow) {
+            var input       = document.getElementById(&apos;latlng&apos;).value;
+            var latlngStr   = input.split(&apos;,&apos;, 2);
+            var latlng      = {lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};
+
+            geocoder.geocode({&apos;location&apos;: latlng}, function(results, status) {
+                if (status === &apos;OK&apos;) {
+                    if (results[1]) {
+                        map.setZoom(11);
+
+                        var marker = new google.maps.Marker({
+                            position: latlng,
+                            map     : map
+                        });
+
+                        infowindow.setContent(results[1].formatted_address);
+                        infowindow.open(map, marker);
+                    }
+                    else {
+                        window.alert(&apos;No results found&apos;);
+                    }
+                }
+                else {
+                    window.alert(&apos;Geocoder failed due to: &apos; + status);
+                }
+            });
+        }
+    &lt;/script&gt;
+
+    &lt;script async defer src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $server_key_placeholder }}&amp;callback=initMap&quot;&gt;&lt;/script&gt;
+@endsection
+
+@section('source-code-css')
+    #map { height: 500px; }
+@endsection
+
+@section('source-code-html')
+    <div id="map"></div>
+@endsection
