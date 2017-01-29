@@ -78,8 +78,39 @@
 @section('source-code-javascript')
 
     &lt;script&gt;
-        //
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+                zoom    : 10,
+                center: {lat: -7.265757, lng: 112.734146},
+            });
+
+            var geocoder = new google.maps.Geocoder();
+
+            document.getElementById(&apos;submit&apos;).addEventListener(&apos;click&apos;, function() {
+                geocodeAddress(geocoder, map);
+            });
+        }
+
+        function geocodeAddress(geocoder, resultsMap) {
+            var address = document.getElementById(&apos;address&apos;).value;
+
+            geocoder.geocode({&apos;address&apos;: address}, function(results, status) {
+                if (status === &apos;OK&apos;) {
+                    resultsMap.setCenter(results[0].geometry.location);
+
+                    var marker = new google.maps.Marker({
+                        map     : resultsMap,
+                        position: results[0].geometry.location
+                    });
+                }
+                else {
+                    alert(&apos;Geocode was not successful for the following reason: &apos; + status);
+                }
+            });
+        }
     &lt;/script&gt;
+
+    &lt;script async defer src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $server_key_placeholder }}&amp;callback=initMap&quot;&gt;&lt;/script&gt;
 @endsection
 
 @section('source-code-css')
