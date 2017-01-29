@@ -166,5 +166,11 @@
 @endsection
 
 @section('source-code-html')
-    <div id="map"></div>
+
+    &lt;div id=&quot;floating-panel&quot;&gt;
+        &lt;input id=&quot;latlng&quot; type=&quot;text&quot; value=&quot;40.714224, -73.961452&quot;&gt;
+        &lt;input id=&quot;submit&quot; type=&quot;button&quot; value=&quot;Find&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
 @endsection
