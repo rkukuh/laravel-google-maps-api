@@ -15,6 +15,7 @@
         <input id="submit" type="button" value="Find">
     </div>
 
+    <span class="text-primary">Use "Server Key" instead of "Browser Key"</span>
     <div id="map"></div>
 @endsection
 
