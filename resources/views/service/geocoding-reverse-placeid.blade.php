@@ -60,7 +60,6 @@
             });
         }
 
-        // This function is called when the user clicks the UI button requesting a reverse geocode.
         function geocodePlaceId(geocoder, map, infowindow) {
             var placeId = document.getElementById('place-id').value;
 
