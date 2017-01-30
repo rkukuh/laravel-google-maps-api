@@ -10,7 +10,6 @@
     </h1>
 
     <div id="floating-panel">
-        <!-- Supply a default place ID for a place in Brooklyn, New York. -->
         <input id="place-id" type="text" value="ChIJd8BlQ2BZwokRAFUEcm_qrcA">
         <input id="submit" type="button" value="Find">
     </div>
