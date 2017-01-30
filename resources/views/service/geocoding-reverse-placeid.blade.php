@@ -91,3 +91,60 @@
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ $server_key }}&callback=initMap"></script>
 @endpush
+
+@section('source-code-javascript')
+
+    &lt;script&gt;
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+                zoom    : 10,
+                center  : {lat: -7.265757, lng: 112.734146}
+            });
+
+            var geocoder = new google.maps.Geocoder;
+            var infowindow = new google.maps.InfoWindow;
+
+            document.getElementById(&apos;submit&apos;).addEventListener(&apos;click&apos;, function() {
+                geocodePlaceId(geocoder, map, infowindow);
+            });
+        }
+
+        // This function is called when the user clicks the UI button requesting a reverse geocode.
+        function geocodePlaceId(geocoder, map, infowindow) {
+            var placeId = document.getElementById(&apos;place-id&apos;).value;
+
+            geocoder.geocode({&apos;placeId&apos;: placeId}, function(results, status) {
+                if (status === &apos;OK&apos;) {
+                    if (results[0]) {
+                        map.setZoom(11);
+                        map.setCenter(results[0].geometry.location);
+
+                        var marker = new google.maps.Marker({
+                            map     : map,
+                            position: results[0].geometry.location
+                        });
+
+                        infowindow.setContent(results[0].formatted_address);
+                        infowindow.open(map, marker);
+                    }
+                    else {
+                        window.alert(&apos;No results found&apos;);
+                    }
+                }
+                else {
+                    window.alert(&apos;Geocoder failed due to: &apos; + status);
+                }
+            });
+        }
+    &lt;/script&gt;
+
+    &lt;script async defer src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $server_key_placeholder }}&amp;callback=initMap&quot;&gt;&lt;/script&gt;
+@endsection
+
+@section('source-code-css')
+    #map { height: 500px; }
+@endsection
+
+@section('source-code-html')
+    <div id="map"></div>
+@endsection
