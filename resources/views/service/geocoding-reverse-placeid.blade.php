@@ -3,7 +3,11 @@
 @section('title', 'Reverse Geocoding by Place ID')
 
 @section('content')
-    <h1>Reverse Geocoding by Place ID</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Reverse Geocoding by Place ID
+    </h1>
 
     <div id="floating-panel">
         <!-- Supply a default place ID for a place in Brooklyn, New York. -->
@@ -21,7 +25,7 @@
         #floating-panel {
             position: absolute;
             top: 10px;
-            left: 50%;
+            left: 55%;
             z-index: 5;
             background-color: #fff;
             padding: 5px;
