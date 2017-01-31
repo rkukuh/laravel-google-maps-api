@@ -9,6 +9,7 @@
         Geocoding Component Restriction
     </h1>
 
+    <span class="text-primary">Use "Server Key" instead of "Browser Key"</span>
     <div id="map"></div>
 
     <div id="floating-panel">
@@ -23,7 +24,7 @@
 
         #floating-panel {
             position: absolute;
-            top: 90px;
+            top: 95px;
             left: 35%;
             z-index: 5;
             background-color: #fff;
