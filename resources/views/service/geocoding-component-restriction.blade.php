@@ -42,8 +42,8 @@
         function initMap() {
             var geocoder = new google.maps.Geocoder;
                 var map = new google.maps.Map(document.getElementById('map'), {
-                zoom    : 8,
-                center  : {lat: -33.865, lng: 151.209}
+                zoom    : 10,
+                center  : {lat: -7.265757, lng: 112.734146}
             });
 
             document.getElementById('submit').addEventListener('click', function() {
