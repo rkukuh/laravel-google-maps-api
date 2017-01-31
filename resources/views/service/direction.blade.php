@@ -110,8 +110,42 @@
 @section('source-code-javascript')
 
     &lt;script&gt;
-        //
+        function initMap() {
+            var directionsService = new google.maps.DirectionsService;
+            var directionsDisplay = new google.maps.DirectionsRenderer;
+
+            var map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+                zoom    : 7,
+                center  : {lat: 41.85, lng: -87.65}
+            });
+
+            directionsDisplay.setMap(map);
+
+            var onChangeHandler = function() {
+                calculateAndDisplayRoute(directionsService, directionsDisplay);
+            };
+
+            document.getElementById(&apos;start&apos;).addEventListener(&apos;change&apos;, onChangeHandler);
+            document.getElementById(&apos;end&apos;).addEventListener(&apos;change&apos;, onChangeHandler);
+        }
+
+        function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+            directionsService.route({
+                origin      : document.getElementById(&apos;start&apos;).value,
+                destination : document.getElementById(&apos;end&apos;).value,
+                travelMode  : &apos;DRIVING&apos;
+            }, function(response, status) {
+                if (status === &apos;OK&apos;) {
+                    directionsDisplay.setDirections(response);
+                }
+                else {
+                    window.alert(&apos;Directions request failed due to &apos; + status);
+                }
+            });
+        }
     &lt;/script&gt;
+
+    &lt;script async defer src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $server_key_placeholder }}&amp;callback=initMap&quot;&gt;&lt;/script&gt;
 @endsection
 
 @section('source-code-css')
