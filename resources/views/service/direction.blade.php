@@ -5,6 +5,7 @@
 @section('content')
     <h1>Direction</h1>
 
+    <span class="text-primary">Use "Server Key" instead of "Browser Key"</span>
     <div id="map"></div>
 
     <div id="floating-panel">
