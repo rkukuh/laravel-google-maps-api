@@ -139,5 +139,12 @@
 @endsection
 
 @section('source-code-html')
-    <div id="map"></div>
+
+    &lt;span class=&quot;text-primary&quot;&gt;Use &quot;Server Key&quot; instead of &quot;Browser Key&quot;&lt;/span&gt;
+    &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+
+    &lt;div id=&quot;floating-panel&quot;&gt;
+        &lt;pre&gt;componentRestrictions: {country: &quot;AU&quot;, postalCode: &quot;2000&quot;}&lt;/pre&gt;
+        &lt;button id=&quot;submit&quot;&gt;Geocode&lt;/button&gt;
+    &lt;/div&gt;
 @endsection
