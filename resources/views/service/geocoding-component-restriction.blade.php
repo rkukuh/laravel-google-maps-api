@@ -3,7 +3,11 @@
 @section('title', 'Geocoding Component Restriction')
 
 @section('content')
-    <h1>Geocoding Component Restriction</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Geocoding Component Restriction
+    </h1>
 
     <div id="map"></div>
 
