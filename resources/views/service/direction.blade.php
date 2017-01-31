@@ -3,7 +3,11 @@
 @section('title', 'Direction')
 
 @section('content')
-    <h1>Direction</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Direction
+    </h1>
 
     <span class="text-primary">Use "Server Key" instead of "Browser Key"</span>
     <div id="map"></div>
