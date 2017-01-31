@@ -168,5 +168,41 @@
 @endsection
 
 @section('source-code-html')
-    <div id="map"></div>
+
+    &lt;span class=&quot;text-primary&quot;&gt;Use &quot;Server Key&quot; instead of &quot;Browser Key&quot;&lt;/span&gt;
+    &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+
+    &lt;div id=&quot;floating-panel&quot;&gt;
+        &lt;b&gt;Start: &lt;/b&gt;
+        &lt;select id=&quot;start&quot;&gt;
+            &lt;option value=&quot;chicago, il&quot;&gt;Chicago&lt;/option&gt;
+            &lt;option value=&quot;st louis, mo&quot;&gt;St Louis&lt;/option&gt;
+            &lt;option value=&quot;joplin, mo&quot;&gt;Joplin, MO&lt;/option&gt;
+            &lt;option value=&quot;oklahoma city, ok&quot;&gt;Oklahoma City&lt;/option&gt;
+            &lt;option value=&quot;amarillo, tx&quot;&gt;Amarillo&lt;/option&gt;
+            &lt;option value=&quot;gallup, nm&quot;&gt;Gallup, NM&lt;/option&gt;
+            &lt;option value=&quot;flagstaff, az&quot;&gt;Flagstaff, AZ&lt;/option&gt;
+            &lt;option value=&quot;winona, az&quot;&gt;Winona&lt;/option&gt;
+            &lt;option value=&quot;kingman, az&quot;&gt;Kingman&lt;/option&gt;
+            &lt;option value=&quot;barstow, ca&quot;&gt;Barstow&lt;/option&gt;
+            &lt;option value=&quot;san bernardino, ca&quot;&gt;San Bernardino&lt;/option&gt;
+            &lt;option value=&quot;los angeles, ca&quot;&gt;Los Angeles&lt;/option&gt;
+        &lt;/select&gt;
+
+        &lt;b&gt;End: &lt;/b&gt;
+        &lt;select id=&quot;end&quot;&gt;
+            &lt;option value=&quot;chicago, il&quot;&gt;Chicago&lt;/option&gt;
+            &lt;option value=&quot;st louis, mo&quot;&gt;St Louis&lt;/option&gt;
+            &lt;option value=&quot;joplin, mo&quot;&gt;Joplin, MO&lt;/option&gt;
+            &lt;option value=&quot;oklahoma city, ok&quot;&gt;Oklahoma City&lt;/option&gt;
+            &lt;option value=&quot;amarillo, tx&quot;&gt;Amarillo&lt;/option&gt;
+            &lt;option value=&quot;gallup, nm&quot;&gt;Gallup, NM&lt;/option&gt;
+            &lt;option value=&quot;flagstaff, az&quot;&gt;Flagstaff, AZ&lt;/option&gt;
+            &lt;option value=&quot;winona, az&quot;&gt;Winona&lt;/option&gt;
+            &lt;option value=&quot;kingman, az&quot;&gt;Kingman&lt;/option&gt;
+            &lt;option value=&quot;barstow, ca&quot;&gt;Barstow&lt;/option&gt;
+            &lt;option value=&quot;san bernardino, ca&quot;&gt;San Bernardino&lt;/option&gt;
+            &lt;option value=&quot;los angeles, ca&quot;&gt;Los Angeles&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
 @endsection
