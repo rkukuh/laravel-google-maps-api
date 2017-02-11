@@ -286,5 +286,29 @@
 @endsection
 
 @section('source-code-html')
-    <div id="map"></div>
+
+    &lt;div id=&quot;floating-panel&quot;&gt;
+        &lt;b&gt;Start: &lt;/b&gt;
+        &lt;select id=&quot;start&quot;&gt;
+            &lt;option value=&quot;penn station, new york, ny&quot;&gt;Penn Station&lt;/option&gt;
+            &lt;option value=&quot;grand central station, new york, ny&quot;&gt;Grand Central Station&lt;/option&gt;
+            &lt;option value=&quot;625 8th Avenue, New York, NY, 10018&quot;&gt;Port Authority Bus Terminal&lt;/option&gt;
+            &lt;option value=&quot;staten island ferry terminal, new york, ny&quot;&gt;Staten Island Ferry Terminal&lt;/option&gt;
+            &lt;option value=&quot;101 E 125th Street, New York, NY&quot;&gt;Harlem - 125th St Station&lt;/option&gt;
+        &lt;/select&gt;
+
+        &lt;b&gt;End: &lt;/b&gt;
+        &lt;select id=&quot;end&quot;&gt;
+            &lt;option value=&quot;260 Broadway New York NY 10007&quot;&gt;City Hall&lt;/option&gt;
+            &lt;option value=&quot;W 49th St &amp; 5th Ave, New York, NY 10020&quot;&gt;Rockefeller Center&lt;/option&gt;
+            &lt;option value=&quot;moma, New York, NY&quot;&gt;MOMA&lt;/option&gt;
+            &lt;option value=&quot;350 5th Ave, New York, NY, 10118&quot;&gt;Empire State Building&lt;/option&gt;
+            &lt;option value=&quot;253 West 125th Street, New York, NY&quot;&gt;Apollo Theater&lt;/option&gt;
+            &lt;option value=&quot;1 Wall St, New York, NY&quot;&gt;Wall St&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+
+    &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+
+    &lt;div id=&quot;warnings-panel&quot;&gt;&lt;/div&gt;
 @endsection
