@@ -3,7 +3,11 @@
 @section('title', 'Direction with setPanel()')
 
 @section('content')
-    <h1>Direction with setPanel()</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Direction with setPanel()
+    </h1>
 
     <div id="floating-panel">
         <strong>Start:</strong>
