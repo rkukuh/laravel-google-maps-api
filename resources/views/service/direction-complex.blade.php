@@ -3,7 +3,11 @@
 @section('title', 'Direction (complex)')
 
 @section('content')
-    <h1>Direction (complex)</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Direction (complex)
+    </h1>
 
     <div id="floating-panel">
         <b>Start: </b>
