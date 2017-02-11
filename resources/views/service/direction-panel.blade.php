@@ -162,8 +162,52 @@
 @section('source-code-javascript')
 
     &lt;script&gt;
-        //
+        function initMap() {
+            var directionsDisplay = new google.maps.DirectionsRenderer;
+            var directionsService = new google.maps.DirectionsService;
+
+            var map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+                zoom    : 7,
+                center  : {lat: 41.85, lng: -87.65}
+            });
+
+            directionsDisplay.setMap(map);
+            directionsDisplay.setPanel(document.getElementById(&apos;right-panel&apos;));
+
+            var control = document.getElementById(&apos;floating-panel&apos;);
+
+            control.style.display = &apos;block&apos;;
+            map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
+
+            var onChangeHandler = function() {
+                calculateAndDisplayRoute(directionsService, directionsDisplay);
+            };
+
+            document.getElementById(&apos;start&apos;).addEventListener(&apos;change&apos;, onChangeHandler);
+            document.getElementById(&apos;end&apos;).addEventListener(&apos;change&apos;, onChangeHandler);
+        }
+
+        function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+            var start   = document.getElementById(&apos;start&apos;).value;
+            var end     = document.getElementById(&apos;end&apos;).value;
+
+            directionsService.route({
+                origin      : start,
+                destination : end,
+                travelMode  : &apos;DRIVING&apos;
+            },
+            function(response, status) {
+                if (status === &apos;OK&apos;) {
+                    directionsDisplay.setDirections(response);
+                }
+                else {
+                    window.alert(&apos;Directions request failed due to &apos; + status);
+                }
+            });
+        }
     &lt;/script&gt;
+
+    &lt;script async defer src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $server_key_placeholder }}&amp;callback=initMap&quot;&gt;&lt;/script&gt;
 @endsection
 
 @section('source-code-css')
