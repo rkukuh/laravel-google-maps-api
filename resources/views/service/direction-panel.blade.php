@@ -211,7 +211,64 @@
 @endsection
 
 @section('source-code-css')
+
     #map { height: 500px; }
+
+    #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 35%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+        background: #fff;
+        font-size: 14px;
+        box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+        display: none;
+    }
+
+    #right-panel {
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+        height: 500px;
+        float: right;
+        width: 390px;
+        overflow: scroll;
+    }
+
+    #right-panel select, #right-panel input {
+        font-size: 15px;
+    }
+
+    #right-panel select {
+        width: 100%;
+    }
+
+    #right-panel i {
+        font-size: 12px;
+    }
+
+    #map {
+        margin-right: 400px;
+    }
+
+    @media print {
+        #map {
+            height: 500px;
+            margin: 0;
+        }
+
+        #right-panel {
+            float: none;
+            width: auto;
+        }
+    }
 @endsection
 
 @section('source-code-html')
