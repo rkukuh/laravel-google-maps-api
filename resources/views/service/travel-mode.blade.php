@@ -150,5 +150,16 @@
 @endsection
 
 @section('source-code-html')
-    <div id="map"></div>
+
+    &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+
+    &lt;div id=&quot;floating-panel&quot;&gt;
+        &lt;b&gt;Mode of Travel: &lt;/b&gt;
+        &lt;select id=&quot;mode&quot;&gt;
+            &lt;option value=&quot;DRIVING&quot;&gt;Driving&lt;/option&gt;
+            &lt;option value=&quot;WALKING&quot;&gt;Walking&lt;/option&gt;
+            &lt;option value=&quot;BICYCLING&quot;&gt;Bicycling&lt;/option&gt;
+            &lt;option value=&quot;TRANSIT&quot;&gt;Transit&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
 @endsection
