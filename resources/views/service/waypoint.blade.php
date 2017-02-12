@@ -3,7 +3,11 @@
 @section('title', 'Waypoints in direction')
 
 @section('content')
-    <h1>Waypoints in direction</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Waypoints in direction
+    </h1>
 
     <div id="map"></div>
 
