@@ -76,13 +76,13 @@
         #right-panel {
             margin: 20px;
             border-width: 2px;
-            width: 20%;
+            width: 25%;
             height: 400px;
             float: left;
             text-align: left;
             padding-top: 0;
         }
-        
+
         #directions-panel {
             margin-top: 10px;
             background-color: #FFEE77;
