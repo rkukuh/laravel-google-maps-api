@@ -82,6 +82,7 @@
             text-align: left;
             padding-top: 0;
         }
+        
         #directions-panel {
             margin-top: 10px;
             background-color: #FFEE77;
