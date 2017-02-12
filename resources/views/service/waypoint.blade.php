@@ -225,7 +225,43 @@
 @endsection
 
 @section('source-code-css')
-    #map { height: 500px; }
+
+    #map {
+        float: left;
+        width: 70%;
+        height: 500px;
+    }
+
+    #right-panel {
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+        margin: 20px;
+        border-width: 2px;
+        width: 25%;
+        height: 400px;
+        float: left;
+        text-align: left;
+        padding-top: 0;
+    }
+
+    #right-panel select, #right-panel input {
+        font-size: 15px;
+    }
+
+    #right-panel select {
+        width: 100%;
+    }
+
+    #right-panel i {
+        font-size: 12px;
+    }
+
+    #directions-panel {
+        margin-top: 10px;
+        background-color: #FFEE77;
+        padding: 10px;
+    }
 @endsection
 
 @section('source-code-html')
