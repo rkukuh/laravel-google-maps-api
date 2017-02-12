@@ -142,7 +142,6 @@
 
                     summaryPanel.innerHTML = '';
 
-                    // For each route, display summary information.
                     for (var i = 0; i < route.legs.length; i++) {
                         var routeSegment = i + 1;
                         summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment + '</b><br>';
