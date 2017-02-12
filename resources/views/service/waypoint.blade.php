@@ -265,5 +265,45 @@
 @endsection
 
 @section('source-code-html')
-    <div id="map"></div>
+
+    &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+
+    &lt;div id=&quot;right-panel&quot;&gt;
+        &lt;div&gt;
+            &lt;b&gt;Start:&lt;/b&gt;
+            &lt;select id=&quot;start&quot;&gt;
+                &lt;option value=&quot;Halifax, NS&quot;&gt;Halifax, NS&lt;/option&gt;
+                &lt;option value=&quot;Boston, MA&quot;&gt;Boston, MA&lt;/option&gt;
+                &lt;option value=&quot;New York, NY&quot;&gt;New York, NY&lt;/option&gt;
+                &lt;option value=&quot;Miami, FL&quot;&gt;Miami, FL&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;br&gt;
+
+            &lt;b&gt;Waypoints:&lt;/b&gt; &lt;br&gt;
+            &lt;i&gt;(Ctrl+Click or Cmd+Click for multiple selection)&lt;/i&gt; &lt;br&gt;
+            &lt;select multiple id=&quot;waypoints&quot;&gt;
+                &lt;option value=&quot;montreal, quebec&quot;&gt;Montreal, QBC&lt;/option&gt;
+                &lt;option value=&quot;toronto, ont&quot;&gt;Toronto, ONT&lt;/option&gt;
+                &lt;option value=&quot;chicago, il&quot;&gt;Chicago&lt;/option&gt;
+                &lt;option value=&quot;winnipeg, mb&quot;&gt;Winnipeg&lt;/option&gt;
+                &lt;option value=&quot;fargo, nd&quot;&gt;Fargo&lt;/option&gt;
+                &lt;option value=&quot;calgary, ab&quot;&gt;Calgary&lt;/option&gt;
+                &lt;option value=&quot;spokane, wa&quot;&gt;Spokane&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;br&gt;
+
+            &lt;b&gt;End:&lt;/b&gt;
+            &lt;select id=&quot;end&quot;&gt;
+                &lt;option value=&quot;Vancouver, BC&quot;&gt;Vancouver, BC&lt;/option&gt;
+                &lt;option value=&quot;Seattle, WA&quot;&gt;Seattle, WA&lt;/option&gt;
+                &lt;option value=&quot;San Francisco, CA&quot;&gt;San Francisco, CA&lt;/option&gt;
+                &lt;option value=&quot;Los Angeles, CA&quot;&gt;Los Angeles, CA&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;br&gt;
+
+            &lt;input type=&quot;submit&quot; id=&quot;submit&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;directions-panel&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
 @endsection
