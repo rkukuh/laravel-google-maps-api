@@ -3,7 +3,11 @@
 @section('title', 'Travel Modes in direction')
 
 @section('content')
-    <h1>Travel Modes in direction</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Travel Modes in direction
+    </h1>
 
     <div id="map"></div>
 
