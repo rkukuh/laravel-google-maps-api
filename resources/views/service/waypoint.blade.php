@@ -63,6 +63,13 @@
             font-family: 'Roboto','sans-serif';
             line-height: 30px;
             padding-left: 10px;
+            margin: 20px;
+            border-width: 2px;
+            width: 25%;
+            height: 400px;
+            float: left;
+            text-align: left;
+            padding-top: 0;
         }
 
         #right-panel select, #right-panel input {
@@ -75,16 +82,6 @@
 
         #right-panel i {
             font-size: 12px;
-        }
-
-        #right-panel {
-            margin: 20px;
-            border-width: 2px;
-            width: 25%;
-            height: 400px;
-            float: left;
-            text-align: left;
-            padding-top: 0;
         }
 
         #directions-panel {
