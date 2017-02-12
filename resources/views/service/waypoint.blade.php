@@ -164,8 +164,68 @@
 @section('source-code-javascript')
 
     &lt;script&gt;
-        //
+        function initMap() {
+            var directionsService = new google.maps.DirectionsService;
+            var directionsDisplay = new google.maps.DirectionsRenderer;
+
+            var map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+                zoom    : 6,
+                center  : {lat: 41.85, lng: -87.65}
+            });
+
+            directionsDisplay.setMap(map);
+
+            document.getElementById(&apos;submit&apos;).addEventListener(&apos;click&apos;, function() {
+                calculateAndDisplayRoute(directionsService, directionsDisplay);
+            });
+        }
+
+        function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+            var waypts = [];
+            var checkboxArray = document.getElementById(&apos;waypoints&apos;);
+
+            for (var i = 0; i &lt; checkboxArray.length; i++) {
+                if (checkboxArray.options[i].selected) {
+                    waypts.push({
+                        location: checkboxArray[i].value,
+                        stopover: true
+                    });
+                }
+            }
+
+            directionsService.route({
+                origin              : document.getElementById(&apos;start&apos;).value,
+                destination         : document.getElementById(&apos;end&apos;).value,
+                waypoints           : waypts,
+                optimizeWaypoints   : true,
+                travelMode          : &apos;DRIVING&apos;
+            },
+            function(response, status) {
+                if (status === &apos;OK&apos;) {
+                    directionsDisplay.setDirections(response);
+
+                    var route = response.routes[0];
+                    var summaryPanel = document.getElementById(&apos;directions-panel&apos;);
+
+                    summaryPanel.innerHTML = &apos;&apos;;
+
+                    // For each route, display summary information.
+                    for (var i = 0; i &lt; route.legs.length; i++) {
+                        var routeSegment = i + 1;
+                        summaryPanel.innerHTML += &apos;&lt;b&gt;Route Segment: &apos; + routeSegment + &apos;&lt;/b&gt;&lt;br&gt;&apos;;
+                        summaryPanel.innerHTML += route.legs[i].start_address + &apos; to &apos;;
+                        summaryPanel.innerHTML += route.legs[i].end_address + &apos;&lt;br&gt;&apos;;
+                        summaryPanel.innerHTML += route.legs[i].distance.text + &apos;&lt;br&gt;&lt;br&gt;&apos;;
+                    }
+                }
+                else {
+                    window.alert(&apos;Directions request failed due to &apos; + status);
+                }
+            });
+        }
     &lt;/script&gt;
+
+    &lt;script async defer src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $server_key_placeholder }}&amp;callback=initMap&quot;&gt;&lt;/script&gt;
 @endsection
 
 @section('source-code-css')
