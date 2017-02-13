@@ -3,7 +3,11 @@
 @section('title', 'Showing elevation along path')
 
 @section('content')
-    <h1>Showing elevation along path</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Showing elevation along path
+    </h1>
 
     <div id="map"></div>
     <div id="elevation_chart"></div>
