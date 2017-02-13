@@ -63,8 +63,44 @@
 @section('source-code-javascript')
 
     &lt;script&gt;
-        //
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+                zoom        : 8,
+                center      : {lat: 63.333, lng: -150.5},  // Denali.
+                mapTypeId   : &apos;terrain&apos;
+            });
+
+            var elevator    = new google.maps.ElevationService;
+            var infowindow  = new google.maps.InfoWindow({map: map});
+
+            map.addListener(&apos;click&apos;, function(event) {
+                displayLocationElevation(event.latLng, elevator, infowindow);
+            });
+        }
+
+        function displayLocationElevation(location, elevator, infowindow) {
+            elevator.getElevationForLocations({
+                &apos;locations&apos;: [location]
+            },
+            function(results, status) {
+                infowindow.setPosition(location);
+
+                if (status === &apos;OK&apos;) {
+                    if (results[0]) {
+                        infowindow.setContent(&apos;The elevation at this point &lt;br&gt;is &apos; + results[0].elevation + &apos; meters.&apos;);
+                    }
+                    else {
+                        infowindow.setContent(&apos;No results found&apos;);
+                    }
+                }
+                else {
+                    infowindow.setContent(&apos;Elevation service failed due to: &apos; + status);
+                }
+            });
+        }
     &lt;/script&gt;
+
+    &lt;script async defer src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $server_key }}&amp;callback=initMap&quot;&gt;&lt;/script&gt;
 @endsection
 
 @section('source-code-css')
