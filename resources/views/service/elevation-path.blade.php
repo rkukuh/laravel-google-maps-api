@@ -150,7 +150,7 @@
             if (status !== &apos;OK&apos;) {
                 // Show the error code inside the chartDiv.
                 chartDiv.innerHTML = &apos;Cannot show elevation: request failed because &apos; + status;
-                
+
                 return;
             }
 
@@ -183,7 +183,7 @@
 @endsection
 
 @section('source-code-css')
-    #map { height: 500px; }
+    #map { height: 350px; }
 @endsection
 
 @section('source-code-html')
