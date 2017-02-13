@@ -223,5 +223,10 @@
 @endsection
 
 @section('source-code-html')
-    <div id="map"></div>
+
+    &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+
+    &lt;div id=&quot;right-panel&quot;&gt;
+        &lt;p&gt;Total Distance: &lt;span id=&quot;total&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
 @endsection
