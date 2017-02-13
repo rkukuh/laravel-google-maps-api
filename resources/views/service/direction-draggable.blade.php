@@ -58,7 +58,7 @@
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom    : 4,
-                center  : {lat: -24.345, lng: 134.46}  // Australia.
+                center  : {lat: -24.345, lng: 134.46}
             });
 
             var directionsService = new google.maps.DirectionsService;
