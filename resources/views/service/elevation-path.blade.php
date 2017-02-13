@@ -150,6 +150,7 @@
             if (status !== &apos;OK&apos;) {
                 // Show the error code inside the chartDiv.
                 chartDiv.innerHTML = &apos;Cannot show elevation: request failed because &apos; + status;
+                
                 return;
             }
 
