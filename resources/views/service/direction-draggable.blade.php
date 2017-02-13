@@ -3,7 +3,11 @@
 @section('title', 'Draggable direction')
 
 @section('content')
-    <h1>Draggable direction</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Draggable direction
+    </h1>
 
     <div id="map"></div>
 
