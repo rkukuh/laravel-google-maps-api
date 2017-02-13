@@ -187,5 +187,7 @@
 @endsection
 
 @section('source-code-html')
-    <div id="map"></div>
+
+    &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;elevation_chart&quot;&gt;&lt;/div&gt;
 @endsection
