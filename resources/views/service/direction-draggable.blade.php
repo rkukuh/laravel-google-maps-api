@@ -187,7 +187,39 @@
 @endsection
 
 @section('source-code-css')
-    #map { height: 500px; }
+
+    #map {
+        float: left;
+        width: 63%;
+        height: 500px;
+    }
+
+    #right-panel {
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+        float: right;
+        width: 34%;
+        height: 500px;
+        overflow: scroll
+    }
+
+    #right-panel select, #right-panel input {
+        font-size: 15px;
+    }
+
+    #right-panel select {
+        width: 100%;
+    }
+
+    #right-panel i {
+        font-size: 12px;
+    }
+
+    .panel {
+        height: 100%;
+        overflow: auto;
+    }
 @endsection
 
 @section('source-code-html')
