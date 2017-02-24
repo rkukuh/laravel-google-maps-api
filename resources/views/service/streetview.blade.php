@@ -60,5 +60,5 @@
 @endsection
 
 @section('source-code-html')
-    <div id="map"></div>
+    &lt;div id=&quot;street-view&quot;&gt;&lt;/div&gt;
 @endsection
