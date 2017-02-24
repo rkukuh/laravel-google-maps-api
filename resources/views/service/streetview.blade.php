@@ -56,7 +56,7 @@
 @endsection
 
 @section('source-code-css')
-    #map { height: 500px; }
+    #street-view { height: 500px; }
 @endsection
 
 @section('source-code-html')
