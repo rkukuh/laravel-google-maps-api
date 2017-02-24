@@ -26,7 +26,7 @@
             panorama = new google.maps.StreetViewPanorama(
                 document.getElementById('street-view'),
             {
-                position    : {lat: 37.869260, lng: -122.254811},
+                position    : {lat: -7.2459509, lng: 112.7386515},
                 pov         : {heading: 165, pitch: 0},
                 zoom        : 1
             });
@@ -45,7 +45,7 @@
             panorama = new google.maps.StreetViewPanorama(
                 document.getElementById(&apos;street-view&apos;),
             {
-                position    : {lat: 37.869260, lng: -122.254811},
+                position    : {lat: -7.2459509, lng: 112.7386515},
                 pov         : {heading: 165, pitch: 0},
                 zoom        : 1
             });
