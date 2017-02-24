@@ -3,7 +3,11 @@
 @section('title', 'Street View container')
 
 @section('content')
-    <h1>Street View container</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Street View container
+    </h1>
 
     <div id="street-view"></div>
 @endsection
