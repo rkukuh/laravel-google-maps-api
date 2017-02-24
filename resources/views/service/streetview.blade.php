@@ -39,8 +39,20 @@
 @section('source-code-javascript')
 
     &lt;script&gt;
-        //
+        var panorama;
+
+        function initialize() {
+            panorama = new google.maps.StreetViewPanorama(
+                document.getElementById(&apos;street-view&apos;),
+            {
+                position    : {lat: 37.869260, lng: -122.254811},
+                pov         : {heading: 165, pitch: 0},
+                zoom        : 1
+            });
+        }
     &lt;/script&gt;
+
+    &lt;script async defer src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;callback=initialize&quot;&gt;&lt;/script&gt;
 @endsection
 
 @section('source-code-css')
