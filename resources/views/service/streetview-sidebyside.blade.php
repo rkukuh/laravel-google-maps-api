@@ -90,5 +90,7 @@
 @endsection
 
 @section('source-code-html')
-    <div id="map"></div>
+
+    &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;pano&quot;&gt;&lt;/div&gt;
 @endsection
