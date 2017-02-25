@@ -26,17 +26,17 @@
 @push('js')
     <script>
         function initialize() {
-            var fenway = {lat: 42.345573, lng: -71.098326};
+            var surabaya = {lat: -7.2459509, lng: 112.7386515};
 
             var map = new google.maps.Map(document.getElementById('map'), {
-                center  : fenway,
+                center  : surabaya,
                 zoom    : 14
             });
 
             var panorama = new google.maps.StreetViewPanorama(
                 document.getElementById('pano'),
                 {
-                    position: fenway,
+                    position: surabaya,
                     pov: {
                         heading: 34,
                         pitch: 10
@@ -55,17 +55,17 @@
 
     &lt;script&gt;
         function initialize() {
-            var fenway = {lat: 42.345573, lng: -71.098326};
+            var surabaya = {lat: -7.2459509, lng: 112.7386515};
 
             var map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
-                center  : fenway,
+                center  : surabaya,
                 zoom    : 14
             });
 
             var panorama = new google.maps.StreetViewPanorama(
                 document.getElementById(&apos;pano&apos;),
                 {
-                    position: fenway,
+                    position: surabaya,
                     pov: {
                         heading: 34,
                         pitch: 10
