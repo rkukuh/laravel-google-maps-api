@@ -81,7 +81,12 @@
 @endsection
 
 @section('source-code-css')
-    #map { height: 500px; }
+
+    #map, #pano {
+        float: left;
+        height: 500px;
+        width: 50%;
+    }
 @endsection
 
 @section('source-code-html')
