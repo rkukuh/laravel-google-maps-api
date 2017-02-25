@@ -54,8 +54,30 @@
 @section('source-code-javascript')
 
     &lt;script&gt;
-        //
+        function initialize() {
+            var fenway = {lat: 42.345573, lng: -71.098326};
+
+            var map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+                center  : fenway,
+                zoom    : 14
+            });
+
+            var panorama = new google.maps.StreetViewPanorama(
+                document.getElementById(&apos;pano&apos;),
+                {
+                    position: fenway,
+                    pov: {
+                        heading: 34,
+                        pitch: 10
+                    }
+                }
+            );
+
+            map.setStreetView(panorama);
+        }
     &lt;/script&gt;
+
+    &lt;script async defer src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;callback=initialize&quot;&gt;&lt;/script&gt;
 @endsection
 
 @section('source-code-css')
