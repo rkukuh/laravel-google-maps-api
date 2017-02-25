@@ -3,7 +3,11 @@
 @section('title', 'Street View side-by-side')
 
 @section('content')
-    <h1>Street View side-by-side</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Street View side-by-side
+    </h1>
 
     <div id="map"></div>
     <div id="pano"></div>
