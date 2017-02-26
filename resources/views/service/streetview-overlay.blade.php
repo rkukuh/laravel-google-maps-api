@@ -3,7 +3,11 @@
 @section('title', 'Overlays within street view')
 
 @section('content')
-    <h1>Overlays within street view</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Overlays within street view
+    </h1>
 
     <div id="map"></div>
 
