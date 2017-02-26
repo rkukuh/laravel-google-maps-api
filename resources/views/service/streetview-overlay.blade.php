@@ -175,5 +175,10 @@
 @endsection
 
 @section('source-code-html')
-    <div id="map"></div>
+
+    &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+
+    &lt;div id=&quot;floating-panel&quot;&gt;
+        &lt;input type=&quot;button&quot; value=&quot;Toggle Street View&quot; onclick=&quot;toggleStreetView();&quot;&gt;&lt;/input&gt;
+    &lt;/div&gt;
 @endsection
