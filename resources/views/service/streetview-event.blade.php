@@ -10,7 +10,7 @@
     </h1>
 
     <div id="pano"></div>
-    
+
     <div id="floating-panel">
         <table class="table">
             <tr>
@@ -228,5 +228,29 @@
 @endsection
 
 @section('source-code-html')
-    <div id="map"></div>
+
+    &lt;div id=&quot;pano&quot;&gt;&lt;/div&gt;
+
+    &lt;div id=&quot;floating-panel&quot;&gt;
+        &lt;table class=&quot;table&quot;&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;b&gt;Position&lt;/b&gt;&lt;/td&gt;&lt;td id=&quot;position-cell&quot;&gt;&amp;nbsp;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;b&gt;POV Heading&lt;/b&gt;&lt;/td&gt;&lt;td id=&quot;heading-cell&quot;&gt;270&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;b&gt;POV Pitch&lt;/b&gt;&lt;/td&gt;&lt;td id=&quot;pitch-cell&quot;&gt;0.0&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;b&gt;Pano ID&lt;/b&gt;&lt;/td&gt;&lt;td id=&quot;pano-cell&quot;&gt;&amp;nbsp;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;&lt;b&gt;Links&lt;/b&gt;&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;table id=&quot;links_table&quot;&gt;&lt;/table&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
 @endsection
