@@ -23,7 +23,7 @@
         function initPano() {
             var panorama = new google.maps.StreetViewPanorama(
                 document.getElementById('map'), {
-                    position: {lat: 42.345573, lng: -71.098326},
+                    position: {lat: -7.2459509, lng: 112.7386515},
                     addressControlOptions: {
                         position: google.maps.ControlPosition.BOTTOM_CENTER
                     },
@@ -46,7 +46,7 @@
             // set by default.
             var panorama = new google.maps.StreetViewPanorama(
                 document.getElementById(&apos;map&apos;), {
-                    position: {lat: 42.345573, lng: -71.098326},
+                    position: {lat: -7.2459509, lng: 112.7386515},
                     addressControlOptions: {
                         position: google.maps.ControlPosition.BOTTOM_CENTER
                     },
