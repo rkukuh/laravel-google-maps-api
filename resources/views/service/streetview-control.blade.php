@@ -43,8 +43,24 @@
 @section('source-code-javascript')
 
     &lt;script&gt;
-        //
+        function initPano() {
+            // Note: constructed panorama objects have visible: true
+            // set by default.
+            var panorama = new google.maps.StreetViewPanorama(
+                document.getElementById(&apos;map&apos;), {
+                    position: {lat: 42.345573, lng: -71.098326},
+                    addressControlOptions: {
+                        position: google.maps.ControlPosition.BOTTOM_CENTER
+                    },
+                    linksControl: false,
+                    panControl: false,
+                    enableCloseButton: false
+                }
+            );
+        }
     &lt;/script&gt;
+
+    &lt;script async defer src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;callback=initPano&quot;&gt;&lt;/script&gt;
 @endsection
 
 @section('source-code-css')
