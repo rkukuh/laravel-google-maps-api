@@ -56,7 +56,6 @@
         }
 
         #pano {
-            border: 1px solid red;
             width: 65%;
             height: 500px;
             float: left;
