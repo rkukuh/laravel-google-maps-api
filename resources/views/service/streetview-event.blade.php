@@ -10,6 +10,7 @@
     </h1>
 
     <div id="pano"></div>
+    
     <div id="floating-panel">
         <table class="table">
             <tr>
