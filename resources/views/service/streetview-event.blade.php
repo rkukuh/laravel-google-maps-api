@@ -3,7 +3,11 @@
 @section('title', 'Street View events')
 
 @section('content')
-    <h1>Street View events</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Street View events
+    </h1>
 
     <div id="pano"></div>
     <div id="floating-panel">
