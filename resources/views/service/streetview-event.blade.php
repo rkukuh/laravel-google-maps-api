@@ -199,7 +199,31 @@
 @endsection
 
 @section('source-code-css')
-    #map { height: 500px; }
+
+    #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+        width: 35%;
+        height: 100%;
+        float: right;
+        text-align: left;
+        overflow: auto;
+        position: static;
+    }
+
+    #pano {
+        width: 65%;
+        height: 500px;
+        float: left;
+    }
 @endsection
 
 @section('source-code-html')
