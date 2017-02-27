@@ -133,8 +133,69 @@
 @section('source-code-javascript')
 
     &lt;script&gt;
-        //
+        function initPano() {
+            var panorama = new google.maps.StreetViewPanorama(
+                document.getElementById(&apos;pano&apos;),
+                {
+                    position: {lat: 37.869, lng: -122.255},
+                    pov: {
+                        heading: 270,
+                        pitch: 0
+                    },
+                    visible: true
+                }
+            );
+
+            panorama.addListener(&apos;pano_changed&apos;, function() {
+                var panoCell = document.getElementById(&apos;pano-cell&apos;);
+
+                panoCell.innerHTML = panorama.getPano();
+            });
+
+            panorama.addListener(&apos;links_changed&apos;, function() {
+                var linksTable = document.getElementById(&apos;links_table&apos;);
+
+                while (linksTable.hasChildNodes()) {
+                    linksTable.removeChild(linksTable.lastChild);
+                }
+
+                var links = panorama.getLinks();
+
+                for (var i in links) {
+                    var row = document.createElement(&apos;tr&apos;);
+
+                    linksTable.appendChild(row);
+
+                    var labelCell = document.createElement(&apos;td&apos;);
+
+                    labelCell.innerHTML = &apos;&lt;b&gt;Link: &apos; + i + &apos;&lt;/b&gt;&apos;;
+
+                    var valueCell = document.createElement(&apos;td&apos;);
+
+                    valueCell.innerHTML = links[i].description;
+
+                    linksTable.appendChild(labelCell);
+                    linksTable.appendChild(valueCell);
+                }
+            });
+
+            panorama.addListener(&apos;position_changed&apos;, function() {
+                var positionCell = document.getElementById(&apos;position-cell&apos;);
+
+                positionCell.firstChild.nodeValue = panorama.getPosition() + &apos;&apos;;
+            });
+
+            panorama.addListener(&apos;pov_changed&apos;, function() {
+                var headingCell = document.getElementById(&apos;heading-cell&apos;);
+                var pitchCell   = document.getElementById(&apos;pitch-cell&apos;);
+
+                headingCell.firstChild.nodeValue = panorama.getPov().heading + &apos;&apos;;
+                pitchCell.firstChild.nodeValue = panorama.getPov().pitch + &apos;&apos;;
+            });
+        }
     &lt;/script&gt;
+
+    &lt;script async defer src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;callback=initPano&quot;&gt;&lt;/script&gt;
 @endsection
 
 @section('source-code-css')
