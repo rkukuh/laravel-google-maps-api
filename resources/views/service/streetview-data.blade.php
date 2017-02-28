@@ -155,7 +155,12 @@
 @endsection
 
 @section('source-code-css')
-    #map { height: 500px; }
+
+    #map, #pano {
+        height: 500px;
+        width: 50%;
+        float: left;
+    }
 @endsection
 
 @section('source-code-html')
