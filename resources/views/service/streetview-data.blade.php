@@ -94,8 +94,70 @@
 @section('source-code-javascript')
 
     &lt;script&gt;
-        //
+        var map;
+        var panorama;
+
+        function initMap() {
+            var surabaya = {lat: -7.2459509, lng: 112.7386515};
+            var sv       = new google.maps.StreetViewService();
+
+            panorama     = new google.maps.StreetViewPanorama(document.getElementById(&apos;pano&apos;));
+
+            // Set up the map.
+            map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+                center: surabaya,
+                zoom: 16,
+                streetViewControl: false
+            });
+
+            // Set the initial Street View camera to the center of the map
+            sv.getPanorama({location: surabaya, radius: 50}, processSVData);
+
+            // Look for a nearby Street View panorama when the map is clicked.
+            // getPanoramaByLocation will return the nearest pano when the
+            // given radius is 50 meters or less.
+            map.addListener(&apos;click&apos;, function(event) {
+                sv.getPanorama({location: event.latLng, radius: 50}, processSVData);
+            });
+        }
+
+        function processSVData(data, status) {
+            if (status === &apos;OK&apos;) {
+                var marker = new google.maps.Marker({
+                    position: data.location.latLng,
+                    map: map,
+                    title: data.location.description
+                });
+
+                panorama.setPano(data.location.pano);
+
+                panorama.setPov({
+                    heading: 270,
+                    pitch: 0
+                });
+
+                panorama.setVisible(true);
+
+                marker.addListener(&apos;click&apos;, function() {
+                    var markerPanoID = data.location.pano;
+
+                    // Set the Pano to use the passed panoID.
+                    panorama.setPano(markerPanoID);
+                    panorama.setPov({
+                        heading: 270,
+                        pitch: 0
+                    });
+
+                    panorama.setVisible(true);
+                });
+            }
+            else {
+                console.error(&apos;Street View data not found for this location.&apos;);
+            }
+        }
     &lt;/script&gt;
+
+    &lt;script async defer src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;callback=initMap&quot;&gt;&lt;/script&gt;
 @endsection
 
 @section('source-code-css')
