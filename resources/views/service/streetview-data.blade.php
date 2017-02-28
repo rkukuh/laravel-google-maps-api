@@ -3,7 +3,11 @@
 @section('title', 'Accessing street view data')
 
 @section('content')
-    <h1>Accessing street view data</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Accessing street view data
+    </h1>
 
     <div id="map"></div>
     <div id="pano"></div>
@@ -74,7 +78,7 @@
                         heading: 270,
                         pitch: 0
                     });
-                    
+
                     panorama.setVisible(true);
                 });
             }
