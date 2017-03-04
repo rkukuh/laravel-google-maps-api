@@ -284,5 +284,21 @@
 @endsection
 
 @section('source-code-html')
-    <div id="map"></div>
+
+    &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+
+    &lt;div id=&quot;right-panel&quot;&gt;
+        &lt;div id=&quot;inputs&quot;&gt;
+            var origin1 = {lat: 55.930, lng: -3.118};&lt;br&gt;
+            var origin2 = &apos;Greenwich, England&apos;;&lt;br&gt;
+            var destinationA = &apos;Stockholm, Sweden&apos;;&lt;br&gt;
+            var destinationB = {lat: 50.087, lng: 14.421};
+        &lt;/div&gt;
+
+        &lt;div style=&quot;margin-top: 20px;&quot;&gt;
+            &lt;strong&gt;Results&lt;/strong&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;output&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
 @endsection
