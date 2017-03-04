@@ -3,7 +3,11 @@
 @section('title', 'Distance Matrix')
 
 @section('content')
-    <h1>Distance Matrix</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Distance Matrix
+    </h1>
 
     <div id="map"></div>
 
@@ -37,6 +41,7 @@
             padding-left: 20px;
             float: right;
             width: 45%;
+            overflow: scroll;
         }
 
         #right-panel select, #right-panel input {
