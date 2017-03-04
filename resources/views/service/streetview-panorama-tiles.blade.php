@@ -3,7 +3,11 @@
 @section('title', 'Custom street view panorama tiles')
 
 @section('content')
-    <h1>Custom street view panorama tiles</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Custom street view panorama tiles
+    </h1>
 
     <div id="map"></div>
 @endsection
