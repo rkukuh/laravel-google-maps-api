@@ -3,7 +3,11 @@
 @section('title', 'Region code biasing (ES)')
 
 @section('content')
-    <h1>Region code biasing (ES)</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Region code biasing (ES)
+    </h1>
 
     <div id="map"></div>
 @endsection
