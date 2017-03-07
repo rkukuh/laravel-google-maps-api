@@ -3,7 +3,11 @@
 @section('title', 'Maximum zoom imagery')
 
 @section('content')
-    <h1>Maximum zoom imagery</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Maximum zoom imagery
+    </h1>
 
     <div id="map"></div>
 @endsection
