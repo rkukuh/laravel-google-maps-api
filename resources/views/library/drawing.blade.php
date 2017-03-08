@@ -3,7 +3,11 @@
 @section('title', 'Drawing tool')
 
 @section('content')
-    <h1>Drawing tool</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Drawing tool
+    </h1>
 
     <div id="map"></div>
 @endsection
