@@ -54,8 +54,35 @@
 @section('source-code-javascript')
 
     &lt;script&gt;
-        //
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+            });
+
+            var drawingManager = new google.maps.drawing.DrawingManager({
+                drawingMode: google.maps.drawing.OverlayType.MARKER,
+                drawingControl: true,
+                drawingControlOptions: {
+                    position: google.maps.ControlPosition.TOP_CENTER,
+                    drawingModes: [&apos;marker&apos;, &apos;circle&apos;, &apos;polygon&apos;, &apos;polyline&apos;, &apos;rectangle&apos;]
+                },
+                markerOptions: {icon: &apos;https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png&apos;},
+                circleOptions: {
+                    fillColor: &apos;#ffff00&apos;,
+                    fillOpacity: 1,
+                    strokeWeight: 5,
+                    clickable: false,
+                    editable: true,
+                    zIndex: 1
+                }
+            });
+
+            drawingManager.setMap(map);
+        }
     &lt;/script&gt;
+
+    &lt;script async defer src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;libraries=drawing&amp;callback=initMap&quot;&gt;&lt;/script&gt;
 @endsection
 
 @section('source-code-css')
