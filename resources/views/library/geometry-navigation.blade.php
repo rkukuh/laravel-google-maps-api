@@ -192,5 +192,12 @@
 @endsection
 
 @section('source-code-html')
-    <div id="map"></div>
+
+    &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+
+    &lt;div id=&quot;floating-panel&quot;&gt;
+        Origin: &lt;input type=&quot;text&quot; readonly id=&quot;origin&quot;&gt;
+        Destination: &lt;input type=&quot;text&quot; readonly id=&quot;destination&quot;&gt;&lt;br&gt;
+        Heading: &lt;input type=&quot;text&quot; readonly id=&quot;heading&quot;&gt; degrees
+    &lt;/div&gt;
 @endsection
