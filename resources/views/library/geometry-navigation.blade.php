@@ -3,7 +3,11 @@
 @section('title', 'Geometry: Navigation functions')
 
 @section('content')
-    <h1>Geometry: Navigation functions</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Geometry: Navigation functions
+    </h1>
 
     <div id="map"></div>
 
