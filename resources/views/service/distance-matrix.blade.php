@@ -154,3 +154,109 @@
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ $server_key }}&callback=initMap"></script>
 @endpush
+
+@section('source-code-javascript')
+
+    &lt;script&gt;
+        function initMap() {
+            var bounds       = new google.maps.LatLngBounds;
+            var markersArray = [];
+
+            var origin1      = {lat: 55.93, lng: -3.118};
+            var origin2      = &apos;Greenwich, England&apos;;
+            var destinationA = &apos;Stockholm, Sweden&apos;;
+            var destinationB = {lat: 50.087, lng: 14.421};
+
+            var destinationIcon = &apos;https://chart.googleapis.com/chart?&apos; + &apos;chst=d_map_pin_letter&amp;chld=D|FF0000|000000&apos;;
+            var originIcon      = &apos;https://chart.googleapis.com/chart?&apos; + &apos;chst=d_map_pin_letter&amp;chld=O|FFFF00|000000&apos;;
+
+            var map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+                center  : {lat: 55.53, lng: 9.4},
+                zoom    : 10
+            });
+
+            var geocoder = new google.maps.Geocoder;
+            var service  = new google.maps.DistanceMatrixService;
+
+            service.getDistanceMatrix({
+                origins         : [origin1, origin2],
+                destinations    : [destinationA, destinationB],
+                travelMode      : &apos;DRIVING&apos;,
+                unitSystem      : google.maps.UnitSystem.METRIC,
+                avoidHighways   : false,
+                avoidTolls  : false
+            },
+            function(response, status) {
+                if (status !== &apos;OK&apos;) {
+                    alert(&apos;Error was: &apos; + status);
+                }
+                else {
+                    var originList      = response.originAddresses;
+                    var destinationList = response.destinationAddresses;
+                    var outputDiv       = document.getElementById(&apos;output&apos;);
+                    outputDiv.innerHTML = &apos;&apos;;
+
+                    deleteMarkers(markersArray);
+
+                    var showGeocodedAddressOnMap = function(asDestination) {
+                        var icon = asDestination ? destinationIcon : originIcon;
+
+                        return function(results, status) {
+                            if (status === &apos;OK&apos;) {
+                                map.fitBounds(bounds.extend(results[0].geometry.location));
+
+                                markersArray.push(new google.maps.Marker({
+                                    map     : map,
+                                    position: results[0].geometry.location,
+                                    icon    : icon
+                                }));
+                            }
+                            else {
+                                alert(&apos;Geocode was not successful due to: &apos; + status);
+                            }
+                        };
+                    };
+
+                    for (var i = 0; i &lt; originList.length; i++) {
+                        var results = response.rows[i].elements;
+
+                        geocoder.geocode(
+                            {&apos;address&apos;: originList[i]},
+                            showGeocodedAddressOnMap(false)
+                        );
+
+                        for (var j = 0; j &lt; results.length; j++) {
+                            geocoder.geocode(
+                                {&apos;address&apos;: destinationList[j]},
+                                showGeocodedAddressOnMap(true)
+                            );
+
+                            outputDiv.innerHTML += originList[i] +
+                                                    &apos; to &apos; + destinationList[j] +
+                                                    &apos;: &apos; + results[j].distance.text + &apos; in &apos; +
+                                                    results[j].duration.text + &apos;&lt;br&gt;&apos;;
+                        }
+                    }
+                }
+            });
+        }
+
+        function deleteMarkers(markersArray) {
+            for (var i = 0; i &lt; markersArray.length; i++) {
+                markersArray[i].setMap(null);
+            }
+
+            markersArray = [];
+        }
+    &lt;/script&gt;
+
+    &lt;script async defer src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $server_key_placeholder }}&amp;callback=initMap&quot;&gt;&lt;/script&gt;
+@endsection
+
+@section('source-code-css')
+    #map { height: 500px; }
+@endsection
+
+@section('source-code-html')
+    <div id="map"></div>
+@endsection
