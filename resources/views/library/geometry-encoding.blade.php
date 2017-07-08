@@ -182,3 +182,13 @@
         width: 100%;
     }
 @endsection
+
+@section('source-code-html')
+
+    &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+
+    &lt;div id=&quot;right-panel&quot;&gt;
+        &lt;div&gt;Encoding:&lt;/div&gt;
+        &lt;textarea id=&quot;encoded-polyline&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+@endsection
