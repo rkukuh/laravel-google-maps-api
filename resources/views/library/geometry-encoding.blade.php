@@ -3,7 +3,11 @@
 @section('title', 'Geometry: Encoding methods')
 
 @section('content')
-    <h1>Geometry: Encoding methods</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Geometry: Encoding methods
+    </h1>
 
     <div id="map"></div>
 
