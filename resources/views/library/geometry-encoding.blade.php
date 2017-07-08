@@ -148,3 +148,37 @@
     &lt;script async defer
     src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;libraries=geometry&amp;callback=initMap&quot;&gt;&lt;/script&gt;
 @endsection
+
+@section('source-code-css')
+
+    #map {
+        height: 500px;
+        width: 55%;
+        float: left;
+    }
+
+    #right-panel {
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+        width: 45%;
+        float: left;
+    }
+
+    #right-panel select, #right-panel input {
+        font-size: 15px;
+    }
+
+    #right-panel select {
+        width: 100%;
+    }
+
+    #right-panel i {
+        font-size: 12px;
+    }
+
+    #encoded-polyline {
+        height: 100px;
+        width: 100%;
+    }
+@endsection
