@@ -3,7 +3,11 @@
 @section('title', 'Geometry: containsLocation()')
 
 @section('content')
-    <h1>Geometry: containsLocation()</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Geometry: containsLocation()
+    </h1>
 
     <div id="map"></div>
 @endsection
