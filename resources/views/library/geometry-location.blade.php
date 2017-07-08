@@ -65,7 +65,7 @@
 @endpush
 
 @section('source-code-javascript')
-    
+
     &lt;script&gt;
         // This example requires the Geometry library. Include the libraries=geometry
         // parameter when you first load the API. For example:
@@ -109,4 +109,8 @@
 
     &lt;script async defer
     src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key }}&amp;libraries=geometry&amp;callback=initMap&quot;&gt;&lt;/script&gt;
+@endsection
+
+@section('source-code-css')
+    #map { height: 500px; }
 @endsection
