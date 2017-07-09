@@ -3,7 +3,11 @@
 @section('title', 'Places: Search')
 
 @section('content')
-    <h1>Places: Search</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Places: Search
+    </h1>
 
     <div id="map"></div>
 @endsection
