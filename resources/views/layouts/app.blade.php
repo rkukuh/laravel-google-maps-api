@@ -163,7 +163,7 @@
     <script src="/js/app.js"></script>
     <script src="{{ asset('js/bootstrap-modal-animate-css.js') }}"></script>
 
-    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.min.js"></script>
     <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js"></script>
     <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushCss.js"></script>
     <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushXml.js"></script>
