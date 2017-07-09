@@ -13,8 +13,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="{{ asset('css/multi-level-navbar-menu.css') }}">
-    <link rel="stylesheet" href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css">
-    <link rel="stylesheet" href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeRDark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCore.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeRDark.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="{{ asset('css/mystyle.css') }}">
 
