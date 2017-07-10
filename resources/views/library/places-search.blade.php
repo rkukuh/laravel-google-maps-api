@@ -136,3 +136,7 @@
 @section('source-code-css')
     #map { height: 500px; }
 @endsection
+
+@section('source-code-html')
+    <div id="map"></div>
+@endsection
