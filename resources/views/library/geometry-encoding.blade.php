@@ -57,7 +57,7 @@
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 14,
-                center: {lat: 34.366, lng: -89.519}
+                center: {lat: -7.265757, lng: 112.734146}
             });
 
             var poly = new google.maps.Polyline({
