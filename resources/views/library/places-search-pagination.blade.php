@@ -83,17 +83,17 @@
         var map;
 
         function initMap() {
-            var pyrmont = {lat: -33.866, lng: 151.196};
+            var surabaya = {lat: -7.265757, lng: 112.734146};
 
             map = new google.maps.Map(document.getElementById('map'), {
-                center: pyrmont,
+                center: surabaya,
                 zoom: 17
             });
 
             var service = new google.maps.places.PlacesService(map);
 
             service.nearbySearch({
-                    location: pyrmont,
+                    location: surabaya,
                     radius: 500,
                     type: ['store']
                 },
@@ -163,17 +163,17 @@
         var map;
 
         function initMap() {
-            var pyrmont = {lat: -33.866, lng: 151.196};
+            var surabaya = {lat: -7.265757, lng: 112.734146};
 
             map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
-                center: pyrmont,
+                center: surabaya,
                 zoom: 17
             });
 
             var service = new google.maps.places.PlacesService(map);
 
             service.nearbySearch({
-                    location: pyrmont,
+                    location: surabaya,
                     radius: 500,
                     type: [&apos;store&apos;]
                 },
