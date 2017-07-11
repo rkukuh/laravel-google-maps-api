@@ -295,3 +295,14 @@
         margin: 5px 0 0 0;
     }
 @endsection
+
+@section('source-code-html')
+
+    &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+
+    &lt;div id=&quot;right-panel&quot;&gt;
+        &lt;h2&gt;Results&lt;/h2&gt;
+        &lt;ul id=&quot;places&quot;&gt;&lt;/ul&gt;
+        &lt;button id=&quot;more&quot;&gt;More results&lt;/button&gt;
+    &lt;/div&gt;
+@endsection
