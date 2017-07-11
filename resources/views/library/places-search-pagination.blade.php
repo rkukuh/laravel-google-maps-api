@@ -236,3 +236,62 @@
 
     &lt;script async defer src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;libraries=places&amp;callback=initMap&quot;&gt;&lt;/script&gt;
 @endsection
+
+@section('source-code-css')
+
+    #map { height: 500px; }
+
+    #right-panel {
+        font-family: 'Roboto','sans-serif';
+        position: absolute;
+        right: 65px;
+        top: 60%;
+        margin-top: -195px;
+        padding: 5px;
+        border: 1px solid red;
+        background: #fff;
+    }
+
+    #right-panel select, #right-panel input {
+        font-size: 15px;
+    }
+
+    #right-panel select {
+        width: 100%;
+    }
+
+    #right-panel i {
+        font-size: 12px;
+    }
+
+    #right-panel h2 {
+        font-size: 22px;
+        margin: 0 0 5px 0;
+    }
+
+    #right-panel ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        height: 271px;
+        width: 200px;
+        overflow-y: scroll;
+    }
+
+    #right-panel li {
+        background-color: #f1f1f1;
+        padding: 10px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    #right-panel li:nth-child(odd) {
+        background-color: #fcfcfc;
+    }
+
+    #more {
+        width: 100%;
+        margin: 5px 0 0 0;
+    }
+@endsection
