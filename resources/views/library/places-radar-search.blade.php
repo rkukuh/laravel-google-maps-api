@@ -113,7 +113,7 @@
 
         function initMap() {
             map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
-                center: {lat: -33.867, lng: 151.206},
+                center: {lat: -7.265757, lng: 112.734146},
                 zoom: 15,
                 styles: [
                     {
@@ -137,7 +137,7 @@
         function performSearch() {
             var request = {
                 bounds: map.getBounds(),
-                keyword: &apos;best view&apos;
+                keyword: &apos;hotel&apos;
             };
 
             service.radarSearch(request, callback);
