@@ -3,7 +3,11 @@
 @section('title', 'Search 200 places with Radar Search')
 
 @section('content')
-    <h1>Search 200 places with Radar Search</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Search 200 places with Radar Search
+    </h1>
 
     <div id="map"></div>
 @endsection
