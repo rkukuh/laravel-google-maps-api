@@ -182,3 +182,7 @@
     &lt;script async defer
     src=&quot;https://maps.googleapis.com/maps/api/js?key={{ $browser_key_placeholder }}&amp;callback=initMap&amp;libraries=places,visualization&quot;&gt;&lt;/script&gt;
 @endsection
+
+@section('source-code-css')
+    #map { height: 500px; }
+@endsection
