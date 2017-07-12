@@ -54,7 +54,7 @@
         function performSearch() {
             var request = {
                 bounds: map.getBounds(),
-                keyword: 'best view'
+                keyword: 'hotel'
             };
 
             service.radarSearch(request, callback);
