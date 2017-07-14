@@ -3,7 +3,11 @@
 @section('title', 'Places: Autocomplete')
 
 @section('content')
-    <h1>Places: Autocomplete</h1>
+    <h1>
+        @include('_shared.button-source-code')
+
+        Places: Autocomplete
+    </h1>
 
     <div id="map"></div>
 
