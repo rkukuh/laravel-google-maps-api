@@ -315,3 +315,24 @@
         font-weight: 300;
     }
 @endsection
+
+@section('source-code-html')
+
+    &lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+
+    &lt;input id=&quot;pac-input&quot; class=&quot;controls&quot; type=&quot;text&quot; placeholder=&quot;Enter a location&quot;&gt;
+
+    &lt;div id=&quot;type-selector&quot; class=&quot;controls&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;type&quot; id=&quot;changetype-all&quot; checked=&quot;checked&quot;&gt;
+        &lt;label for=&quot;changetype-all&quot;&gt;All&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; name=&quot;type&quot; id=&quot;changetype-establishment&quot;&gt;
+        &lt;label for=&quot;changetype-establishment&quot;&gt;Establishments&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; name=&quot;type&quot; id=&quot;changetype-address&quot;&gt;
+        &lt;label for=&quot;changetype-address&quot;&gt;Addresses&lt;/label&gt;
+
+        &lt;input type=&quot;radio&quot; name=&quot;type&quot; id=&quot;changetype-geocode&quot;&gt;
+        &lt;label for=&quot;changetype-geocode&quot;&gt;Geocodes&lt;/label&gt;
+    &lt;/div&gt;
+@endsection
