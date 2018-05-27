@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::share('browser_key', 'AIzaSyCHnXGlwf8bxR_lc_eAvvkzf7MQYTk6ccE');
+        View::share('browser_key', 'AIzaSyDcEAVCwHf0OtZ4jKB3aVOE_auka3pLPQU');
         View::share('server_key', 'AIzaSyByaynCk7vcuS66I4S6Ed46IgreC54UVEg');
 
         View::share('browser_key_placeholder', 'BROWSER_KEY');
